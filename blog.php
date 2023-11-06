@@ -426,6 +426,9 @@
                             } else {
                                 alert(resp.msg);
                             }
+                        },
+                        error:function(xhr,error_str){
+                            alert(error_str);
                         }
                     });
 
