@@ -120,7 +120,7 @@
                         </div>
                         <div class="all_blogs_profile_img_sec">
                             <div class="all_blogs_card_profile">
-                                <div class="__profile__pic"><img src="uploads/all-profiles/${val.user_profileimg}" alt="${val.user_username} proofile"></div>
+                                <div class="__profile__pic"><img src="${val.user_profileimg}" alt="${val.user_username} proofile"></div>
                                 <div class="user-details___">
                                     <h4>${val.user_fullname}</h4>
                                     <h6>@${val.user_username}</h6>
