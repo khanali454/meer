@@ -50,10 +50,10 @@
 
                     <div class="col-5">
                         <ul class="social-icons">
-                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a class="dribbble" href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a class="facebook" href="<?= $app['facebook_url'] ?>"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="twitter" href="<?= $app['twitter_url'] ?>"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="dribbble" href="<?= $app['instagram_url'] ?>"><i class="fa fa-instagram"></i></a></li>
+                            <li><a class="linkedin" href="<?= $app['linkedin_url'] ?>"><i class="fa fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                 </div>
