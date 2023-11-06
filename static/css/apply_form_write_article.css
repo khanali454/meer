@@ -1,0 +1,240 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1e1e1e;
+}
+
+
+.apply_writting_article_info_break {
+    border: 1px solid #515050;
+    width: 100%;
+}
+
+.apply_form_article_page {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.apply_form_article_container {
+    width: 90%;
+    margin: 20px 0px;
+}
+
+.apply_form_article_back_submit_btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apply_form_article_back_submit_btn svg {
+    width: 26px;
+    fill: #ffffff9e;
+}
+
+.apply_form_article_back_submit_btn span {
+    font-size: 20px;
+    color: #ffffffbd;
+    font-weight: 500;
+}
+
+.apply_form_content_main_sec {
+    color: #0077B6;
+    width: 40%;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px 0px 10px 0px;
+    text-align: center;
+    line-break: 10px;
+    line-height: 28px;
+}
+
+/* .apply_form_back_img{
+max-width: 60%;
+width: 100%;
+transform: translateY(-80px);
+}
+.apply_form_back_img img{
+width: 100%;
+} */
+.apply_form_form label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #f1f1f1;
+    align-items: flex-start;
+    width: 100%;
+    display: flex;
+    margin: 15px 0px 0px 0px;
+}
+.apply_form_form {
+    width: 100%;
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+    height: fit-content;
+ 
+    margin: 0px 0px;
+    border-radius: 5px;
+    background-color: #f2f2f217;
+}
+.apply_form_form input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background: none;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    color: #ffffff9e;
+    font-size: 17px;
+}
+.apply_form_form select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background: #51505093;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    color: #ffffff9e;
+    font-size: 17px;
+}
+.apply_form_form input[type=submit] {
+    width: 100%;
+    background-color: #0077B6;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    background-color: #1e1e1e;
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: #fff;
+    float: left;
+    border: none;
+    border-radius:10px;
+    outline: none;
+    cursor: pointer;
+    padding: 6px 0px;
+    width: calc(100% - 85.72%);
+    transition: 0.3s;
+    font-size: 17px;
+    z-index: 100;
+
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ffa2c1;
+    border-radius: 10px;
+}
+.apply_form_form h4{
+    color: #ffffff9e;
+    margin: 30px 0px;
+    padding-bottom:15px ;
+    font-size: 24px;
+    font-weight: 600;
+    border-bottom: 2px solid #0077B6 ;
+}
+.apply_form_form textarea{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    outline-color: #0077B6;
+    padding: 10px;
+    accent-color: #0077B6;
+}
+
+@media (max-width:615px) {
+    .tab button {
+        padding: 10px;
+    }
+
+
+}
+
+
+@media (max-width:700px) {
+
+    .apply_form_content_main_sec {
+        width: 95%;
+    }
+
+    .apply_form_back_img {
+        top: 210px;
+    }
+
+}
+@media (max-width:515px) {
+    .apply_form_content_main_sec {
+        color: #0077B6;
+        width: 90%;
+        font-size: 24px;
+        margin: 20px 0px 7px 0px;
+    }
+    .apply_form_form input{
+        width: 100%;
+        padding: 7px 14px;
+        margin: 8px 0;
+        font-size: 14px;
+    }
+
+    .apply_form_form label {
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    /* Style the buttons inside the tab */
+    .tab button {
+    
+        padding: 6px 0px;
+  
+    
+    }
+    
+
+}

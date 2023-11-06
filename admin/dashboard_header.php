@@ -1,0 +1,300 @@
+<?php
+include "config.php";
+$curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);  
+
+
+if(!isset($_SESSION['admin_logged_in_id'])){
+    header("Location:index.php");
+}
+
+?>
+
+
+ <div class="_dashboard">
+        <div class="_top">
+            <div class="_top_logo">Admin</div>
+            <ul class="right_nav">
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-envelope"></i>
+                      <span>Messages</span>
+                        <i class="fa-solid fa-chevron-down doosra" style="font-size: 14px;"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-bell"></i>
+                       <span>Alerts</span>
+                        <i class="fa-solid fa-chevron-down doosra" style="font-size: 14px;"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Admin</span>
+                        <i class="fa-solid fa-chevron-down doosra" style="font-size: 14px;"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="" id="btn_for_sidebar">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="_bottom">
+            <div class="_bottom_left">
+                <ul class="_side_bar">
+
+
+                <!-- menu item -->
+                <?php if($curPageName=="dashboard.php"){?>
+                    <li class="__active">
+                        <a href="dashboard.php">
+                            <i class="fa-solid fa-gauge-high"></i>
+                            <span class="text">Dashboard</span>
+                        </a>
+                    </li>
+                <?php }else{ ?>
+                    <li>
+                        <a href="dashboard.php">
+                            <i class="fa-solid fa-gauge-high"></i>
+                            <span class="text">Dashboard</span>
+                        </a>
+                    </li>
+                <?php } ?>
+
+                   
+
+                
+                 <!-- menu item -->
+                 <?php if($curPageName=="users.php"){?>
+                    <li class="__active">
+                        <a href="users.php">
+                            <i class="fa-solid fa-users-line"></i>
+                            <span class="text">Users</span>
+                        </a>
+                    </li>
+                <?php }else{ ?>
+                    <li>
+                        <a href="users.php">
+                            <i class="fa-solid fa-users-line"></i>
+                            <span class="text">Users</span>
+                        </a>
+                    </li>
+                <?php } ?>
+
+                   
+
+
+                 <!-- menu item -->
+                 <?php if($curPageName=="creators.php"){?>
+                    <li class="__active">
+                        <a href="creators.php">
+                            <i class="fa-solid fa-user-group"></i>
+                            <span class="text">Creators</span>
+                        </a>
+                    </li>
+                <?php }else{ ?>
+                    <li>
+                        <a href="creators.php">
+                            <i class="fa-solid fa-user-group"></i>
+                            <span class="text">Creators</span>
+                        </a>
+                    </li>
+                <?php } ?>
+
+                   
+
+
+                 <!-- menu item -->
+                 <?php if($curPageName=="requests.php"){?>
+                    <li class="__active">
+                        <a href="requests.php">
+                            <i class="fa-solid fa-file-pen"></i>
+                            <span class="text">Requests</span>
+                        </a>
+                    </li>
+                <?php }else{ ?>
+                    <li>
+                        <a href="requests.php">
+                            <i class="fa-solid fa-file-pen"></i>
+                            <span class="text">Requests</span>
+                        </a>
+                    </li>
+                <?php } ?>
+
+                   
+
+
+                 <!-- menu item -->
+                 <?php if($curPageName=="blogs.php"){?>
+                    <li class="__active">
+                        <a href="blogs.php">
+                            <i class="fa-solid fa-blog"></i>
+                            <span class="text">Blogs</span>
+                        </a>
+                    </li>
+                <?php }else{ ?>
+                    <li>
+                        <a href="blogs.php">
+                            <i class="fa-solid fa-blog"></i>
+                            <span class="text">Blogs</span>
+                        </a>
+                    </li>
+                <?php } ?>
+
+                   
+
+
+                 <!-- menu item -->
+                 <?php if($curPageName=="articles.php"){?>
+                    <li class="__active">
+                        <a href="articles.php">
+                            <i class="fa-solid fa-pen"></i>
+                            <span class="text">Articles</span>
+                        </a>
+                    </li>
+                <?php }else{ ?>
+                    <li>
+                        <a href="articles.php">
+                            <i class="fa-solid fa-pen"></i>
+                            <span class="text">Articles</span>
+                        </a>
+                    </li>
+                <?php } ?>
+
+                   
+
+
+                 <!-- menu item -->
+                 <?php if($curPageName=="posts.php"){?>
+                    <li class="__active">
+                        <a href="posts.php">
+                            <i class="fa-solid fa-gauge-high"></i>
+                            <span class="text">Posts</span>
+                        </a>
+                    </li>
+                <?php }else{ ?>
+                    <li>
+                        <a href="posts.php">
+                            <i class="fa-solid fa-gauge-high"></i>
+                            <span class="text">Posts</span>
+                        </a>
+                    </li>
+                <?php } ?>
+
+                   
+
+
+                 <!-- menu item -->
+                 <?php if($curPageName=="draft-posts.php"){?>
+                    <li class="__active">
+                        <a href="draft-posts.php">
+                            <i class="fa-solid fa-align-left"></i>
+                            <span class="text">Drafts</span>
+                        </a>
+                    </li>
+                <?php }else{ ?>
+                    <li>
+                        <a href="draft-posts.php">
+                            <i class="fa-solid fa-align-left"></i>
+                            <span class="text">Drafts</span>
+                        </a>
+                    </li>
+                <?php } ?>
+
+                   
+
+
+                 <!-- menu item -->
+                 <?php if($curPageName=="published-posts.php"){?>
+                    <li class="__active">
+                        <a href="published-posts.php">
+                            <i class="fa-solid fa-square-check"></i>
+                            <span class="text">Published</span>
+                        </a>
+                    </li>
+                <?php }else{ ?>
+                    <li>
+                        <a href="published-posts.php">
+                            <i class="fa-solid fa-square-check"></i>
+                            <span class="text">Published</span>
+                        </a>
+                    </li>
+                <?php } ?>
+
+                   
+
+
+                 <!-- menu item -->
+                 <?php if($curPageName=="categories.php"){?>
+                    <li class="__active">
+                        <a href="categories.php">
+                            <i class="fa-solid fa-tags"></i>
+                            <span class="text">Categories</span>
+                        </a>
+                    </li>
+                <?php }else{ ?>
+                    <li>
+                        <a href="categories.php">
+                            <i class="fa-solid fa-tags"></i>
+                            <span class="text">Categories</span>
+                        </a>
+                    </li>
+                <?php } ?>
+
+                   
+                <!-- menu item -->
+                <?php if($curPageName=="stats.php"){?>
+                    <li class="__active">
+                        <a href="stats.php">
+                            <i class="fa-solid fa-chart-column"></i>
+                            <span class="text">web stats</span>
+                        </a>
+                    </li>
+                <?php }else{ ?>
+                    <li>
+                        <a href="stats.php">
+                            <i class="fa-solid fa-chart-column"></i>
+                            <span class="text">web stats</span>
+                        </a>
+                    </li>
+                <?php } ?>
+
+
+
+                 <!-- menu item -->
+                 <?php if($curPageName=="theme.php"){?>
+                    <li class="__active">
+                        <a href="theme.php">
+                            <i class="fa-solid fa-palette"></i>
+                            <span class="text">web theme</span>
+                        </a>
+                    </li>
+                <?php }else{ ?>
+                    <li>
+                        <a href="theme.php">
+                            <i class="fa-solid fa-palette"></i>
+                            <span class="text">web theme</span>
+                        </a>
+                    </li>
+                <?php } ?>
+
+                <li>
+                    <a href="logout.php">
+                         <i class="fa-solid fa-power-off"></i>
+                        <span class="text">Logout</span></a>
+                </li>
+                    
+                </ul>
+            </div>
+
+        <!-- CONTENT -->
+        <div class="_bottom_right">
+            <div class="_greeting">Slam Admin !</div>
+            <div class="_breadcrumb">
+                Dashboard
+                <hr> <?php if(explode(".", $curPageName)[0]!="dashboard"){echo explode(".", $curPageName)[0]; }?>
+            </div>

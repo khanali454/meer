@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Followers & Following</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="static/css/Follower_following.css">
+
+</head>
+
+<body>
+    <div class="follower_following_info_page">
+        <div class="follower_following_info_container">
+
+            <div class="follower_top_sec">
+                <div class="back_follower_page">
+                    <a href="secondary-navbar-header.html"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z" />
+                        </svg></a>
+
+                </div>
+
+                <div class="name_profile">
+                    <span> Yameen khan</span>
+                </div>
+                <div class="follower_following_back_submit_btn">
+
+                    <input id="closing_width" type="text" name="" placeholder="Search" id="">
+                    <div class="open_serach_tab">
+                        <i class="fas fa-search"></i>
+                    </div>
+
+
+                    <div class="close_serach_tab">
+                        <i class="fas fa-times"></i>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+
+
+            <div class="Follow_tab_container">
+                <!-- tabs  -->
+                <div class="Follow_container_tabs">
+
+                    <a href="#followers_page" class="follower_Tab_link following_active">Followers</a>
+
+                    <a href="#following_page" style="margin-left: 10px;" class="follower_Tab_link">Following</a>
+
+                </div>
+                <div class="follower_following_info_break"></div>
+                <!-- content of tabs -->
+
+                <div class="tabs_content_followers">
+
+
+                    <div id="followers_page" class="following_tab_data following_active">
+                        <div class="all_followers_profile_cont_m_blocs">
+
+                            <!-- follower block start -->
+                            <div class="follower_profile__bloc">
+                                <div class="follower_profile__img">
+                                    <img src="static/images/profile2.jpg" alt="">
+                                </div>
+                                <div class="follower_profile__bloc_name">
+
+                                    <p><a href="#">AQeel Khan</a></p>
+
+
+                                </div>
+                            </div>
+
+                            <!-- follower block end -->
+
+                            <!-- follower block start -->
+                            <div class="follower_profile__bloc">
+                                <div class="follower_profile__img">
+                                    <img src="static/images/profile2.jpg" alt="">
+                                </div>
+                                <div class="follower_profile__bloc_name">
+
+                                    <p><a href="#">Baloch</a></p>
+
+
+                                </div>
+                            </div>
+
+                            <!-- follower block end -->
+
+                            <!-- follower block start -->
+                            <div class="follower_profile__bloc">
+                                <div class="follower_profile__img">
+                                    <img src="static/images/profile2.jpg" alt="">
+                                </div>
+                                <div class="follower_profile__bloc_name">
+
+                                    <p><a href="#">Dr. Israr Ahmad</a></p>
+
+
+                                </div>
+                            </div>
+
+                            <!-- follower block end -->
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!--following page sec -->
+                    <div id="following_page" class="following_tab_data ">
+    <!-- follower block start -->
+    <div class="follower_profile__bloc">
+        <div class="follower_profile__img">
+            <img src="static/images/comingsoon.webp" alt="">
+        </div>
+        <div class="follower_profile__bloc_name">
+
+            <p><a href="#">Basit Khan</a></p>
+
+
+        </div>
+    </div>
+
+    <!-- follower block end -->
+
+    <!-- follower block start -->
+    <div class="follower_profile__bloc">
+        <div class="follower_profile__img">
+            <img src="static/images/profile1.png" alt="">
+        </div>
+        <div class="follower_profile__bloc_name">
+
+            <p><a href="#">Sir. Baloch</a></p>
+
+
+        </div>
+    </div>
+
+    <!-- follower block end -->
+
+    <!-- follower block start -->
+    <div class="follower_profile__bloc">
+        <div class="follower_profile__img">
+            <img src="static/images/profile1.jpg" alt="">
+        </div>
+        <div class="follower_profile__bloc_name">
+
+            <p><a href="#">Dr.Raja Azam</a></p>
+
+
+        </div>
+    </div>
+
+    <!-- follower block end -->
+
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="static/js/Js.js"></script>
+    <script>
+        const $FolowerLinks = $('.follower_Tab_link');
+        const $FollowerPanes = $('.following_tab_data');
+
+        $FolowerLinks.on('click', function (event) {
+            event.preventDefault(); // prevent default link behavior
+
+            // remove active class from all links and panes
+            $FolowerLinks.removeClass('following_active');
+            $FollowerPanes.removeClass('following_active');
+
+            // add active class to clicked link and corresponding pane
+            $(this).addClass('following_active');
+            $($(this).attr('href')).addClass('following_active');
+        });
+    </script>
+    <script>
+
+        const openSerachtab = document.querySelector(".open_serach_tab");
+        const closeSerachtab = document.querySelector(".close_serach_tab");
+        const followerFollowingbacksubmitbtn = document.querySelector(".follower_top_sec .follower_following_back_submit_btn");
+        const openSerachtabInput = document.querySelector("input");
+        const backFollowerpage = document.querySelector(".back_follower_page");
+        const nameProfile = document.querySelector(".name_profile");
+        openSerachtab.onclick = () => {
+            nameProfile.classList.add("active");
+            followerFollowingbacksubmitbtn.classList.add("active");
+            openSerachtabInput.classList.add("active");
+            closeSerachtab.classList.add("active");
+            backFollowerpage.classList.add("active");
+
+
+        }
+        closeSerachtab.onclick = () => {
+            followerFollowingbacksubmitbtn.classList.remove("active");
+            openSerachtabInput.classList.remove("active");
+            closeSerachtab.classList.remove("active");
+            backFollowerpage.classList.remove("active");
+            nameProfile.classList.remove("active");
+
+            // document.getElemetaById("closing_width").style.width="40px";
+
+        }
+    </script>
+
+
+</body>
+
+</html>

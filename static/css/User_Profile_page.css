@@ -1,0 +1,426 @@
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: #66FCF1;
+    --orange: hsl(34, 97%, 64%);
+    --blue: #47A4FA;
+    --black:#1E1E1E;
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: #FFFFFF;
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--veryLightGray);
+    background-color: #1E1E1E;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+._posts_container{
+   background-color: #1E1E1E;
+}
+.user_profile_container{
+    float: right;
+    width: calc(100% - 300px);
+    /* overflow: hidden; */
+    /* height: calc(100vh - 65px); */
+    margin-top: 65px;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+}
+.user_profile_main_sec{
+    width: 96%;
+    display: flex;
+
+}
+.user_profile_content{
+    width: 92%;
+    
+}
+.user_profile_content h3{
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+
+.user_profile_back_pic{
+    width: 100%;
+    height: 270px;
+    position: relative;
+    
+
+}
+.user_profile_back_pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+.icon_upload_back_pic{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+.icon_upload_back_pic label{
+    border: 1px solid rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.icon_upload_back_pic svg{
+    width: 30px;
+    fill: #000000;
+    cursor: pointer;
+}
+.icon_upload_back_pic input{
+    display: none;
+}
+.user_profile_pic{
+    transform: translateY(40px);
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+.user_profile_pic img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.icon_upload_profile_pic{
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+
+}
+.icon_upload_profile_pic label{
+    border: 1px solid rgb(255, 255, 255);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+}
+.icon_upload_profile_pic svg{
+    width: 20px;
+    fill: #000000;
+    cursor: pointer;
+    
+}
+.icon_upload_profile_pic input{
+    display: none;
+}
+.user_profile_name_username{
+    
+    margin-top: 40px;
+
+}
+.user_profile_name_username h3{
+    color: #ffffffc2;
+    line-height: 10px;
+
+}
+.user_profile_name_username h5{
+    color: #ffffff6c;
+    font-size: 12px;
+    font-weight: 300;
+
+}
+
+.add_post_edit_details_btn{
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+}
+.add_post_btn button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 45px;
+    cursor: pointer;
+    background-color: #66fcf1;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.add_post_btn svg{
+    width: 30px;
+    height: 30px;
+    margin-right:10px ;
+}
+.Edit_details_btn button{
+    padding: 12px 11px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #ffffffb4;
+
+
+}
+.break_line{
+    width: 100%;
+    border: 2px solid #66FCF1;
+    
+}
+.Edit_details_btn{
+    margin: 0px 10px;
+}
+.user_profile_post_about{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+
+}
+.user_profile_btn{
+    width: 100%;
+}
+.user_profile_btn label{
+    cursor: pointer;
+    color: #ffffffb1;
+    padding: 8px  14px;
+    border-radius: 25px;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+.user_btn_active{
+    background-color: #47a3fa4e;
+    color: #64b4ff;
+
+}
+.user_profile_post_about input[type=radio]{
+    display: none;
+}
+.user_profile_post_about input[type=radio]:checked + div{
+    
+    display: block;
+
+}
+
+.user_profile_posts{
+   display: none;
+   width: 100%;
+   padding: 10px 0px;
+
+}
+.user_profile_about{
+    display: none;
+    width: 100%;
+    padding: 10px 0px;
+   
+
+}
+
+.contact_info_btn_heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 10px;
+    font-size: 16px;
+    color: #ffffffcf;
+    font-weight: bold;
+}
+.user_info_icon_number,
+    .user_info_icon_mail{
+    display: flex;
+    align-items: center;
+}
+.user_info_icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff1f;
+    margin: 10px 0px;
+    margin-right: 5px;
+}
+.user_info_icon img{
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+}
+.user_info_icon svg{
+    width: 20px;
+    fill: #66FCF1;
+}
+.contact_info_btn_heading a{
+    color: #47A4FA;
+    text-decoration: none;
+    font-weight: 400;
+
+}
+.user_info_phone_mail{
+    margin: 10px;
+}
+.user_info_content_mobile,
+.user_info_icon_mail{
+    color: #ffffff38;
+    font-weight: 200;
+    font-size: 11px;
+    
+}
+.user_info_content_mobile a,
+.user_info_icon_mail a{
+    color: #ffffffb5;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: none;
+    text-decoration: none;
+  
+}
+.break_line_user_unfo{
+    border-top: 0.1px solid #ffffff08;
+    margin: 10px 0px;
+}
+.break_line_user_unfo2{
+    border-top: 0.1px solid #ffffff08;
+    margin: 10px 45px;
+    width: 88%;
+}
+::-webkit-scrollbar{
+    width:5px;
+    color: #66FCF1;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: gray;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #66fcf1;
+}
+@media only screen and (max-width:999px) {
+.user_profile_container{
+    float: right;
+    width: 96%;
+    /* overflow: hidden; */
+    /* height: calc(100vh - 65px); */
+    margin-top: 65px;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+}
+}
+@media only screen and (max-width:501px) {
+    .Edit_details_btn button{
+        padding: 8px 11px;
+        font-size: 13px;
+
+    }
+    .add_post_btn button{
+        font-size: 14px;
+        width: 130px;
+        height: 35px;
+
+    }
+    .add_post_btn svg{
+        width: 20px;
+        height: 20px;
+    
+    }
+    .user_profile_pic{
+        transform: translateY(20px);
+        position: relative;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+    
+    }
+    .user_profile_pic img{
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+    }
+    .user_profile_back_pic{
+        width: 100%;
+        height: 220px;
+        position: relative;
+        
+    
+    }
+    .user_profile_back_pic img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    
+    }
+
+    .icon_upload_profile_pic{
+        position: absolute;
+        right: 10px;
+        bottom: 0px;
+    
+    }
+    .icon_upload_back_pic label{
+        border: 1px solid rgb(255, 255, 255);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .icon_upload_back_pic svg{
+        width: 20px;
+        fill: #000000;
+        cursor: pointer;
+    }
+    .icon_upload_profile_pic label{
+        border: 1px solid rgb(255, 255, 255);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+    }
+    .icon_upload_profile_pic svg{
+        width: 12px;
+        fill: #000000;
+        cursor: pointer;
+        
+    }
+    .icon_upload_profile_pic input{
+        display: none;
+    }
+}

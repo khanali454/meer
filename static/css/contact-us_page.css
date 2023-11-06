@@ -1,0 +1,277 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url("included.css");
+
+.contact_us_page_container{
+    margin: 0;
+    padding: 0;
+    background: #404040;
+    margin-top: 110px;
+    
+}
+.contact_us_page_heading_img_bloak img{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute; */
+
+}
+.contact_us_submit_main_btn input{
+    padding: 8px 20px;
+    background: #47A4FA;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+}
+.contact_us_heading_line{
+    border: 2px solid #66fcf1;
+    width: 40px;
+    margin-right: 10px;
+}
+.contac_us_page_heading_and_line{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transform: translateY(-388px);
+    /* position: relative; */
+}
+.contact_us_heading h2{
+    color: #fff;
+}
+.contact_us_get_touch_sec{
+    padding-top: 5%;
+    background: linear-gradient(#090E1C, #000000);
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    width: 100%;
+    height: 414px;
+    flex-direction: column;
+    
+}
+.contact_us_heading_gettouch {
+    font-size: 22px;
+    color: #AACFF2;
+    font-weight: bold;
+}
+.contact_us_link_phone_social_msg_sec{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    flex-direction: row;
+    margin-top:5%;
+    
+    
+}
+.contact_us_ul_list{
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+
+}
+.contact_us_touch_phone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact_us_touch_phone h5{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    /* line-height: 30px; */
+    margin-bottom: 7px;
+
+}
+.contact_us_touch_phone a{
+    color: #47A4FA;
+    
+}
+.contact_us_touch_phone svg{
+    fill: #66fcf1;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.boder-lineuzair{
+    border: 1px solid #ffffff2a;
+    height: 200px;
+}
+.twitter-uzair svg{
+    width: 25px;
+    
+    
+
+}
+.twitter-uzair a{
+    margin-left: 10px;
+}
+.twitter-uzair{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    
+}
+
+/* form start  */
+.contact_form_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #404040;
+    
+}
+.contact_form_main_sec label{
+    color: #AACFF2;
+    font-size: 15px;
+}
+
+.contact_form_main_sec{
+    padding: 20px 0px;
+    width: 90%;
+}
+input[type=text]{
+   
+    padding: 8px 0px;
+    margin: 8px 1px;
+    display: inline-block;
+    box-sizing: border-box;
+    outline: 1px;
+    border-radius: 4px;
+    border: 1px solid #aacff257;
+    background: none;
+    color: #fff;
+
+}
+.contact_number_input_blocks input[type=submit]{
+    color: #fff;
+    padding:9.5px 10px ;
+    border-radius: 0px  4px 4px 0px;
+    border: none;
+    cursor: pointer;
+    width:120px;
+    background: linear-gradient(to right,#01524C,#EFA12B);
+}
+
+.contact_number_input_blocks{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+.contact_number_input_blocks input{
+    border: 1px solid #aacff257;
+    border-radius: 4px 0px 0px 4px;
+    width: 100%;
+}
+.contact_number_input_blocks input[type=tel]{
+    padding: 8px 10px;
+    border-radius: 4px;
+    outline: none;
+    margin-left: 1px;
+    border: 1px solid #aacff257;
+    background: none;
+    color: #fff;
+}
+.contact_selectcountry_blocks select{
+    padding: 8px 10px;
+    margin: 8px 1px;
+    display: inline-block;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 4px;
+    border-top: 1px solid #aacff257;
+    background: #404040;
+    color: #fff;
+ 
+    
+
+}
+.contact_selectcountry_blocks{
+    width: 100%;
+}
+.contac_block_names{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+ 
+
+}
+.contact_fullnames_blocks,.contact_selectcountry_blocks{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  
+}
+.contact_fullnames_blocks{
+    width: 100%;
+}
+.contac_block_email_no{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.contact_email_blocks,
+.contact_number_blocks{
+    width: 100%;
+}
+.contact_number_blocks,
+.contact_number_blocks{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.address_contact_block{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+@media(max-width:700px){
+    .contact_us_link_phone_social_msg_sec{
+        margin-top: 10%;
+    }
+    .contact_us_get_touch_sec{
+        padding-top: 10%;
+    }
+
+}
+@media(max-width:550px){
+    .contact_us_touch_phone h5{
+        font-size: 14px;
+    }
+    .contact_us_touch_phone a{
+        font-size: 12px;
+    }
+    .twitter-uzair a{
+        font-size: 12px;
+        font-weight: bold;
+
+    }
+    .twitter-uzair{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+    .twitter-uzair svg{
+        width: 20px;
+    }
+
+}

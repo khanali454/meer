@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Trends # Tags</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  
+    <link rel="stylesheet" href="static/css/edit_basic_info.css">
+</head>
+<body>
+    <div class="edit_basic_info_page">
+        <div class="edit_basic_info_container">
+            <div class="edit_basic_back_submit_btn">
+                <a href="Feeds_page.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z"/></svg></a>
+
+                 <p>Top Trends</p>
+
+            </div>
+              <div class="edit_basic_info_break"></div>
+
+              <div class="wrapper">
+                <div class="search-input">
+                  <a href="" target="_blank" hidden></a>
+                  <input type="text" placeholder="Top Trends search..">
+                  <div class="autocom-box">
+                    <!-- here list are inserted from javascript -->
+                  </div>
+                  <div class="icon"><i class="fas fa-search"></i></div>
+                </div>
+              </div>
+              <div class="autocom-box">
+                <!-- here list are inserted from javascript -->
+              <h4>#Pakistan</h4>
+              <h4>#Imrankhan</h4>
+              <h4>#pdm</h4>
+              <h4>#India</h4>
+              </div>
+          
+
+        </div>
+    </div>
+    <script src="static/js/suggestions.js"></script> 
+               <script src="static/js/Js.js"></script> 
+    <script>
+        // getting all required elements
+const searchWrapper = $(".search-input");
+const inputBox = searchWrapper.find("input");
+const suggBox = searchWrapper.find(".autocom-box");
+const icon = searchWrapper.find(".icon");
+let linkTag = searchWrapper.find("a");
+let webLink;
+
+// if user press any key and release
+inputBox.on("keyup", function(e) {
+  let userData = e.target.value; //user enetered data
+  let emptyArray = [];
+
+  if (userData) {
+    icon.on("click", function() {
+      webLink = `https://www.google.com/search?q=${userData}`;
+      linkTag.attr("href", webLink);
+      linkTag.click();
+    });
+
+    emptyArray = suggestions.filter(function(data) {
+      //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
+      return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+    });
+
+    emptyArray = emptyArray.map(function(data) {
+      // passing return data inside li tag
+      return data = `<li>${data}</li>`;
+    });
+
+    searchWrapper.addClass("active"); //show autocomplete box
+    showSuggestions(emptyArray);
+
+    let allList = suggBox.find("li");
+
+    allList.each(function() {
+      $(this).on("click", function() {
+        select(this);
+      });
+    });
+  } else {
+    searchWrapper.removeClass("active"); //hide autocomplete box
+  }
+});
+
+function select(element) {
+  let selectData = $(element).text();
+  inputBox.val(selectData);
+
+  icon.on("click", function() {
+    webLink = `https://www.google.com/search?q=${selectData}`;
+    linkTag.attr("href", webLink);
+    linkTag.click();
+  });
+
+  searchWrapper.removeClass("active");
+}
+
+function showSuggestions(list) {
+  let listData;
+
+  if (!list.length) {
+    userValue = inputBox.val();
+    listData = `<li>${userValue}</li>`;
+  } else {
+    listData = list.join("");
+  }
+
+  suggBox.html(listData);
+}
+
+    </script>
+</body>
+</html>

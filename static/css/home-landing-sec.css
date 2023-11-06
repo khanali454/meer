@@ -1,0 +1,264 @@
+
+
+
+
+
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: #66FCF1;
+    --orange: hsl(34, 97%, 64%);
+    --blue: #0B101E;
+    --black:#1E1E1E;
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: #FFFFFF;
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.landing-page-container{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-bottom: 30px;
+    height: 100vh;
+ 
+    
+}
+.landing-page-main-sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+  
+
+}
+.landing-page-img{
+    display: flex;
+    align-items:center;
+    justify-content: right;
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    max-height: 400px;
+  
+  
+   
+   
+}
+.landing-page-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+h3{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+h1{
+    font-size: 48px;
+    font-weight: bolder;
+    margin: 20px 0px;
+}
+.landing-page-sec-one{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: fit-content;
+    width: 90%;
+    text-align:center;
+    margin: 20px 0px;
+}
+.landing-page-sec-one h3,h1{
+    color: var(--veryLightGray);
+}
+.landing-page-sec-one button{
+    font-size: 20px;
+    margin: 20px 0px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    border: 2px solid #66FCF1;
+    background-color: #66FCF1;
+    color: #1E1E1E;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+
+
+/* Home page  services card design Start*/
+
+.landing-sec-card-one{
+    width: 224px;
+    background-color: #1E1E1E;
+    margin: 10px;
+    padding: 20px;
+}
+.landing-sec-card-one:hover {
+    border:2px solid #66FCF1;
+
+
+}
+.landing-sec-card-one svg{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+.landing-sec-card-one h2{
+    color: var(--veryLightGray);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 7px 0px;
+}
+
+.landing-sec-card-one p{
+    color: var(--veryLightGray);
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 400;
+
+}
+
+.landing-page-sec-two{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:50px;
+  
+    
+}
+
+
+
+/* Home page  services card Mobile design Start*/
+
+@media only screen and (max-width:824px) {
+
+    .landing-sec-card-one{
+        width: 224px;
+        margin: 4px;
+        padding: 10px;
+    }
+    .landing-page-container{
+        flex-direction: column-reverse;
+        justify-content: center;
+        height: fit-content;
+    }
+}
+
+@media only screen and (max-width:651px) {
+    .landing-page-sec-two{
+    display: none;
+      
+    }
+    .landing-sec-card-one{
+        width: 224px;
+        margin: 2px;
+        padding: 5px;
+    }
+    .landing-sec-card-one svg{
+        width: 22px;
+        height: 22px;
+    }
+    .landing-page-sec-one h1{
+        line-height: 50px;
+        font-size: 44px;
+    }
+    .landing-page-img{
+        display: flex;
+        align-items:center;
+        justify-content: right;
+        max-width: 260px;
+        max-height: 350px;
+ 
+      
+       
+       
+    }
+    .landing-page-img img{
+        height:100% ;
+        width: 100%;
+        object-fit: fill;
+        
+    }
+  
+}
+
+
+/* Home page  services card design end*/
+
+@media only screen and (max-width:930px) {
+
+
+
+    .landing-page-main-sec{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+       
+    }
+    
+    h3{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    /* h1{
+        font-size: 40px;
+        font-weight: bolder;
+    } */
+    .landing-page-sec-one button{
+        margin: 20px 0px;
+        font-size: 16px;
+    }
+    
+}
+
+@media only screen and (max-width:420px) {
+
+    
+  
+    h3{
+        font-size: 10px;
+        font-weight: bold;
+    }
+    h1{
+        font-size: 18px;
+        width: 60%;
+        font-weight: bolder;
+    }
+ 
+    .landing-page-sec-one button{
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    .landing-sec-card-one svg{
+        width: 16px;
+        height: 16px;
+    }
+    
+
+}
+@media only screen and (max-width:360px) {
+
+
+}

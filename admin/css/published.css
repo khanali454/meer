@@ -1,0 +1,11 @@
+._bottom_right .published_websites_stats_container{
+    padding: 5px 0px;
+    display: flex;
+    justify-content: flex-start;
+    
+
+}
+.published_space_card{
+    margin-right: 10px;
+    color: #fff;
+}

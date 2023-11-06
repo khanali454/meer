@@ -1,0 +1,204 @@
+/* font family */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url("included.css");
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: #66FCF1;
+    --orange: hsl(34, 97%, 64%);
+    --blue: #0B101E;
+    --black:#1E1E1E;
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: #FFFFFF;
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #1E1E1E;
+}
+.Create_post_page{
+    width: 100%;
+    position: absolute;
+    top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.create_post_container{
+    width: 85%;
+}
+
+.Create_heading_btn_block{
+    width: 100%;
+  
+    
+}
+.create_post_border_line{
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    border: 1.5px solid #ffffff2d;
+
+}
+.back_btn_heading_post{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    text-align: center;
+    
+}
+.back_btn_heading_post h2{
+    margin-left: 20px;
+    color: #dbdbdb;
+    font-size: 26px;
+    font-weight: bold;
+}
+.back_btn_heading_post svg{
+    fill: #FFFFFF;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    
+
+}
+.img_file_place_block {
+    width: 100%;
+    height: 250px;
+}
+.img_file_place_block img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.back_btn_create_post{
+    width: 100%;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.publish_btn_post button{
+    padding: 8px 14px;
+    background-color: #6FBAFF;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.Create_Post_Profile{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.Create_post_profile_detail{
+    margin-left: 10px;
+}
+.Create_post_profile_detail h4{
+    font-size: 18px;
+    font-weight: bold;
+    color: #dbdbdb;
+    line-height: 20px;
+
+}
+.Create_post_profile_detail h6{
+    color: #ffffff2d;
+    font-size: 14px;
+    font-weight: 300;
+}
+.Create_Post_Profile img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #66FCF1;
+
+}
+.Create_post_title_block{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 30px; 
+    
+}
+.Create_post_title_block input{
+    font-style: none;
+    border: none;
+    background: none;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    color: #dbdbdb;
+
+
+}
+
+.Create_post_para_block{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px; 
+    font-size: 14px;
+    font-weight: 300;
+}
+.Create_post_para_block input{
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 14px;
+    color: #dbdbdb;
+}
+.Create_post_uploading_sec{
+    width: 85%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 2%;
+    
+}
+.Create_post_uploading_block input{
+    display: none;
+
+}
+.Create_post_uploading_block label{
+    cursor: pointer;
+}
+.Create_post_uploading_block{
+    align-items: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.Create_post_uploading_block svg{
+    fill: #dbdbdb;
+    width: 25px;
+    height: 25px;
+}
+.create_post_border_line2{
+    width: 100%;
+    position: absolute;
+    bottom: 55px;
+    border: 1.5px solid #ffffff2d;
+
+}
+@media (max-width:600px){
+
+.back_btn_heading_post h2{
+    margin-left: 20px;
+    color: #dbdbdb;
+    font-size: 18px;
+    font-weight:400;
+}
+.publish_btn_post button{
+    padding: 4px 10px;
+    font-weight: 500;
+}
+}

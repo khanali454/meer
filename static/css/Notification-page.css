@@ -1,0 +1,114 @@
+/* font family */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url("included.css");
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: #66FCF1;
+    --orange: hsl(34, 97%, 64%);
+    --blue: #0B101E;
+    --black:#1E1E1E;
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: #FFFFFF;
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #1E1E1E;
+}
+.notification-heading-line{
+    border: 2px solid #66FCF1;
+    width: 59px;
+}
+.notification-heading-sec{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.notification-heading-sec h3{
+    color: #FFFFFF;
+    margin-left: 10px;
+    font-size: 26px;
+    font-weight: bold;
+
+    
+}
+.notification-page-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.notification-page-main-sec{
+    width: 100%;
+
+}
+
+/* 
+Notification page card css start  */
+.notification-page-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5%;
+
+  
+}
+.notification-page-card-img-name-main-sec{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 80%;
+    background-color: #404040;
+    padding: 10px;
+    margin-left: 15px;
+    border-radius: 5px;
+ 
+}
+.notification-card-profile-img-sec img{
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+
+}
+.notification-card-name-content-date-sec{
+    margin-left: 10px; 
+}
+.notification-card-name-content-date-sec p{
+    font-size: 14px;
+    font-weight: 300;
+    color: #cdcdcd;
+  
+ 
+}
+.notification-card-name-content-date-sec h5{
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 15px;
+ 
+ 
+}
+.notification-card-name-content-date-sec h6{
+    color: #cdcdcd4f;
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 8px;
+
+}
+
+/* responsive style start */
+@media only screen and (max-width:451px) {
+    .notification-page-card-img-name-main-sec{
+        width: 100%;
+        margin: 0;
+
+    }
+
+}

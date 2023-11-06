@@ -1,0 +1,83 @@
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: #66FCF1;
+    --orange: hsl(34, 97%, 64%);
+    --blue: #47A4FA;
+    --black:#1E1E1E;
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: #FFFFFF;
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--veryLightGray);
+    background-color: #1E1E1E;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+.edit_password_page{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: #1e1e1e;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.edit_passsword_container{
+    width: 90%;
+}
+.edit_password_back_submit_btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    margin: 10px 0px;
+    
+}
+.edit_password_back_submit_btn svg{
+    width: 25px;
+    fill: #ffffff;
+}
+.edit_password_back_submit_btn input{
+    background-color: #0872e4;
+    border: none;
+    outline: none;
+    padding: 7px 10px ;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.edit_password_break{
+    border: 1px solid #515050;
+}
+.account_adelete_btn_block{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #c8e3ff;
+    padding: 20px;
+    margin: 20px 0px;
+}
+.account_adelete_btn_block input{
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: 800;
+    color: red;
+    cursor: pointer;
+}
+.account_adelete_btn_block span{
+    font-size: 18px;
+}

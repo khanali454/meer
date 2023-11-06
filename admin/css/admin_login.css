@@ -1,0 +1,181 @@
+@import url("included.css");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ===== Colors ===== */
+  --body-color: #E4E9F7;
+  --sidebar-color: #FFF;
+  --primary-color-pink:#e40f68 ;
+  --primary-color-light: #F6F5FF;
+  --toggle-color: #DDD;
+  --text-color: #707070;
+  --black-color:#000;
+  --low-black-color:#202020fa;
+  --text-black-color:#141414fa;
+  --blue-light:#0c0c34;
+  --blue-white:#0080ff;
+  --low-pink:#e8f1ff;
+  --low-neela:#e0cdff;
+  --high-pink:#690041;
+  --high-yellow:#fdc160;
+  /* ====== Transition ====== */
+  --tran-03: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.3s ease;
+  --tran-05: all 0.3s ease;
+}
+.signup_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #eee;
+    height: 100vh;
+    
+
+}
+
+/* error message */
+.erro_msg{
+    display: none;
+    width: 90%;
+    max-width: 600px;
+    padding: 15px 10px;
+    background: rgb(255, 0, 0);
+    color: #fff;
+    font-size: 14px;
+    line-height: calc(14 * 1.2px);
+}
+
+
+
+.signup_container_tabs{
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ccc;
+    border: 3px inset #707070;
+    height: 45px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 3px outset #d9d9d9;
+
+}
+.signup_container_tabs a{
+    text-decoration: none;
+    color: #0c0c34;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.signup_Tab_link.sign_active{
+   background-color: #0c0c34;
+   color: #fff;
+   height: 100%;
+   transition: 0.8s;
+   border: 3px outset #d9d9d9;
+
+
+   
+}
+.signup_tab_data.sign_active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+
+}
+.tabs_content_sign{
+    width: 90%;
+    max-width: 600px;
+}
+.signup_tab_data{
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 10px;
+    padding: 30px 0px;
+    background: #fff;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
+
+}
+.signup_tab_data h1{
+    color: #00D3AD;
+    text-align: center;
+    line-height: 28px;
+    margin-bottom: 20px;
+    font-size: 30px;
+ 
+}
+.signup_tab_data input{
+    width: 90%;
+    margin: 10px 0px;
+    padding: 15px 15px;
+    outline: #0080ff;
+    font-size: 16px;
+    color: #0c0c34;
+    border: 3px outset #d9d9d9;
+    background-color: #ccc;
+}
+.signup_tab_data #admin_login{
+    width:90%;
+    padding: 15px 15px;
+    background-color: #0c0c34;
+    border: 3px outset #ffffffcc;
+    color: #fff;
+    font-size: 18px ;
+    font-weight: solid;
+    cursor: pointer;
+    margin-top: 15px;
+    
+}
+.or_line{
+    width: 93%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.or_line span{
+    border: 1px solid #cccccc5c;
+    width: 100%;
+    margin: 10px 10px;
+    
+}
+.with_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    border: 3px outset #d9d9d9;
+    padding: 15px;
+    margin: 5px;
+    
+
+}
+.with_link a{
+    list-style: none;
+    font-size: 16px;
+    text-decoration: none;
+}
+ #with_link{
+    display: flex;
+    align-items: center;
+ }
+
+@media (max-width:620px){
+    .tabs_content_sign{
+      
+        max-width:96%;
+    }
+    .signup_container_tabs{
+        max-width: 96%;
+    }
+}

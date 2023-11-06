@@ -1,0 +1,90 @@
+ /* font family */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+ /* variables */
+ :root{
+     --black-color:#000000;
+     --white-color:#ffffff;
+     --theme-color:rgb(102,252,241);
+     --font-family: 'Poppins', sans-serif;
+     --heading-size:24px;
+ }
+ *{
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+     font-family: var(--font-family);
+ }
+body{
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+.edit_contact_info_page{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: #1e1e1e;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.edit_contact_info_container{
+    width: 90%;
+}
+.edit_contact_back_submit_btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    margin: 10px 0px;
+    
+}
+.edit_contact_back_submit_btn svg{
+    width: 25px;
+    fill: #ffffff;
+}
+.edit_contact_back_submit_btn input{
+    background-color: #0872e4;
+    border: none;
+    outline: none;
+    padding: 7px 10px ;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.edit_contact_info_break{
+    border: 1px solid #515050;
+}
+.edit_contact_info_add_del{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10%;
+}
+.edit_contact_info_add_del label{
+    width: 100%;
+    color: #ffffffba;
+}
+.edit_contact_info_add_del input{
+    width: 98%;
+    height: 30px;
+    max-height: 40px;
+    border: none;
+    outline: #0872e4;
+    background: #51505058;
+    border-radius: 5px;
+    margin: 10px;
+    padding-left: 10px;
+    color: #ffffff;
+}
+@media (max-width:450px) {
+    .edit_contact_info_add_del{
+        margin-top: 10%;
+    }
+
+
+}

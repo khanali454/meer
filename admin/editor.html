@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Editor</title>
+    <link rel="stylesheet" href="css/editor.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #preview_container {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: #000;
+            color: #fff;
+            padding: 20px 10px;
+            display: none;
+        }
+
+        .inner-image{
+            max-width: 900px;
+            height: 300px;
+        }
+
+        .inner-image .cover{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="editor_banner">
+        <input type="file" accept="image/*" name="" id="banner_upload" hidden>
+        <label for="banner_upload" class="banner_upload_btn">
+            <i class="fa fa-upload" aria-hidden="true"></i>
+        </label>
+    </div>
+
+    <div class="editor_title">
+        <textarea name="" class="title_title" type="text" placeholder="Blog Title Here..."></textarea>
+        <textarea name="" class="para_writing" type="text" placeholder="Start writing Here..."></textarea>
+    </div>
+
+    <div class="blogs_btns_option">
+        <button class="btn dark publish_btn">Publish</button>
+        <input type="file" name="" accept="image/*" id="image_upload" hidden>
+        <label for="image_upload" class="btn grey upload_btn">Upload Image</label>
+    </div>
+
+    <!-- preview -->
+    <div id="preview_container">
+        <div id="preview"></div>
+    </div>
+
+    <script src="js/Js.js"></script>
+    <script>
+        $(".publish_btn").on("click", function () {
+            $("#preview_container").css("display", "flex");
+            var data = $(".para_writing").val();
+            data = data.split("\n").filter(item => item.length);
+
+            data.forEach(line => {
+                if (line[0] == "#") {
+                    let countH = 0;
+                    let i = 0;
+                    while (line[i] == "#") {
+                        countH++;
+                        i++;
+                    }
+                    let tag = `h${countH}`;
+
+                    $("#preview").html($("#preview").html() + `<${tag}>${line.slice(countH, line.length)}</${tag}>`);
+                } else if (line[0] == "!" && line[1] == "[") {
+                    let seperator;
+                    for (let i = 0; i <= line.length; i++) {
+
+                        if (line[i] == "]" && line[i + 1] == "(" && line[line.length - 1] == ")") {
+                            seperator = i;
+                        }
+
+                    }
+
+                    let alt = line.slice(2,seperator);
+                    let src = line.slice(seperator+2,line.length - 1);
+
+                    console.log(alt);
+                    console.log(src);
+
+                    // imgggg khosa
+
+                     $("#preview").html($("#preview").html() + `<div class="inner-image"><img src='${src}' alt='${alt}' class='cover'></div>`);
+
+                } else {
+                    $("#preview").html($("#preview").html() + `<p>${line}</p>`);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

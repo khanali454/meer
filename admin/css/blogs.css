@@ -1,0 +1,13 @@
+.blogs_stat_box_top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+}
+._stat_box .blogs_stat_box_top{
+    padding: 30px 10px;
+    background-color: #0085FF;
+
+
+}

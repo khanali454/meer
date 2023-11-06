@@ -1,0 +1,289 @@
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: #66FCF1;
+    --orange: hsl(34, 97%, 64%);
+    --blue: #0B101E;
+    --black:#1E1E1E;
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: #FFFFFF;
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--veryLightGray);
+}
+.article_by_mirethi{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+.article_by_mirethi h6{
+    font-size: 28px;
+    color: #eb2786;
+    margin: 0px 10px;
+    font-weight: bold;
+}
+.article_by_mirethi p{
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+}
+.article_by_mirethi span{
+    color: #eb2786;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0px 10px;
+}
+.article_by_mirethi img{
+    width: 240px;
+    height:65px ;
+
+    }
+.articlecard-sec-container{
+    background-color: var(--blue);
+    margin-top: 1px;
+    padding-top: 4%;
+    padding-bottom:40px ;
+ 
+}
+.articlecard-sec-container-one{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 20px 0px;
+    
+}
+.articlecard-sec-container-line{
+    border: 2px solid var(--cyan);
+    width: 50px;
+    margin-right: 20px;
+}
+.articlecard-sec-container-one h2{
+    color: #FFFFFF;
+    font-size: 28px;
+    font-weight: bold;
+
+}
+
+img {
+    width:100%;
+    height: 270px;
+    object-fit: cover;
+}
+.avator {
+    border-radius:50%;
+    width:55px;
+    height: 53px;
+    margin-right: 15px;
+    
+}
+.article_cards_main_section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tweet-wrap-container {
+    max-width:400px;
+    margin: 0 auto;
+    margin: 10px;
+    border-radius:15px;
+    padding: 10px;
+   
+
+ 
+}
+.date_artcile_card{
+    color:#657786;
+    font-weight:normal;
+    text-align: right;
+    
+
+}
+.date_artcile_card span{
+    font-size: 11px;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+
+
+
+}
+.tweet-header {
+    display: flex;
+    width: 100%;
+    font-size:14px;
+    font-family: 'Inter', sans-serif;
+    border-bottom: 1px solid #657786;
+
+}
+.tweet-header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+
+}
+.tweet-header-info span {
+    color:#657786;
+    font-weight:normal;
+    margin: 10px 0px;
+}
+.tweet-header-info p {
+    font-size: 12px;
+    font-weight:normal;
+    margin-top: 10px;
+    color: #ffffffb1;
+
+    
+}
+/* .tweet-img-wrap {
+     padding-left: 10px;
+}
+     */
+    
+
+.tweet-img-wrap img{
+    width: 100%;
+    height: fit-content;
+    border-radius: 3px;
+}
+
+/* .tweet-info-counts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+.tweet-info-counts div {
+    display: flex;
+    margin-right: 20px;
+    color: #657786;
+}
+.tweet-info-counts div svg {
+    color:#66fcf1;
+    margin-right: 10px;
+} */
+@media screen and (max-width:650px){
+    .article_cards_main_section{
+        flex-direction: column;
+    }
+    .article_by_mirethi h6{
+        font-size: 22px;
+        color: #eb2786;
+        margin: 0px 10px;
+        font-weight: bold;
+    }
+    .article_by_mirethi p{
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .article_by_mirethi span{
+        color: #eb2786;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0px 10px;
+    }
+    .article_by_mirethi img{
+        width: 205px;
+        height:55px;
+    
+        }
+        .articlecard-sec-container-one h2{
+            color: #FFFFFF;
+            font-size: 22px;
+            font-weight: bold;
+        
+        }
+
+
+}
+@media screen and (max-width:550px){
+    .article_cards_main_section{
+        flex-direction: column;
+    }
+    .article_by_mirethi h6{
+        font-size: 18px;
+        color: #eb2786;
+        margin: 0px 5px;
+        font-weight: bold;
+    }
+    .article_by_mirethi p{
+        color: #FFFFFF;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .article_by_mirethi span{
+        color: #eb2786;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0px 5px;
+    }
+    .article_by_mirethi img{
+        width: 135px;
+        height:36px;
+    
+        }
+        .articlecard-sec-container-one h2{
+            color: #FFFFFF;
+            font-size: 20px;
+            font-weight: bold;
+        
+        }
+        .articlecard-sec-container-line{
+            border: 2px solid var(--cyan);
+            width: 30px;
+            margin-right: 10px;
+        }
+        .article_by_mirethi{
+            margin-left: 10px;
+        }
+
+
+}
+@media screen and (max-width:430px){
+    /* body {
+        padding-left: 10px;
+        padding-right: 10px;
+    } */
+    .tweet-header {
+        flex-direction:row;
+    }
+    .tweet-header img {
+        margin-bottom: 10px;
+    }
+    .tweet-header-info p {
+        margin-bottom: 10px;
+    }
+    .tweet-img-wrap {
+        padding-left: 0;
+    }
+    .tweet-info-counts {
+        display: flex;
+        margin-left: 0;
+    }
+    .tweet-info-counts div {
+        margin-right: 10px;
+    }
+    .avator {
+        border-radius:50%;
+        width:44px;
+        height: 43px;
+        margin-right: 15px;
+        
+    }
+}

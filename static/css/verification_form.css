@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+    background-color: #1e1e1e;
+}
+.apply_verification_form_info_page{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    
+   
+}
+.apply_verification_form_info_container{
+    width: 85%;
+    margin: 5px 0px;
+}
+.apply_verification_form_back_submit_btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 15px 0px;
+    
+}
+.apply_verification_form_back_submit_btn span{
+    font-size: 20px;
+    color: #ffffffbd;
+    font-weight: 500;
+}
+.apply_verification_form_back_submit_btn svg{
+    width: 26px;
+    fill: #ffffff9e;
+}
+.apply_verification_form_info_break{
+    border: 1px solid #515050;
+    width: 100%;
+}
+
+.verified_form_card_container h2{
+    color: #ffffff9e;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 20px opx;
+
+
+}
+.veri_form_block label{
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff9e;
+    display: flex;
+    margin: 15px 0px 0px 0px;
+  
+}
+.verified_form_card_container{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 30px 10px;
+    text-align: center;
+    line-break: 10px;
+    line-height: 28px;
+    padding: 30px 0px;
+    background-color: #f2f2f217;
+    border-top:4px solid #66fcf1 ;
+}
+.veri_form_block{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 15px;
+    border-top: none;
+    height: fit-content;
+    border-radius: 5px;
+  
+}
+.verified_form_card_container h2{
+    color: #0077B6;
+}
+.veri_form_block h4{
+    color: #ffffff9e;
+    margin-top: 30px;
+}
+.veri_form_block input{
+    width: 100%;
+    padding: 12px 10px;
+    background: none;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 3px;
+}
+.veri_form_block textarea{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    outline-color: #0077B6;
+    padding: 10px;
+    accent-color: #0077B6;
+    margin: 10px 0px;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.veri_form_block option{
+    color: #ffffff9e;
+    background-color: #0077B6;
+}
+.veri_form_block select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: #51505093;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+    color: #ffff;
+    font-size: 17px;
+}
+.veri_form_block input[type=submit] {
+    width: 100%;
+    background-color: #0077B6;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+@media (max-width:500px){
+    .apply_verification_form_back_submit_btn span{
+        font-size: 17px;
+        color: #ffffffbd;
+        font-weight: 400;
+    }
+    .verified_form_card_container{
+        width: 100%;
+        
+    }
+
+}

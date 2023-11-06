@@ -1,0 +1,119 @@
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: #66FCF1;
+    --orange: hsl(34, 97%, 64%);
+    --blue: #0B101E;
+    --black:#1E1E1E;
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: #FFFFFF;
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--veryLightGray);
+}
+
+/* Home page  services card design Start*/
+.services-sec-container{
+    background-color: var(--blue);
+    margin-top: 1px;
+    padding-top: 4%;
+    padding-bottom:10px ;
+ 
+}
+.services-sec-container-one{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    
+}
+.serices-sec-card-one{
+
+    background-color: #1E1E1E;
+    border-bottom: 3px solid #66FCF1;
+     margin: 10px;
+     padding: 20px; 
+}
+.serices-sec-card-one:hover {
+    background-color: #66FCF1;
+    border-bottom: 3px solid var(--veryLightGray);
+
+}
+.serices-sec-card-one svg{
+    width: 30px;
+    height: 30px;
+}
+.serices-sec-card-one:hover path{
+    fill:var(--black);
+}
+
+.serices-sec-card-one:hover p{
+    color: var(--black);
+}
+.serices-sec-card-one:hover h2{
+    color: var(--black);
+}
+.serices-sec-card-one h2{
+    color: var(--veryLightGray);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.serices-sec-card-one p{
+    color: #afafaf;
+    font-size: 12px;
+    font-weight: 300;
+}
+.services-sec-container-two-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+.services-sec-container-two{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+
+}
+.services-sec-container-one h2{
+    color: var(--veryLightGray);
+    font-size: 24px;
+    font-weight: bolder;
+    
+}
+.services-sec-container-line{
+    border: 2px solid var(--cyan);
+    width: 50px;
+    margin-right: 20px;
+}
+
+/* Home page  services card Mobile design Start*/
+
+@media only screen and (max-width:824px) {
+    .serices-sec-card-one h2{
+        font-size: 16px;
+        font-weight: bolder;
+    }
+    
+}
+
+@media only screen and (max-width:651px) {
+    .services-sec-container-two{
+     flex-direction: column;
+     height: fit-content;
+    width: 94%;
+    }
+  
+}
+
+
+/* Home page  services card design end*/

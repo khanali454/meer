@@ -1,0 +1,112 @@
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: #66FCF1;
+    --orange: hsl(34, 97%, 64%);
+    --blue: #47A4FA;
+    --black:#1E1E1E;
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: #FFFFFF;
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--veryLightGray);
+    background-color: #1E1E1E;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+.edit_manage_page{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: #1e1e1e;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.edit_manage_container{
+    width: 90%;
+}
+.edit_manage_back_submit_btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    margin: 10px 0px;
+    color: #FFFFFF;
+    font-size: 17px;
+    font-weight: bold;
+    
+}
+.edit_manage_back_submit_btn svg{
+    width: 25px;
+    fill: #ffffff;
+}
+.edit_manage_back_submit_btn input{
+    background-color: #0872e4;
+    border: none;
+    outline: none;
+    padding: 7px 10px ;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.edit_manage_break{
+    border: 1px solid #515050;
+}
+.change_password_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 15px 0px;
+}
+.change_password_container input{
+    width: 100%;
+    padding: 10px;
+    margin:5px 0px;
+    border-radius: 7px;
+    border: 1px solid #515050;
+    outline-color: none;
+    background-color: #1e1e1e;
+    color: #FFFFFF;
+}
+.change_password_container input::placeholder{
+    color: #ffffffbe;
+    font-size: 14px;
+    font-weight: 300;
+}
+.change_password_container input[type="submit"]{
+    background-color: #0872e4;
+    border: none;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.change_password_container a{
+    color: #0872e4;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#Cancel_btn{
+    background-color: #515050a4;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+}

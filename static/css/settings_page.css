@@ -1,0 +1,138 @@
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: #66FCF1;
+    --orange: hsl(34, 97%, 64%);
+    --blue: #47A4FA;
+    --black:#1E1E1E;
+    --varyDarkBlue: hsl(234, 12%, 34%);
+    --grayishBlue: hsl(229, 6%, 66%);
+    --veryLightGray: #FFFFFF;
+    --weight1: 200;
+    --weight2: 400;
+    --weight3: 600;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--veryLightGray);
+    background-color: #1E1E1E;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+.setting_home_page{
+    float: right;
+    width: calc(100% - 300px);
+    overflow: hidden;
+    height: calc(100vh - 65px);
+    margin-top: 65px;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+ 
+    
+}
+.setting_container{
+    width: 94%;
+    margin-top: 2%;
+}
+
+.setting_heading_main_block{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.setting_heading_main_block h4{
+    color: #fff;
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.setting_icon_back{
+    cursor: pointer;
+    background-color: #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.setting_icon_back svg{
+    width: 25px;
+}
+.setting_line_heading{
+    border: 2px solid #66cfa1;
+    width: 50px;
+}
+.settings_card a{
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff1e;
+    margin: 4px 0px;
+    box-shadow: 0px 4px 4px 0px #ffffff16;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+.setting_card_icon svg{
+    width: 25px;
+    fill: #AACFF2;
+    margin: 0px 10px;
+}
+.setting_card_info{
+    margin: 5px 10px;
+}
+.setting_card_info span{
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10x 0px;
+}
+.setting_card_info p{
+    color: #ffffff86;
+    font-size: 14px;
+}
+@media (max-width:500px){
+    .setting_container{
+        width: 94%;
+        margin-top: 5%;
+    
+    
+    }
+    .setting_card_icon svg{
+        width: 20px;
+        fill: #AACFF2;
+        margin: 0px 5px;
+    }
+    .setting_card_info{
+        margin: 3px 6px;
+    }
+    .setting_card_info span{
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        margin: 10x 0px;
+    }
+    .setting_card_info p{
+        color: #ffffff86;
+        font-size: 12px;
+    }
+}
+@media (max-width:999px){
+.setting_home_page{
+    float: right;
+    /* width: calc(100% - 60px); */
+    width: 100%;
+}
+}
