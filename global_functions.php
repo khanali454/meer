@@ -15,6 +15,5 @@ function getAppConfiguration(){
     }
 }
 
-echo "<pre>";
-print_r(getAppConfiguration());
+
 ?>
