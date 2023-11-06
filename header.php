@@ -1,5 +1,21 @@
 <?php
 $logged_in_user_id = 1;
+include ("config.php");
+
+function getAppConfiguration(){
+    global $conn;
+    $sql = "SELECT * FROM `general_settings`";
+    $result = $conn->query($sql);
+    if($result->num_rows > 0){
+        return $result->fetch_assoc();
+    }else{
+        return 0;
+    }
+
+}
+
+print_r(getAppConfiguration());
+
 ?>
 
 <header class="_header">
