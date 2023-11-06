@@ -1,6 +1,6 @@
-<?php 
+<?php
 include "global_functions.php";
-$app = getAppConfiguration(); 
+$app = getAppConfiguration();
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ $app = getAppConfiguration();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $app['site_title']; ?></title>
-    <link rel="icon" type="image/png" href="static/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" href="static/favicon/<?= $app['site_favicon'] ?>">
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -56,18 +56,13 @@ $app = getAppConfiguration();
 
 <body>
 
-    <!-- ========== Main-container-starting ============= -->
+
 
     <main class="_main_container">
 
-        <!-- ========== Header-starting ============= -->
-
+        <!-- @include header -->
         <?php include "header.php"; ?>
 
-
-        <!-- ========== Header-ending ============= -->
-
-        <!-- ========== Main-container-ending ============= -->
 
         <!-- Landing section strat -->
         <div class="landing-page-container">
@@ -105,7 +100,7 @@ $app = getAppConfiguration();
 
             <div class="featured-home-post-card-main-sec">
                 <div class="featured-home-post-card-sec-one">
-                    <img src="static/images/app/<?=$app['mir_ehtesham_logo'] ?>" alt="logo">
+                    <img src="static/images/app/<?= $app['mir_ehtesham_logo'] ?>" alt="logo">
                     <p class="featured-date-sec">Jan 7,2023</p>
                     <h2>Featured Posts</h2>
 
@@ -136,7 +131,7 @@ $app = getAppConfiguration();
 
         <div class="homecard-sec-container">
             <div class="post_by_mirethi">
-                <img src="static/images/app/<?=$app['somiacis_logo'] ?>" alt="logo">
+                <img src="static/images/app/<?= $app['somiacis_logo'] ?>" alt="logo">
                 <!-- <h6>Posts</h6>
             <p>By</p>
             <span>Mirehti</span> -->
@@ -192,10 +187,7 @@ $app = getAppConfiguration();
                                     The life is too hard
                                 </div>
                                 <div class="_content">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quia
-                                    perferendis dicta! Quidem sint nulla, nesciunt soluta praesentium possimus eius
-                                    magni exercitationem! Eum, harum blanditiis perspiciatis accusantium nesciunt
-                                    eligendi ut!
+                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero pariatur at laboriosam voluptatibus tempore magni fugit voluptatum praesentium. Officia architecto dolores veniam. Quasi temporibus repellat perspiciatis itaque perferendis debitis voluptatibus alias error minima earum cupiditate saepe vitae veritatis tenetur dicta quam dolorum tempora, nam eius repellendus quos? Nemo maiores sequi nulla vel porro nisi debitis unde repudiandae sed enim aperiam omnis, voluptas ducimus error nostrum cum quae consequatur aliquid quaerat at tempora, est exercitationem aspernatur voluptatum! Omnis laudantium vel, blanditiis ducimus voluptate reiciendis alias iusto fugiat itaque quibusdam enim, velit reprehenderit! Dolorum, iste! Natus error voluptatem hic eos numquam voluptatibus saepe repudiandae assumenda illo eum minima officiis, veritatis iure, esse ex a! Similique repudiandae vitae adipisci maxime aspernatur nisi facere, atque minus explicabo sint culpa maiores magni ullam praesentium dolorum quasi aliquam voluptatum ipsam at sed, itaque non. Quae, voluptates voluptas harum voluptate repellat architecto perferendis earum ipsam illo et iure vel fugiat, placeat quasi! Explicabo, fugiat? Assumenda blanditiis cumque ex maxime distinctio ipsa harum modi nesciunt! Odit voluptatem suscipit eum quasi necessitatibus atque aspernatur accusamus quae vitae officia voluptates aut eius, rem fuga consequatur nisi quibusdam, porro esse commodi ducimus? Distinctio, veniam quos fugiat minima nobis aspernatur voluptatem corporis, facilis ut doloremque natus aliquam omnis modi molestias similique nulla numquam repellendus quisquam enim odio voluptates quibusdam! Omnis, provident quod! Voluptas, maxime quia laudantium, tempore obcaecati vitae est amet itaque tenetur, dolorem neque quidem voluptatum ratione totam sed pariatur atque deserunt voluptate at distinctio porro earum nihil quae. Odit alias cumque ipsam unde architecto consequatur quae accusantium officiis, quaerat consectetur sequi optio vero nihil et temporibus nostrum aperiam distinctio animi ullam delectus dolorem explicabo, neque praesentium? Voluptatum iure quis id expedita blanditiis nisi explicabo labore possimus laboriosam temporibus facere architecto dolores obcaecati ipsam adipisci quisquam minima velit suscipit facilis, odio quia sequi! Ab quo dolorum, excepturi nobis velit dolore vel, eius minima itaque ad laudantium numquam quibusdam consequuntur voluptas vero totam blanditiis ducimus expedita unde atque sit. Nam hic labore itaque aspernatur harum atque cumque, nobis tempora ducimus excepturi, non saepe asperiores quis iure voluptatum accusantium laboriosam amet perferendis nemo. Minus maiores officia, beatae dolorum corrupti fugit necessitatibus atque vel nulla veritatis, ipsam aperiam deserunt aliquam quod architecto consequuntur eum officiis? Deserunt, vero, saepe ab, esse numquam libero odit distinctio at sed totam optio iste dicta sint reiciendis neque ipsa. Quae recusandae, modi unde saepe quam iusto quidem quia adipisci?
                                 </div>
                             </div>
                             <hr>
@@ -580,7 +572,7 @@ $app = getAppConfiguration();
         </div>
         <!-- ========== Services-home-card-end ============= -->
 
-      <?php include "footer.php"; ?>
+        <?php include "footer.php"; ?>
 
     </main>
     <script>
