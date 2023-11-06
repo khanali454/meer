@@ -1,6 +1,9 @@
 <!-- db connection -->
-<?php include "admin/config.php"; ?>
-
+<?php
+include "admin/config.php";
+include "global_functions.php";
+$app = getAppConfiguration();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
