@@ -5,7 +5,7 @@ $logged_in_user_id = 1;
 <header class="_header">
     <div class="_header_container navbar">
         <div class="_logo">
-            <img src="static/images/mirehtisham-logo-zip-file/png/logo-no-background.png" alt="">
+            <img src="static/images/app/<?=$app['mir_ehtesham_logo'] ?>" alt="logo">
             <!-- MIReHTESHAM                     -->
         </div>
         <div class="_nav_menu">
