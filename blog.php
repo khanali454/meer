@@ -459,7 +459,7 @@
                                 $("#" + container).append(`
                           <div class="blog-view-comment-show">
                                                 <div class="blog-view-profile-pic-sec">
-                                                    <img loading="lazy" src="uploads/all-profiles/${val.user_profileimg}" alt="${val.user_username} profile">
+                                                    <img loading="lazy" src="${val.user_profileimg}" alt="${val.user_username} profile">
                                                 </div>
                                                 <div class="blog-view-comment-para-detail">
                                                     <h5>${val.user_fullname}</h5>
@@ -624,7 +624,7 @@
                                     <div class="blog-view-comment-show-sec">
                                         <div class="blog-view-comment-show">
                                             <div class="blog-view-profile-pic-sec">
-                                                <img loading="lazy" src="uploads/all-profiles/${val.user_profileimg}" alt="${val.user_username} profile">
+                                                <img loading="lazy" src="${val.user_profileimg}" alt="${val.user_username} profile">
                                             </div>
                                             <div class="blog-view-comment-para-detail">
                                                 <h5>${val.user_fullname}</h5>
