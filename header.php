@@ -1,5 +1,5 @@
 <?php
-$logged_in_user_id = 1;
+$logged_in_user_id = 6;
 ?>
 
 <header class="_header">

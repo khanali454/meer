@@ -428,7 +428,7 @@
                             }
                         },
                         error:function(xhr,error_str){
-                            console.log(xhr);
+                            console.log(xhr.statusText);
                         }
                     });
 
