@@ -226,7 +226,7 @@
                             <div class="blog-view-profile-date-section">
                             <div class="blog-view-only-profile-sec">
                                 <div class="__profile__pic">
-                                    <img loading="lazy" src="uploads/all-profiles/${respv.user_profileimg}" alt="">
+                                    <img loading="lazy" src="${respv.user_profileimg}" alt="">
                                 </div>
                                 <div class="user-detail">
                                     <h4>
