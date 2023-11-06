@@ -57,11 +57,11 @@ $logged_in_user_id = 1;
 
 
                 <li>
-                    <a href="about_us.html">About</a>
+                    <a href="about-us.php">About</a>
                 </li>
 
                 <li>
-                    <a href="contact_us_page.html">Contact</a>
+                    <a href="contact-us.php">Contact</a>
                 </li>
             </ul>
         </div>

@@ -8,8 +8,9 @@
                             <img src="static/images/app/<?=$app['mir_ehtesham_logo'] ?>" alt="">
                             <!-- MIReHTESHAM  -->
                         </div>
-                        <p class="text-justify"> <i>CODE WANTS TO BE SIMPLE </i> the code. focuses on providing the most
-                            efficient code or snippets as the code wants to be simple. .</p>
+                        <p class="text-justify">
+                            <?= $app['footer_about'] ?>
+                        </p>
                     </div>
 
                     <div class="col-2">
@@ -26,11 +27,11 @@
                     <div class="col-3">
                         <h6>Quick Links</h6>
                         <ul class="footer-links">
-                            <li><a href="http://scanfcode.com/about/">About Us</a></li>
-                            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+                            <li><a href="about-us.php">About Us</a></li>
+                            <li><a href="contact-us.php">Contact Us</a></li>
 
-                            <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-                            <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Sitemap</a></li>
                         </ul>
                     </div>
                     <div class="col-7">
