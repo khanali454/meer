@@ -161,7 +161,7 @@
                         if (resp.status == false) {
                             isEmpty = true;
                             if (startis == 0) {
-                                $("#blogs").html(`<h3 style="text-align:center;background: rgba(255,255,255,0.2);margin:20px 0;color:#fff;padding:10px; width:100%;">No blog is posted yet.</h3>`);
+                                $("#blogs").html(`<h3 style="text-align:center;background: rgba(255,255,255,0.2);margin:20px 0;color:#fff;padding:10px; width:100%;">${resp.msg}</h3>`);
                             } else {
                                 $("#blogs").append(`<div class="all_blogs_card_container">
                                 <div class="all_blogs_card_content_sec">
