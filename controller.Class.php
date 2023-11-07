@@ -46,7 +46,7 @@ if (isset($_GET['code'])) {
       $user_username = explode("@",$userinfo['user_email'])[0];
       $client_ip = getUserIpAddr();
 
-      $sql = "INSERT INTO users (user_email, user_gender, user_fullname, user_profileimg, email_verified, user_token,user_username,user_ipaddress) VALUES ('{$userinfo['user_email']}', '{$userinfo['gender']}', '{$userinfo['user_fullname']}', '{$userinfo['user_profileimg']}', '{$userinfo['verifiedEmail']}', '{$userinfo['token']}','{$user_username}','{$client_ip}')";
+      $sql = "INSERT INTO users (user_email, user_gender, user_fullname, user_profileimg, email_verified, user_token,user_username,user_ipaddress,user_role,user_creatdat) VALUES ('{$userinfo['user_email']}', '{$userinfo['gender']}', '{$userinfo['user_fullname']}', '{$userinfo['user_profileimg']}', '{$userinfo['verifiedEmail']}', '{$userinfo['token']}','{$user_username}','{$client_ip}','user',CURRENT_TIMESTAMP())";
       
       if ($result =  mysqli_query($conn, $sql)) {
         $token = $userinfo['token'];
