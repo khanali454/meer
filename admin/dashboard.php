@@ -37,7 +37,7 @@
                                 <i class="fa-solid fa-users-line"></i>
                             </div>
                             <div class="stat_box_top_right">
-                                <div class="_stat_count">100</div>
+                                <div class="_stat_count"><?= CountActiveUsers() ?></div>
                                 <div class="_stat_count_name">Users</div>
                             </div>
                         </div>

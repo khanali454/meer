@@ -7,6 +7,14 @@ if(!isset($_SESSION['admin_logged_in_id'])){
     header("Location:index.php");
 }
 
+
+function CountActiveUsers(){
+    global $conn;
+    if($result = mysqli_query($conn,"SELECT * FROM `users` WHERE `user_role` = 'user';")){
+        return mysqli_num_rows($result);
+    }
+}
+
 ?>
 
 
