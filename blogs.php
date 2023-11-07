@@ -89,7 +89,6 @@ include "include_in_all.php";
                         isReq = true;
                     },
                     success: function(resp) {
-                        console.log(resp);
                         isReq = false;
                         $("#loader").css("display", "none");
                         if (resp.status == false) {
@@ -148,7 +147,6 @@ include "include_in_all.php";
                         }
                     }
                 });
-                console.log("called");
             }
 
             loadBlogs(0);

@@ -322,6 +322,13 @@ include "include_in_all.php";
 
             // like blog button / add like
             $(document).on("click", "#likeBtn", function() {
+
+                if(<?= $logged_in_user_id ?> != ""){
+                    alert("not emp");
+                }else{
+                    alert("emp");
+                }
+
                 $("#likeBtn").toggleClass("active");
                 var blog = $(this).attr('data-blog');
                 var add_like_data = {
@@ -426,6 +433,9 @@ include "include_in_all.php";
                             } else {
                                 alert(resp.msg);
                             }
+                        },
+                        error:function(xhr,error_str){
+                            alert(xhr.statusText);
                         }
                     });
 
