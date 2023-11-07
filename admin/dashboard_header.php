@@ -332,16 +332,16 @@ function CountPublishedBlogs(){
 
 
                  <!-- menu item -->
-                 <?php if($curPageName=="published-posts.php"){?>
+                 <?php if($curPageName=="published.php"){?>
                     <li class="__active">
-                        <a href="published-posts.php">
+                        <a href="published.php">
                             <i class="fa-solid fa-square-check"></i>
                             <span class="text">Published</span>
                         </a>
                     </li>
                 <?php }else{ ?>
                     <li>
-                        <a href="published-posts.php">
+                        <a href="published.php">
                             <i class="fa-solid fa-square-check"></i>
                             <span class="text">Published</span>
                         </a>

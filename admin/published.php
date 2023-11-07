@@ -36,11 +36,11 @@
                                 <i class="fa-solid fa-file-pen"></i>
                             </div>
                             <div class="stat_box_top_right">
-                                <div class="_stat_count">110</div>
+                                <div class="_stat_count"><?= CountPublishedBlogs() ?></div>
                                 <div class="_stat_count_name">Total Blogs</div>
                             </div>
                         </div>
-                        <a href="">
+                        <a href="blogs.php">
                         <div class="_stat_box_bottom">
                             <div class="_stat_count_type_name">View</div>
                             <i class="fa-solid fa-circle-arrow-right"></i>
@@ -56,11 +56,11 @@
                                 <i class="fa-solid fa-file-pen"></i>
                             </div>
                             <div class="stat_box_top_right">
-                                <div class="_stat_count">110</div>
+                                <div class="_stat_count"><?= CountPublishedArticles() ?></div>
                                 <div class="_stat_count_name">Total Articles</div>
                             </div>
                         </div>
-                        <a href="">
+                        <a href="articles.php">
                         <div class="_stat_box_bottom">
                             <div class="_stat_count_type_name">View</div>
                             <i class="fa-solid fa-circle-arrow-right"></i>
