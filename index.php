@@ -1,6 +1,6 @@
 <?php
-include "global_functions.php";
-$app = getAppConfiguration();
+include "include_in_all.php";
+
 ?>
 
 <!DOCTYPE html>
