@@ -426,9 +426,6 @@ include "include_in_all.php";
                             } else {
                                 alert(resp.msg);
                             }
-                        },
-                        error:function(xhr,error_str){
-                            console.log(xhr.statusText);
                         }
                     });
 
