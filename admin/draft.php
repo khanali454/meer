@@ -56,7 +56,7 @@ if (isset($_GET['draft']) && in_array($_GET['draft'], ['posts', 'blogs', 'articl
                     <div class="_stat_count_name">Draft Blogs</div>
                 </div>
             </div>
-            <a href="blogs.php">
+            <a href="draft.php?draft=blogs">
                 <div class="_stat_box_bottom">
                     <div class="_stat_count_type_name">View</div>
                     <i class="fa-solid fa-circle-arrow-right"></i>
@@ -76,7 +76,7 @@ if (isset($_GET['draft']) && in_array($_GET['draft'], ['posts', 'blogs', 'articl
                     <div class="_stat_count_name">Draft Articles</div>
                 </div>
             </div>
-            <a href="articles.php">
+            <a href="draft.php?draft=articles">
                 <div class="_stat_box_bottom">
                     <div class="_stat_count_type_name">View</div>
                     <i class="fa-solid fa-circle-arrow-right"></i>
@@ -98,7 +98,7 @@ if (isset($_GET['draft']) && in_array($_GET['draft'], ['posts', 'blogs', 'articl
                     <div class="_stat_count_name">Draft Posts</div>
                 </div>
             </div>
-            <a href="">
+            <a href="draft.php?draft=posts">
                 <div class="_stat_box_bottom">
                     <div class="_stat_count_type_name">View</div>
                     <i class="fa-solid fa-circle-arrow-right"></i>
