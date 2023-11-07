@@ -42,10 +42,10 @@ if(isset($_SESSION['admin_logged_in_id'])){
                 <h1 style="color: #00D3AD; margin-bottom: 40px;">Admin Sign in</h1>
                 <input type="text" placeholder="Email" id="email">
                 <input type="password" placeholder="Password" id="password">
-                <p
+                <!-- <p
                     style="font-size: 16px; line-height: 23px; color: #ccc; width: 100%; max-width: 90%;margin-bottom: 10px;">
                     <a href="forgot_page.html" style="color: #56aaff;">Forgot Password?</a>
-                </p>
+                </p> -->
                 <button type="submit" id="admin_login">Sign in</button>
             </form>
 
