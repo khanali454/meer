@@ -43,6 +43,21 @@
                         </div>
                     </div>
                     <!-- stat box end -->
+
+                    <!--stat box -->
+                    <div class="_stat_box">
+                        <div class="_stat_box_top">
+                            <div class="stat_box_top_left">
+                                <i class="fa-solid fa-user-group"></i>
+                            </div>
+                            <div class="stat_box_top_right">
+                                <div class="_stat_count"><?=countVerifiedCreators() ?></div>
+                                <div class="_stat_count_name">Verified Creators</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- stat box end -->
+
                 </div>
 
                 <div class="_container_posts_ _profile_heading_ ">

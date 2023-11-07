@@ -30,7 +30,21 @@ function countSuspendedUsers(){
 
 function countVerifiedUsers(){
     global $conn;
+    if($result = mysqli_query($conn,"SELECT * FROM `users` WHERE `user_role` = 'user' AND  `user_class` = 'verified';")){
+        return mysqli_num_rows($result);
+    }
+}
+
+function countVerifiedActiveUsers(){
+    global $conn;
     if($result = mysqli_query($conn,"SELECT * FROM `users` WHERE `user_role` = 'user' AND  `status` = 'active' AND `user_class` = 'verified';")){
+        return mysqli_num_rows($result);
+    }
+}
+
+function countVerifiedSuspendedUsers(){
+    global $conn;
+    if($result = mysqli_query($conn,"SELECT * FROM `users` WHERE `user_role` = 'user' AND  `status` = 'suspended' AND `user_class` = 'verified';")){
         return mysqli_num_rows($result);
     }
 }
@@ -45,6 +59,35 @@ function CountAllCreators(){
 function CountActiveCreators(){
     global $conn;
     if($result = mysqli_query($conn,"SELECT * FROM `users` WHERE `user_role` = 'creator' AND  `status` = 'active';")){
+        return mysqli_num_rows($result);
+    }
+}
+
+
+function CountSuspendedCreators(){
+    global $conn;
+    if($result = mysqli_query($conn,"SELECT * FROM `users` WHERE `user_role` = 'creator' AND  `status` = 'suspended';")){
+        return mysqli_num_rows($result);
+    }
+}
+
+function countVerifiedCreators(){
+    global $conn;
+    if($result = mysqli_query($conn,"SELECT * FROM `users` WHERE `user_role` = 'creator' AND `user_class` = 'verified';")){
+        return mysqli_num_rows($result);
+    }
+}
+
+function countVerifiedActiveCreators(){
+    global $conn;
+    if($result = mysqli_query($conn,"SELECT * FROM `users` WHERE `user_role` = 'creator' AND  `status` = 'active' AND `user_class` = 'verified';")){
+        return mysqli_num_rows($result);
+    }
+}
+
+function countVerifiedSuspendedCreators(){
+    global $conn;
+    if($result = mysqli_query($conn,"SELECT * FROM `users` WHERE `user_role` = 'creator' AND  `status` = 'suspended' AND `user_class` = 'verified';")){
         return mysqli_num_rows($result);
     }
 }
