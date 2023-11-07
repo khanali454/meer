@@ -40,6 +40,7 @@ if (isset($_GET['code'])) {
       // user is exists
       $userinfo = mysqli_fetch_assoc($result);
       $token = $userinfo['user_token'];
+      $logged_id = $userinfo['user_id']; // logged in already so get id
     } else {
       // user is not exists
       $user_username = explode("@",$userinfo['user_email'])[0];
@@ -49,6 +50,7 @@ if (isset($_GET['code'])) {
       
       if ($result =  mysqli_query($conn, $sql)) {
         $token = $userinfo['token'];
+        $logged_id = mysqli_insert_id($conn);
       } else {
         echo "User is not created";
         die();
@@ -57,6 +59,7 @@ if (isset($_GET['code'])) {
   
     // save user data into session
     $_SESSION['user_token'] = $token;
+    $_SESSION['logged_id'] = $logged_id;
   } else {
     if (!isset($_SESSION['user_token'])) {
       header("Location: signup.php");
@@ -71,4 +74,3 @@ if (isset($_GET['code'])) {
       $userinfo = mysqli_fetch_assoc($result);
     }
   }
-?>

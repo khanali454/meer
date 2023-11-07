@@ -1,5 +1,6 @@
 <?php
-$logged_in_user_id = 6;
+session_start();
+$logged_in_user_id = $_SESSION['logged_id'];
 ?>
 
 <header class="_header">
