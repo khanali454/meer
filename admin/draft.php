@@ -2,13 +2,13 @@
 if (isset($_GET['draft']) && in_array($_GET['draft'], ['posts', 'blogs', 'articles'])) {
     $draft_type = $_GET['draft'];
     if ($draft_type == "posts") {
-        $draft_heading = "All Draft Posts";
+        $draft_heading = "Draft Posts";
         // $draft_array_data = load_draft_array_data($draft_type);
     } else if ($draft_type == "blogs") {
-        $draft_heading = "All Draft Blogs";
+        $draft_heading = "Draft Blogs";
         // $draft_array_data = load_draft_array_data($draft_type);
     } else if ($draft_type == "articles") {
-        $draft_heading = "All Draft Articles";
+        $draft_heading = "Draft Articles";
         // $draft_array_data = load_draft_array_data($draft_type);
     }
 } else {
