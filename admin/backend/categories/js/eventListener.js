@@ -1,7 +1,8 @@
 // show popup - add category
 $("#popup-content").slideUp();
 $("#_open_btn_pop").on("click", function () {
-  $("#heading-content").html(` Add Category
+  $("#add_category_btn").attr("value","save");
+  $("#heading-content").html(`Add Category
   <span class="close-icon" id="open-close">&times;</span>`);
   $("#c_name").val("");
   $("#c_desc").val("");
