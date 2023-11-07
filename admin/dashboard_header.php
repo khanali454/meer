@@ -117,14 +117,14 @@ function countAllCategories(){
 // published data
 function CountPublishedArticles(){
     global $conn;
-    if($result = mysqli_query($conn,"SELECT * FROM `articles` WHERE status='active';")){
+    if($result = mysqli_query($conn,"SELECT * FROM `articles` WHERE article_status='active';")){
         return mysqli_num_rows($result);
     }
 }
 
 function CountPublishedBlogs(){
     global $conn;
-    if($result = mysqli_query($conn,"SELECT * FROM `blogs` WHERE status='active';")){
+    if($result = mysqli_query($conn,"SELECT * FROM `blogs` WHERE blog_status='active';")){
         return mysqli_num_rows($result);
     }
 }

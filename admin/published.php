@@ -34,7 +34,7 @@
                     <i class="fa-solid fa-file-pen"></i>
                 </div>
                 <div class="stat_box_top_right">
-                    <div class="_stat_count"><?= 22 ?></div>
+                    <div class="_stat_count"><?= CountPublishedBlogs() ?></div>
                     <div class="_stat_count_name">Total Blogs</div>
                 </div>
             </div>
@@ -54,7 +54,7 @@
                     <i class="fa-solid fa-file-pen"></i>
                 </div>
                 <div class="stat_box_top_right">
-                    <div class="_stat_count"><?= 0 ?></div>
+                    <div class="_stat_count"><?= CountPublishedArticles() ?></div>
                     <div class="_stat_count_name">Total Articles</div>
                 </div>
             </div>
