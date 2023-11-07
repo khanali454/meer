@@ -30,7 +30,7 @@
 
 
                       <!--stat box -->
-                      <div class="_stat_box">
+                      <div class="_stat_box published_space_card">
                         <div class="_stat_box_top">
                             <div class="stat_box_top_left">
                                 <i class="fa-solid fa-file-pen"></i>
@@ -49,41 +49,47 @@
                     </div>
                     <!-- stat box end -->
 
-                    <!--stat box -->
-                    <div class="_stat_box published_space_card">
+                         <!--stat box -->
+                         <div class="_stat_box published_space_card">
                         <div class="_stat_box_top">
                             <div class="stat_box_top_left">
-                                <i class="fa-solid fa-pen"></i>
+                                <i class="fa-solid fa-file-pen"></i>
                             </div>
                             <div class="stat_box_top_right">
-                                <div class="_stat_count">100</div>
+                                <div class="_stat_count">110</div>
                                 <div class="_stat_count_name">Total Articles</div>
                             </div>
                         </div>
+                        <a href="">
                         <div class="_stat_box_bottom">
                             <div class="_stat_count_type_name">View</div>
                             <i class="fa-solid fa-circle-arrow-right"></i>
                         </div>
+                         </a>
                     </div>
                     <!-- stat box end -->
-
+                    
+                    
+                    
                     <!--stat box -->
                     <div class="_stat_box published_space_card">
-                        <div class="_stat_box_top">
-                            <div class="stat_box_top_left">
-                                <i class="fa-solid fa-gauge-high"></i>
-                            </div>
-                            <div class="stat_box_top_right">
-                                <div class="_stat_count">100</div>
-                                <div class="_stat_count_name">Total Posts</div>
-                            </div>
-                        </div>
-                        <div class="_stat_box_bottom">
-                            <div class="_stat_count_type_name">View</div>
-                            <i class="fa-solid fa-circle-arrow-right"></i>
-                        </div>
-                    </div>
-                    <!-- stat box end -->
+                   <div class="_stat_box_top">
+                       <div class="stat_box_top_left">
+                           <i class="fa-solid fa-file-pen"></i>
+                       </div>
+                       <div class="stat_box_top_right">
+                           <div class="_stat_count">110</div>
+                           <div class="_stat_count_name">Total Posts</div>
+                       </div>
+                   </div>
+                   <a href="">
+                   <div class="_stat_box_bottom">
+                       <div class="_stat_count_type_name">View</div>
+                       <i class="fa-solid fa-circle-arrow-right"></i>
+                   </div>
+                    </a>
+               </div>
+               <!-- stat box end -->
 
                 </div>
 
