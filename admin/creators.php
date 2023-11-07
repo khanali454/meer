@@ -37,7 +37,7 @@
                                 <i class="fa-solid fa-user-group"></i>
                             </div>
                             <div class="stat_box_top_right">
-                                <div class="_stat_count">07</div>
+                                <div class="_stat_count"><?=CountAllCreators() ?></div>
                                 <div class="_stat_count_name">Total Creators</div>
                             </div>
                         </div>

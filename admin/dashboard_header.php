@@ -7,13 +7,50 @@ if(!isset($_SESSION['admin_logged_in_id'])){
     header("Location:index.php");
 }
 
-
-function CountActiveUsers(){
+function CountAllUsers(){
     global $conn;
     if($result = mysqli_query($conn,"SELECT * FROM `users` WHERE `user_role` = 'user';")){
         return mysqli_num_rows($result);
     }
 }
+
+function CountActiveUsers(){
+    global $conn;
+    if($result = mysqli_query($conn,"SELECT * FROM `users` WHERE `user_role` = 'user' AND  `status` = 'active';")){
+        return mysqli_num_rows($result);
+    }
+}
+
+function countSuspendedUsers(){
+    global $conn;
+    if($result = mysqli_query($conn,"SELECT * FROM `users` WHERE `user_role` = 'user' AND  `status` = 'suspended';")){
+        return mysqli_num_rows($result);
+    }
+}
+
+function countVerifiedUsers(){
+    global $conn;
+    if($result = mysqli_query($conn,"SELECT * FROM `users` WHERE `user_role` = 'user' AND  `status` = 'active' AND `user_class` = 'verified';")){
+        return mysqli_num_rows($result);
+    }
+}
+
+function CountAllCreators(){
+    global $conn;
+    if($result = mysqli_query($conn,"SELECT * FROM `users` WHERE `user_role` = 'creator';")){
+        return mysqli_num_rows($result);
+    }
+}
+
+function CountActiveCreators(){
+    global $conn;
+    if($result = mysqli_query($conn,"SELECT * FROM `users` WHERE `user_role` = 'creator' AND  `status` = 'active';")){
+        return mysqli_num_rows($result);
+    }
+}
+
+
+
 
 ?>
 

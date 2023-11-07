@@ -38,13 +38,41 @@
                                 <i class="fa-solid fa-users-line"></i>
                             </div>
                             <div class="stat_box_top_right">
-                                <div class="_stat_count">100</div>
+                                <div class="_stat_count"><?= CountAllUsers() ?></div>
                                 <div class="_stat_count_name">Total Users</div>
                             </div>
                         </div>
                     </div>
                     <!-- stat box end -->
 
+                      <!--stat box -->
+                      <div class="_stat_box">
+                        <div class="_stat_box_top">
+                            <div class="stat_box_top_left">
+                                <i class="fa-solid fa-users-line"></i>
+                            </div>
+                            <div class="stat_box_top_right">
+                                <div class="_stat_count"><?= CountActiveUsers() ?></div>
+                                <div class="_stat_count_name">Active Users</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- stat box end -->
+
+                    
+                    <!--stat box -->
+                    <div class="_stat_box">
+                        <div class="_stat_box_top">
+                            <div class="stat_box_top_left">
+                                <i class="fa-solid fa-users-line"></i>
+                            </div>
+                            <div class="stat_box_top_right">
+                                <div class="_stat_count"><?= countSuspendedUsers() ?></div>
+                                <div class="_stat_count_name">Suspended users</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- stat box end -->
 
                     <!--stat box -->
                     <div class="_stat_box">
@@ -53,7 +81,7 @@
                                 <i class="fa-solid fa-users-line"></i>
                             </div>
                             <div class="stat_box_top_right">
-                                <div class="_stat_count">100</div>
+                                <div class="_stat_count"><?= countVerifiedUsers() ?></div>
                                 <div class="_stat_count_name">Verified users</div>
                             </div>
                         </div>
@@ -61,19 +89,6 @@
                     <!-- stat box end -->
 
 
-                    <!--stat box -->
-                    <div class="_stat_box">
-                        <div class="_stat_box_top">
-                            <div class="stat_box_top_left">
-                                <i class="fa-solid fa-users-line"></i>
-                            </div>
-                            <div class="stat_box_top_right">
-                                <div class="_stat_count">100</div>
-                                <div class="_stat_count_name">Suspended users</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- stat box end -->
 
                 </div>
 

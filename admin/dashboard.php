@@ -37,11 +37,11 @@
                                 <i class="fa-solid fa-users-line"></i>
                             </div>
                             <div class="stat_box_top_right">
-                                <div class="_stat_count"><?= CountActiveUsers() ?></div>
+                                <div class="_stat_count"><?= CountAllUsers() ?></div>
                                 <div class="_stat_count_name">Users</div>
                             </div>
                         </div>
-                        <a href="users.html">
+                        <a href="users.php">
                            <div  class="_stat_box_bottom " >
                             <div class="_stat_count_type_name" >View</div>
                             <i class="fa-solid fa-circle-arrow-right"></i>
@@ -58,11 +58,11 @@
                                 <i class="fa-solid fa-user-group"></i>
                             </div>
                             <div class="stat_box_top_right">
-                                <div class="_stat_count">100</div>
+                                <div class="_stat_count"><?=CountAllCreators() ?></div>
                                 <div class="_stat_count_name">creators</div>
                             </div>
                         </div>
-                        <a href="creaters.html">
+                        <a href="creators.php">
                         <div class="_stat_box_bottom">
                             <div class="_stat_count_type_name">View</div>
                             <i class="fa-solid fa-circle-arrow-right"></i>
