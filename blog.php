@@ -322,18 +322,11 @@ include "include_in_all.php";
 
             // like blog button / add like
             $(document).on("click", "#likeBtn", function() {
-
-                if(<?= $logged_in_user_id ?> != ""){
-                    alert("not emp");
-                }else{
-                    alert("emp");
-                }
-
                 $("#likeBtn").toggleClass("active");
                 var blog = $(this).attr('data-blog');
                 var add_like_data = {
                     blog: blog,
-                    user: <?= $logged_in_user_id; ?>
+                    user: <?= $logged_in_user_id??0; ?>
                 };
 
                 add_like_data = JSON.stringify(add_like_data);
@@ -358,7 +351,7 @@ include "include_in_all.php";
             // checkUserLike();
             function checkUserLike() {
                 var data_check = {
-                    user: <?= $logged_in_user_id; ?>,
+                    user: <?= $logged_in_user_id??0; ?>,
                     blog: <?= $blogID; ?>
                 }
 
@@ -408,7 +401,7 @@ include "include_in_all.php";
 
                     var comment_req_data = {
                         blog: blogIS,
-                        user: <?= $logged_in_user_id; ?>,
+                        user: <?= $logged_in_user_id??0; ?>,
                         comment: commentMsg
                     };
 
@@ -516,7 +509,7 @@ include "include_in_all.php";
                 }
                 var commentlikedata = {
                     comment: comment,
-                    user: <?= $logged_in_user_id; ?>
+                    user: <?= $logged_in_user_id??0; ?>
                 };
 
                 commentlikedata = JSON.stringify(commentlikedata);
@@ -568,7 +561,7 @@ include "include_in_all.php";
             // checkUserCommentLike();
             function checkUserCommentLike(comment_id, element_id) {
                 var data1_check = {
-                    user: <?= $logged_in_user_id; ?>,
+                    user: <?= $logged_in_user_id??0; ?>,
                     comment: comment_id
                 }
 
