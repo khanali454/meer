@@ -63,7 +63,12 @@ if (isset($_GET['draft']) && in_array($_GET['draft'], ['posts', 'blogs', 'articl
         <div class="_profile_heading_">
             <?= $draft_heading ?? "Drafts" ?>
         </div>
-        <!-- <div class="_create_new_btn">Add categories</div> -->
+        <select name="" id="">
+            <option value="posts">Filter By</option>
+            <option value="posts">Draft Posts</option>
+            <option value="posts">Draft Articles</option>
+            <option value="posts">Draft Blogs</option>
+        </select>
     </div>
     <div class="_table_container_">
         <table class="_table_is" border="1">
