@@ -24,12 +24,9 @@
 
 
 
-    <!-- ========== include header ============= -->
-    <?php
-    include "header.php";
-    ?>
-    <!-- ========== include header ============= -->
-
+    <!-- @include header -->
+    <?php include "header.php"; ?>
+   
 
     <?php
 

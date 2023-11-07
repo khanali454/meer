@@ -1,6 +1,18 @@
 <?php
 require_once 'vendor/autoload.php';
 require_once 'config.php';
+function getUserIpAddr(){
+  if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+      //ip from share internet
+      $ip = $_SERVER['HTTP_CLIENT_IP'];
+  }elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+      //ip pass from proxy
+      $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+  }else{
+      $ip = $_SERVER['REMOTE_ADDR'];
+  }
+  return $ip;
+}
 
 // authenticate code from Google OAuth Flow
 if (isset($_GET['code'])) {
@@ -31,9 +43,11 @@ if (isset($_GET['code'])) {
     } else {
       // user is not exists
       $user_username = explode("@",$userinfo['user_email'])[0];
-      $sql = "INSERT INTO users (user_email, user_gender, user_fullname, user_profileimg, email_verified, user_token,user_username) VALUES ('{$userinfo['user_email']}', '{$userinfo['gender']}', '{$userinfo['user_fullname']}', '{$userinfo['user_profileimg']}', '{$userinfo['verifiedEmail']}', '{$userinfo['token']}','{$user_username}')";
-      $result = mysqli_query($conn, $sql);
-      if ($result) {
+      $client_ip = getUserIpAddr();
+
+      $sql = "INSERT INTO users (user_email, user_gender, user_fullname, user_profileimg, email_verified, user_token,user_username,user_ipaddress) VALUES ('{$userinfo['user_email']}', '{$userinfo['gender']}', '{$userinfo['user_fullname']}', '{$userinfo['user_profileimg']}', '{$userinfo['verifiedEmail']}', '{$userinfo['token']}','{$user_username}','{$client_ip}')";
+      
+      if ($result =  mysqli_query($conn, $sql)) {
         $token = $userinfo['token'];
       } else {
         echo "User is not created";
