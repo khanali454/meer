@@ -107,6 +107,8 @@
                         <tbody>
                             <?php 
                             $users = loadUsers(0,7,"user_fullname ASC");
+                            $total_users = CountAllUsers();
+                            echo "users : {$total_users} <pre>";
                             print_r($users);
                             ?>
 
