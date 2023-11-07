@@ -130,6 +130,23 @@ function CountPublishedBlogs(){
 }
 
 
+
+// draft data
+function CountDrfatArticles(){
+    global $conn;
+    if($result = mysqli_query($conn,"SELECT * FROM `articles` WHERE article_status='draft';")){
+        return mysqli_num_rows($result);
+    }
+}
+
+function CountDraftBlogs(){
+    global $conn;
+    if($result = mysqli_query($conn,"SELECT * FROM `blogs` WHERE blog_status='draft';")){
+        return mysqli_num_rows($result);
+    }
+}
+
+
 ?>
 
 
