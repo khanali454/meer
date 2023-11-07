@@ -38,7 +38,7 @@
                                 <i class="fa-solid fa-blog"></i>
                             </div>
                             <div class="stat_box_top_right">
-                                <div class="_stat_count">07</div>
+                                <div class="_stat_count"><?= CountAllBlogs() ?></div>
                                 <div class="_stat_count_name">Total Blogs</div>
                             </div>
                         </div>

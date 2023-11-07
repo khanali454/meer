@@ -93,7 +93,26 @@ function countVerifiedSuspendedCreators(){
 }
 
 
+function CountAllBlogs(){
+    global $conn;
+    if($result = mysqli_query($conn,"SELECT * FROM `blogs`;")){
+        return mysqli_num_rows($result);
+    }
+}
 
+function CountAllArticles(){
+    global $conn;
+    if($result = mysqli_query($conn,"SELECT * FROM `articles`;")){
+        return mysqli_num_rows($result);
+    }
+}
+
+function countAllCategories(){
+    global $conn;
+    if($result = mysqli_query($conn,"SELECT * FROM `categories`;")){
+        return mysqli_num_rows($result);
+    }
+}
 
 ?>
 

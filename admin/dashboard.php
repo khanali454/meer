@@ -78,11 +78,11 @@
                                 <i class="fa-solid fa-blog"></i>
                             </div>
                             <div class="stat_box_top_right">
-                                <div class="_stat_count">0</div>
+                                <div class="_stat_count"><?= CountAllBlogs() ?></div>
                                 <div class="_stat_count_name">Blogs</div>
                             </div>
                         </div>
-                        <a href="blogs.html">
+                        <a href="blogs.php">
                         <div class="_stat_box_bottom">
                             <div class="_stat_count_type_name">View</div>
                             <i class="fa-solid fa-circle-arrow-right"></i>
@@ -98,11 +98,11 @@
                                 <i class="fa-solid fa-pen"></i>
                             </div>
                             <div class="stat_box_top_right">
-                                <div class="_stat_count">11</div>
+                                <div class="_stat_count"><?= CountAllArticles() ?></div>
                                 <div class="_stat_count_name">Articles</div>
                             </div>
                         </div>
-                        <a href="articls.html">
+                        <a href="articles.php">
                         <div class="_stat_box_bottom">
                             <div class="_stat_count_type_name">View</div>
                             <i class="fa-solid fa-circle-arrow-right"></i>
@@ -163,11 +163,11 @@
                                 <i class="fa-solid fa-tags"></i>
                             </div>
                             <div class="stat_box_top_right">
-                                <div class="_stat_count">100</div>
+                                <div class="_stat_count"><?= countAllCategories() ?></div>
                                 <div class="_stat_count_name">Categories</div>
                             </div>
                         </div>
-                        <a href="categories.html">
+                        <a href="categories.php">
                         <div class="_stat_box_bottom">
                             <div class="_stat_count_type_name">View</div>
                             <i class="fa-solid fa-circle-arrow-right"></i>
