@@ -105,6 +105,10 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php 
+                            $users = loadUsers(0,7,"user_fullname ASC");
+                            print_r($users);
+                            ?>
 
                             <tr>
                                 <td>1</td>
