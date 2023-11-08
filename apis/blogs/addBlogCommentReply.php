@@ -10,14 +10,13 @@ include "../../admin/config.php";
 //================================================
 
 
-
     $data = json_decode(file_get_contents("php://input"),true);
     
     $comment_to_bereplied = $data['comment_to_bereplied'];
     $userID = $data['user'];
     $commentMsg = mysqli_real_escape_string($conn,$data['comment']);
     
-    $blog_comment_reply_query = "INSERT INTO `blog_comments_replies`(`reply_to_comment`,`reply_by`, `replied_msg`,`replied_at`) VALUES ({$comment_to_bereplied},{$userID},'{$commentMsg}',CURRENT_TIMESTAMP());";
+    $blog_comment_reply_query = "INSERT INTO `blog_comments_replies`(`reply_to_comment`,`reply_by`, `replied_msg`,`replied_at`) VALUES ({$comment_to_bereplied},{$userID},'{$commentMsg}',NOW());";
     
         mysqli_query($conn,$blog_comment_reply_query) or die("Query failed");
 
