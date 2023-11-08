@@ -455,7 +455,9 @@ include "include_in_all.php";
                             success: function(resp) {
                                 if (resp.status == true) {
                                     $("#commentMSG").val("");
+                                    $("#" + "replyto" + comment_to_bereplied).html("");
                                     loadCommentReplies("replyto" + comment_to_bereplied);
+                                    $("#reply_box").slideUp();
                                 } else {
                                     alert(resp.msg);
                                 }
