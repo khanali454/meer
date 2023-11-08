@@ -22,6 +22,7 @@ include "../../admin/config.php";
         mysqli_query($conn,$blog_comment_reply_query) or die("Query failed");
 
         if(mysqli_affected_rows($conn)>0){
+            mysqli_query($conn,"UPDATE `blog_comments` SET `replies`=`replies`+1 WHERE comment_id = {$comment_to_bereplied};");
             echo json_encode(array(
                 "status"=>true,
                 "insertedID"=>mysqli_insert_id($conn)
@@ -42,4 +43,3 @@ include "../../admin/config.php";
 //================================================
 // add COMMENTS reply On Blog Post
 //================================================
-?>
