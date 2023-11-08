@@ -600,7 +600,7 @@ body.dark .blog-view-main-section h3, body.dark h5 {
   color: var(--blue-white);
 }
 
-body.dark .blog-view-main-section svg path {
+body.dark .blog-view-main-section .blog-view-reaction-btn-sec svg path {
   fill: #fff;
 }
 
