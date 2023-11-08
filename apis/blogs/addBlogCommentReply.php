@@ -15,7 +15,7 @@ include "../../admin/config.php";
     $comment_to_bereplied = $data['comment_to_bereplied'];
     $userID = $data['user'];
     $commentMsg = mysqli_real_escape_string($conn,$data['comment']);
-    $current_datetime = date('Y-m-d H:i:s');
+    
     
     $blog_comment_reply_query = "INSERT INTO `blog_comments_replies`(`reply_to_comment`,`reply_by`, `replied_msg`,`replied_at`) VALUES ({$comment_to_bereplied},{$userID},'{$commentMsg}','{$current_datetime}');";
     

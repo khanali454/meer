@@ -26,7 +26,7 @@ include "../../admin/config.php";
         $msg = "Like removed successfully.";
     }else{
         $msg = "Like added successfully.";
-        $comment_like_query = "INSERT INTO `blog_comments_likes`(`user_id`, `comment_id`, `liked_at`) VALUES ({$userID},{$CommentID},CURRENT_TIMESTAMP());";
+        $comment_like_query = "INSERT INTO `blog_comments_likes`(`user_id`, `comment_id`, `liked_at`) VALUES ({$userID},{$CommentID},'{$current_datetime}');";
         $comment_like_update = "UPDATE `blog_comments` SET `likes`=`likes`+1 WHERE comment_id = {$CommentID};";
     }
     

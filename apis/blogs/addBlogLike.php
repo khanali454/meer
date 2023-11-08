@@ -25,7 +25,7 @@ include "../../admin/config.php";
         $msg = "Like removed successfully.";
     }else{
         $msg = "Like added successfully.";
-        $blog_add_like_query = "INSERT INTO `blog_likes`(`user_id`, `blog_id`, `liked_at`) VALUES ({$userID},{$BlogID},CURRENT_TIMESTAMP());";
+        $blog_add_like_query = "INSERT INTO `blog_likes`(`user_id`, `blog_id`, `liked_at`) VALUES ({$userID},{$BlogID},'{$current_datetime}');";
     }
     
    

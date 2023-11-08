@@ -18,7 +18,7 @@ include "../../admin/config.php";
     $commentMsg = mysqli_real_escape_string($conn,$data['comment']);
     
     
-    $blog_comments_query = "INSERT INTO `blog_comments`(`user_id`, `blog_id`, `comment`, `commented_at`) VALUES ({$userID},{$BlogID},'{$commentMsg}',CURRENT_TIMESTAMP());";
+    $blog_comments_query = "INSERT INTO `blog_comments`(`user_id`, `blog_id`, `comment`, `commented_at`) VALUES ({$userID},{$BlogID},'{$commentMsg}','{$current_datetime}');";
     
         mysqli_query($conn,$blog_comments_query) or die("Query failed");
 
