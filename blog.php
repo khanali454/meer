@@ -691,7 +691,7 @@ include "include_in_all.php";
             // add reply to comment
 
             $(document).on("click",".addReplyToComment",function(){
-                $("#reply_box_").slideUp();
+                $("#reply_box_").hide();
                 var parentCommentID = $(this).attr("data-parentcomment");
                 var mentionAbleUserName = $(this).attr("data-mentionable");
                 var parentCommentContent = $(this).attr("data-replytocommentcontent");
