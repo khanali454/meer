@@ -397,7 +397,8 @@ include "include_in_all.php";
                 if (document.getElementById("reply_box_").style.display == "none") {
                     alert("comment");
                 } else {
-                    alert("reply");
+                    var comment_to_bereplied =  ReplyingToCommentContent.getAttribute("data-commentID");
+                    alert("reply to cid: " + comment_to_bereplied);
                 }
 
                 return false;
@@ -713,6 +714,8 @@ include "include_in_all.php";
 
 
             });
+            
+            // close reply box
             $(document).on("click", "#close_reply_box_", function() {
                 $("#reply_box_").slideUp();
             });
