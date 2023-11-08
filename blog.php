@@ -390,57 +390,85 @@ include "include_in_all.php";
             // add new comment on blog POST
             $(document).on("click", "#addComment", function() {
                 var commentMsg = $("#commentMSG").val();
-
-
-                // check if replying to a comment 
-                const ReplyingToCommentContent = document.getElementById("ReplyingToCommentContent");
-                if (document.getElementById("reply_box_").style.display == "none") {
-                    alert("comment");
-                } else {
-                    var comment_to_bereplied =  ReplyingToCommentContent.getAttribute("data-commentID");
-                    alert("reply to cid: " + comment_to_bereplied);
-                }
-
-                return false;
-
                 var blogIS = $("#commentMSG").attr('data-blog');
                 if (commentMsg == "") {
                     $("#commentMSG").focus();
                 } else {
                     $("#commentMSG").blur();
 
-                    var comment_req_data = {
-                        blog: blogIS,
-                        user: <?= $logged_in_user_id ?? 0; ?>,
-                        comment: commentMsg
-                    };
+                    // check if replying to a comment 
+                    if (document.getElementById("reply_box_").style.display == "none") {
 
-                    comment_req_data = JSON.stringify(comment_req_data);
+                        var comment_req_data = {
+                            blog: blogIS,
+                            user: <?= $logged_in_user_id ?? 0; ?>,
+                            comment: commentMsg
+                        };
+
+                        comment_req_data = JSON.stringify(comment_req_data);
 
 
-                    $.ajax({
-                        url: baseURL + "apis/blogs/addBlogComment.php",
-                        method: "POST",
-                        data: comment_req_data,
-                        success: function(resp) {
+                        $.ajax({
+                            url: baseURL + "apis/blogs/addBlogComment.php",
+                            method: "POST",
+                            data: comment_req_data,
+                            success: function(resp) {
 
-                            if (resp.status == true) {
-                                $("#commentMSG").val("");
-                                starting = 0;
-                                $(".comments").html("");
-                                isEmpty = false;
-                                isReq = false;
-                                // comment added
-                                loadComments(starting);
+                                if (resp.status == true) {
+                                    $("#commentMSG").val("");
+                                    starting = 0;
+                                    $(".comments").html("");
+                                    isEmpty = false;
+                                    isReq = false;
+                                    // comment added
+                                    loadComments(starting);
 
-                            } else {
-                                alert(resp.msg);
+                                } else {
+                                    alert(resp.msg);
+                                }
+                            },
+                            error: function(xhr, error_str) {
+                                alert(xhr.statusText);
                             }
-                        },
-                        error: function(xhr, error_str) {
-                            alert(xhr.statusText);
-                        }
-                    });
+                        });
+
+                        
+                        // else add reply to comment
+                    } else {
+                        const ReplyingToCommentContent = document.getElementById("ReplyingToCommentContent");
+                        var comment_to_bereplied = ReplyingToCommentContent.getAttribute("data-commentID");
+
+                        
+                        var reply_req_data = {
+                            blog: blogIS,
+                            user: <?= $logged_in_user_id ?? 0; ?>,
+                            comment_to_bereplied:comment_to_bereplied,
+                            comment: commentMsg
+                        };
+
+                        reply_req_data = JSON.stringify(reply_req_data);
+
+                        $.ajax({
+                            url: baseURL + "apis/blogs/addBlogCommentReply.php",
+                            method: "POST",
+                            data: reply_req_data,
+                            success: function(resp) {
+                                if (resp.status == true) {
+                                    $("#commentMSG").val("");
+                                    loadCommentReplies("replyto" + comment_to_bereplied);
+                                } else {
+                                    alert(resp.msg);
+                                }
+                            },
+                            error: function(xhr, error_str) {
+                                alert(xhr.statusText);
+                            }
+                        });
+
+
+
+                        
+                    }
 
 
 
@@ -714,7 +742,7 @@ include "include_in_all.php";
 
 
             });
-            
+
             // close reply box
             $(document).on("click", "#close_reply_box_", function() {
                 $("#reply_box_").slideUp();
