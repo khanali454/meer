@@ -280,7 +280,10 @@ include "include_in_all.php";
                         
                         <div class="blog-view-write-commont-bord" style="flex-direction:column;align-items:start;">
                             <div id="reply_box_" style="width:90%;background:#ffffff70;display:none;padding:10px;border-radius:3px;">
-                                <p style="margin-bottom:4px;">Replying to <b id="ReplyingToUsername">Naveed U.</b></p>
+                                <p style="margin-bottom:4px;display:flex;align-items:center;justify-content:space-between;">
+                                <span>Replying to <b id="ReplyingToUsername">Naveed U.</b></span>
+                                <i class="fa fa-window-close" aria-hidden="true"></i>
+                                </p>
                                 <p id="ReplyingToCommentContent" data-commentID="1" data-mentionedUser="Naveed U." style="background:#e5e5e5;border-radius:3px;padding:10px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
                                 Fantastic read! Your perspective on this subject is truly enlightening. Looking forward to more of your insightful posts!
                                 </p>
