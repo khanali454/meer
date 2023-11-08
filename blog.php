@@ -697,6 +697,8 @@ include "include_in_all.php";
                 var parentCommentContent = $(this).attr("data-replytocommentcontent");
                 $("#ReplyingToUsername").html(mentionAbleUserName);
                 $("#ReplyingToCommentContent").html(parentCommentContent);
+                $("#ReplyingToCommentContent").attr("data-commentID",parentCommentID);
+
 
                 $("#reply_box_").slideDown();
 
