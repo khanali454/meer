@@ -394,10 +394,10 @@ include "include_in_all.php";
 
                 // check if replying to a comment 
                 const ReplyingToCommentContent = document.getElementById("ReplyingToCommentContent");
-                if (ReplyingToCommentContent.style.display == "block") {
-                    alert("reply");
-                } else {
+                if (ReplyingToCommentContent.style.display == "none") {
                     alert("comment");
+                } else {
+                    alert("reply");
                 }
 
                 return false;
