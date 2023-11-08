@@ -166,6 +166,9 @@ include "include_in_all.php";
 
             // number formatter
             function formatNumber(num, precision = 2) {
+                if(num<1000){
+                    precision = 0;
+                }
                 const map = [{
                         suffix: 'T',
                         threshold: 1e12
