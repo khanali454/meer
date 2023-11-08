@@ -29,7 +29,7 @@ include "include_in_all.php";
 
     <!-- @include header -->
     <?php include "header.php"; ?>
-   
+
 
     <?php
 
@@ -282,7 +282,7 @@ include "include_in_all.php";
                             <div id="reply_box_" style="width:90%;background:#ffffff70;display:none;padding:10px;border-radius:3px;">
                                 <p style="margin-bottom:4px;display:flex;align-items:center;justify-content:space-between;">
                                 <span>Replying to <b id="ReplyingToUsername">Naveed U.</b></span>
-                                <i class="fa fa-window-close" style="margin-left:7px;" id="close_reply_box_" aria-hidden="true"></i>
+                                <i class="fa fa-window-close" style="margin-left:7px;cursor:pointer;" id="close_reply_box_" aria-hidden="true"></i>
                                 </p>
                                 <p id="ReplyingToCommentContent" data-commentID="1" data-mentionedUser="Naveed U." style="background:#e5e5e5;border-radius:3px;padding:10px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
                                 Fantastic read! Your perspective on this subject is truly enlightening. Looking forward to more of your insightful posts!
@@ -329,7 +329,7 @@ include "include_in_all.php";
                 var blog = $(this).attr('data-blog');
                 var add_like_data = {
                     blog: blog,
-                    user: <?= $logged_in_user_id??0; ?>
+                    user: <?= $logged_in_user_id ?? 0; ?>
                 };
 
                 add_like_data = JSON.stringify(add_like_data);
@@ -354,7 +354,7 @@ include "include_in_all.php";
             // checkUserLike();
             function checkUserLike() {
                 var data_check = {
-                    user: <?= $logged_in_user_id??0; ?>,
+                    user: <?= $logged_in_user_id ?? 0; ?>,
                     blog: <?= $blogID; ?>
                 }
 
@@ -385,17 +385,23 @@ include "include_in_all.php";
                 $("#commentMSG").focus();
             });
 
-            // check if replying to a comment 
-            // const ReplyingToCommentContent = document.getElementById("ReplyingToCommentContent");
-            // if (ReplyingToCommentContent.style.display == "block") {
 
-            // } else {
-
-            // }
 
             // add new comment on blog POST
             $(document).on("click", "#addComment", function() {
                 var commentMsg = $("#commentMSG").val();
+
+
+                // check if replying to a comment 
+                const ReplyingToCommentContent = document.getElementById("ReplyingToCommentContent");
+                if (ReplyingToCommentContent.style.display == "block") {
+                    alert("reply");
+                } else {
+                    alert("comment");
+                }
+
+                return false;
+
                 var blogIS = $("#commentMSG").attr('data-blog');
                 if (commentMsg == "") {
                     $("#commentMSG").focus();
@@ -404,7 +410,7 @@ include "include_in_all.php";
 
                     var comment_req_data = {
                         blog: blogIS,
-                        user: <?= $logged_in_user_id??0; ?>,
+                        user: <?= $logged_in_user_id ?? 0; ?>,
                         comment: commentMsg
                     };
 
@@ -430,7 +436,7 @@ include "include_in_all.php";
                                 alert(resp.msg);
                             }
                         },
-                        error:function(xhr,error_str){
+                        error: function(xhr, error_str) {
                             alert(xhr.statusText);
                         }
                     });
@@ -512,7 +518,7 @@ include "include_in_all.php";
                 }
                 var commentlikedata = {
                     comment: comment,
-                    user: <?= $logged_in_user_id??0; ?>
+                    user: <?= $logged_in_user_id ?? 0; ?>
                 };
 
                 commentlikedata = JSON.stringify(commentlikedata);
@@ -564,7 +570,7 @@ include "include_in_all.php";
             // checkUserCommentLike();
             function checkUserCommentLike(comment_id, element_id) {
                 var data1_check = {
-                    user: <?= $logged_in_user_id??0; ?>,
+                    user: <?= $logged_in_user_id ?? 0; ?>,
                     comment: comment_id
                 }
 
@@ -693,21 +699,21 @@ include "include_in_all.php";
 
             // add reply to comment
 
-            $(document).on("click",".addReplyToComment",function(){
+            $(document).on("click", ".addReplyToComment", function() {
                 $("#reply_box_").hide();
                 var parentCommentID = $(this).attr("data-parentcomment");
                 var mentionAbleUserName = $(this).attr("data-mentionable");
                 var parentCommentContent = $(this).attr("data-replytocommentcontent");
                 $("#ReplyingToUsername").html(mentionAbleUserName);
                 $("#ReplyingToCommentContent").html(parentCommentContent);
-                $("#ReplyingToCommentContent").attr("data-commentID",parentCommentID);
-                
-                
+                $("#ReplyingToCommentContent").attr("data-commentID", parentCommentID);
+
+
                 $("#reply_box_").slideDown();
-                
-                
+
+
             });
-            $(document).on("click","#close_reply_box_",function(){
+            $(document).on("click", "#close_reply_box_", function() {
                 $("#reply_box_").slideUp();
             });
 
