@@ -394,7 +394,7 @@ include "include_in_all.php";
 
                 // check if replying to a comment 
                 const ReplyingToCommentContent = document.getElementById("ReplyingToCommentContent");
-                if (document.getElementById("#reply_box_").style.display == "none") {
+                if (document.getElementById("reply_box_").style.display == "none") {
                     alert("comment");
                 } else {
                     alert("reply");
