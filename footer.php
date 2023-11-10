@@ -61,3 +61,10 @@
             </div>
         </footer>
         <!-- Footer end -->
+
+        <script>
+            async function loadCategories() {
+                var result = await fetch("")
+                
+            }
+        </script>
