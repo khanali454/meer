@@ -65,6 +65,8 @@
         <script>
             async function loadCategories() {
                 var result = await fetch("http://msamt.com/meer/apis/categories/loadCategories.php");
+                var result = await result.json();
+
                 console.log(result);
                 
             }
