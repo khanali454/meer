@@ -15,12 +15,8 @@
 
                     <div class="col-2">
                         <h6>Categories</h6>
-                        <ul class="footer-links">
+                        <ul class="footer-links" id="footer_categories">
 
-                            <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-                            <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-                            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-                            <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
                         </ul>
                     </div>
 
@@ -66,9 +62,11 @@
              async function loadCategories() {
                 var result = await fetch("<?= $app['site_url'] ?>apis/categories/loadCategories.php");
                 var result = await result.json();
+                var categories_container = document.getElementById("footer_categories");
 
-                result.forEach(element => {
-                    console.log(element);
+                result.forEach((index,element) => {
+                    console.log(index);
+                    // <li><a href="">PHP</a></li>
                 });
                 
             }
