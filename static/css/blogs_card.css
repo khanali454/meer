@@ -109,10 +109,11 @@ img {
     font-size: 20px;
     line-height: calc(20 * 1.3px);
 }
-.blogs-card-header-info h6,.blogs-card-header-info h5,.blogs-card-header-info h4{
-font-size: 18px;
-line-height: calc(18 * 1.2px);
-margin: 10px 0;
+.blogs-card-header-info h6,.blogs-card-header-info h5,.blogs-card-header-info h4,.blogs-card-header-info h1,.blogs-card-header-info h2{
+font-size: 17px;
+line-height: calc(17 * 1.2px);
+margin: 8px 0;
+color: #66fcf1;
 }
 .blog-img-wrap {
   
