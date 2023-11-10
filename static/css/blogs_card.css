@@ -106,8 +106,8 @@ img {
     
 }
 .blogs-card-header-info h3{
-    font-size: 20px;
-    line-height: calc(20 * 1.3px);
+    font-size: 24px;
+    line-height: calc(24 * 1.4px);
 }
 .blogs-card-header-info h6,.blogs-card-header-info h5,.blogs-card-header-info h4,.blogs-card-header-info h1,.blogs-card-header-info h2{
 font-size: 17px;
