@@ -67,7 +67,7 @@
                 var output_str = "";
                 result.forEach((element,index) => {
                     if(index <= max_index){
-                        output_str += `<li><a href='<?= $app['site_url'] ?>/blogs.php?category=${element.c_id}'>${element.c_name}</a></li>`;
+                        output_str += `<li><a href='<?= $app['site_url'] ?>blogs.php?category=${element.c_id}'>${element.c_name}</a></li>`;
                     }else{
                         return false;
                     }
