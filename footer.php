@@ -64,7 +64,7 @@
                 var result = await result.json();
                 var categories_container = document.getElementById("footer_categories");
 
-                result.forEach((index,element) => {
+                result.forEach((element,index) => {
                     console.log(index);
                     // <li><a href="">PHP</a></li>
                 });
