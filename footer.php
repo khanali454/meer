@@ -15,12 +15,8 @@
 
                     <div class="col-2">
                         <h6>Categories</h6>
-                        <ul class="footer-links">
+                        <ul class="footer-links" id="footer_categories">
 
-                            <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-                            <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-                            <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-                            <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
                         </ul>
                     </div>
 
@@ -61,3 +57,25 @@
             </div>
         </footer>
         <!-- Footer end -->
+
+        <script>
+             async function loadCategories(max_index=5) {
+                var result = await fetch("<?= $app['site_url'] ?>apis/categories/loadCategories.php");
+                var result = await result.json();
+                var categories_container = document.getElementById("footer_categories");
+                
+                var output_str = "";
+                result.forEach((element,index) => {
+                    if(index <= max_index){
+                        output_str += `<li><a href='<?= $app['site_url'] ?>blogs.php?category=${element.c_id}'>${element.c_name}</a></li>`;
+                    }else{
+                        return false;
+                    }
+                });
+
+                
+                categories_container.innerHTML = output_str;
+            }
+
+            loadCategories();
+        </script>

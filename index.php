@@ -513,23 +513,7 @@ include "include_in_all.php";
             </div>
 
 
-            <div class="blogs-wrap-container">
-                <div class="blog-card-header">
-
-                    <div class="blogs-card-header-info">
-                        <h3>5 remote work myths to leve behinde in 2020.</h3>
-                        <p> If you're tired of using outline styles for secondary buttons, a soft solid background based
-                            on the text color can be a great alternative.</p>
-
-                    </div>
-
-                </div>
-                <div class="blog-img-wrap">
-                    <div class="home_btn  btn_home">
-                        <button onclick="window.location.href='all_blogs_page.html';">Click Here</button>
-                    </div>
-                    <img src="static/images/profile1.jpg" alt="" class="blogs-img">
-                </div>
+            <div class="blogs-wrap-container" id="recent_blog_container">
 
             </div>
         </div>
@@ -572,9 +556,11 @@ include "include_in_all.php";
         </div>
         <!-- ========== Services-home-card-end ============= -->
 
-        <?php include "footer.php"; ?>
-
+        
     </main>
+
+    <?php include "footer.php"; ?>
+
     <script>
         AOS.init();
     </script>
@@ -602,7 +588,37 @@ include "include_in_all.php";
                 navbar.classList.add("close");
             }
         });
-    </script>
+   
+             async function loadRecentBlog() {
+                data = {
+                    start:0,
+                    category:"any"
+                };
+                var result = await fetch("<?= $app['site_url'] ?>apis/blogs/loadBlogs.php",{
+                    method:"POST",
+                    body: JSON.stringify(data)
+                });
+                var result = await result.json();
+                var recent_blog_container = document.getElementById("recent_blog_container");
+                recent_blog_container.innerHTML = `
+                <div class="blog-card-header">
+                    <div class="blogs-card-header-info">
+                        <h3>${result[0].blog_title}</h3>
+                        <p>${result[0].blog_content}</p>
+                    </div>
+                </div>
+                <div class="blog-img-wrap">
+                    <div class="home_btn  btn_home">
+                        <button onclick="window.location.href='blogs.php';">Click Here</button>
+                    </div>
+                    <img src="uploads/feature-images/${result[0].blog_cover_img}" alt="" class="blogs-img">
+                </div>`;
+
+            }
+
+            loadRecentBlog();
+        </script>
+
 </body>
 
 </html>

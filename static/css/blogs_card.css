@@ -94,20 +94,27 @@ img {
     font-size:14px;
 }
 .blogs-card-header-info {
-    font-weight:bold;
     color: #66fcf1;
 }
 
 .blogs-card-header-info p {
     font-weight:normal;
-    color: #f1f1f1;
-    font-size: 17px;
+    color: #c5c5c5;
+    font-size: 16px;
+    line-height: calc(16 * 1.2px);
     font-weight: 400;
-    line-height: 28px;
     
 }
 .blogs-card-header-info h3{
-    font-size: 18px;
+    font-size: 24px;
+    line-height: calc(24 * 1.4px);
+}
+.blogs-card-header-info h6,.blogs-card-header-info h5,.blogs-card-header-info h4,.blogs-card-header-info h1,.blogs-card-header-info h2{
+font-size: 18px;
+line-height: calc(18 * 1.3px);
+margin: 8px 0;
+font-weight: 600 !important;
+color: #66fcf1 !important;
 }
 .blog-img-wrap {
   
