@@ -71,7 +71,7 @@
                 
             }
 
-            console.log(loadCategories());
+            console.log(await loadCategories());
 
 
 
