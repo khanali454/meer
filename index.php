@@ -611,7 +611,8 @@ include "include_in_all.php";
                     category:"any"
                 };
                 var result = await fetch("<?= $app['site_url'] ?>apis/blogs/loadBlogs.php",{
-                    body: JSON.stringify(data),
+                    method:"POST",
+                    body: JSON.stringify(data)
                 });
                 var result = await result.json();
                 console.log(result);
