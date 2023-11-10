@@ -74,9 +74,10 @@ include "include_in_all.php";
 
 
             // load comments
-            function loadBlogs(startis) {
+            function loadBlogs(startis,category_is) {
                 var data = {
-                    start: startis
+                    start: startis,
+                    category : category_is
                 }
 
                 data = JSON.stringify(data);
@@ -149,7 +150,7 @@ include "include_in_all.php";
                 });
             }
 
-            loadBlogs(0);
+            loadBlogs(0,'<?php $_GET['category']??"any" ?>');
 
             window.addEventListener('scroll', () => {
                 const {
@@ -161,7 +162,7 @@ include "include_in_all.php";
                 console.log(isEmpty);
                 console.log(isReq);
                 if (scrollTop + clientHeight >= scrollHeight - 5 && (isEmpty==false && isReq==false)) {
-                    loadBlogs(starting);
+                    loadBlogs(starting,'<?php $_GET['category']??"any" ?>');
                 }
             }, {
                 passive: true
