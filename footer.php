@@ -68,4 +68,5 @@
                 console.log(result);
                 
             }
+            loadCategories();
         </script>
