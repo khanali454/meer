@@ -599,7 +599,6 @@ include "include_in_all.php";
                     body: JSON.stringify(data)
                 });
                 var result = await result.json();
-                console.log(result[0]);
                 var recent_blog_container = document.getElementById("recent_blog_container");
                 recent_blog_container.innerHTML = `
                 <div class="blog-card-header">
