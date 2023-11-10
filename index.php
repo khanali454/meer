@@ -572,9 +572,11 @@ include "include_in_all.php";
         </div>
         <!-- ========== Services-home-card-end ============= -->
 
-        <?php include "footer.php"; ?>
-
+        
     </main>
+    
+    <?php include "footer.php"; ?>
+
     <script>
         AOS.init();
     </script>
