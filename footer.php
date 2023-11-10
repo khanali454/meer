@@ -65,7 +65,7 @@
         <script>
              async function loadCategories() {
                 var result = fetch("<?= $app['site_url'] ?>apis/categories/loadCategories.php");
-                var result = await result.json();
+                // var result = await result.json();
 
                 return result;
                 
