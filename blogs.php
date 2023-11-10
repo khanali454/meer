@@ -150,7 +150,7 @@ include "include_in_all.php";
                 });
             }
 
-            loadBlogs(0,'<?php $_GET['category']??"any" ?>');
+            loadBlogs(0,'<?= $_GET['category']??"any" ?>');
 
             window.addEventListener('scroll', () => {
                 const {
@@ -162,7 +162,7 @@ include "include_in_all.php";
                 console.log(isEmpty);
                 console.log(isReq);
                 if (scrollTop + clientHeight >= scrollHeight - 5 && (isEmpty==false && isReq==false)) {
-                    loadBlogs(starting,'<?php $_GET['category']??"any" ?>');
+                    loadBlogs(starting,'<?= $_GET['category']??"any" ?>');
                 }
             }, {
                 passive: true
