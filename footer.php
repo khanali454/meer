@@ -72,9 +72,9 @@
             }
 
             var categories =loadCategories();
-            categories.each(element => {
-                console.log(element);
-            });
+            console.log(categories);
+            // categories.each(element => {
+            // });
 
             
         </script>
