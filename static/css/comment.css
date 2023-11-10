@@ -1,0 +1,215 @@
+/* font family */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url("included.css");
+.cooments_page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #ead7d7;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.comment_popup_box{
+    border: 1px solid var(--black-low);
+    background: var(--black-color2);
+    width: 600px;
+    max-width: 600px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    position: relative;
+}
+.comment_popup_box::-webkit-scrollbar{
+    width: 0;
+}
+.comments_top_box{
+    border-bottom: 2px solid var(--black-low) ;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--black-color2);
+}
+.top_section_comint{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 15px;
+}
+.top_section_comint a svg{
+    width: 25px;
+    fill: var(--white-color);
+   
+}
+.top_section_comint span{
+    font-size: 15px;
+    font-weight: 510;
+    color: var(--white-color);
+
+}
+.commnt_scnd_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 15px 8px 5px;
+    flex-direction: row-reverse;
+}
+.commint_profiledata{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+}
+.commint_profiledinfo{
+    margin: 0px 10px;
+    display: flex;
+    align-items: flex-start !important;
+    justify-content: flex-end;
+}
+.comint_img_box{
+    width: 100%;
+
+}
+.comint_image{
+    width: 100%;
+    height: 100%;
+
+}
+.comint_image img{
+    width: 100%;
+    height: 100%;
+
+}
+
+.comment_content_box{
+    padding: 0px 15px 10px 15px;
+    color: var(--background_low);
+}
+
+
+
+.comments_input_box{
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 0;
+    left: 0;
+    background: var(--black-color2);
+    padding: 15px;
+}
+.coments_coments_section{
+    display: flex;
+    align-items: center;
+    background: var(--black-low);
+    border: 1px solid var(--black-low);
+    border-radius: 30px;
+    padding-right: 10px;
+    
+}
+
+.coments_coments_section input{
+    width: calc(100% - 40px);
+    height: 35px;
+    outline: none;
+    background: transparent;
+    padding: 20px 10px 20px 20px;
+    color: var(--white-color);
+    border:none;
+}
+input::selection{
+    background: rgba(0, 0, 255, 0.427);
+}
+._user_profile{
+    border: 2px solid var(--background_low);
+}
+._user_profile img{
+    object-fit: cover;
+}
+.coments_done_btn{
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coments_done_btn i{
+    font-size: 20px;
+    color: var(--background_low);
+}
+._user_name{
+    font-size: 16px !important;
+    line-height: 20px !important;
+}
+.comment_comment_box{
+    border-top: 1px solid var(--black-low);
+    padding: 6px 15px 6px 15px;
+}
+.comnt_comnt{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px 0px;
+
+}
+.comnt_comnt_comnt{
+    width: calc(100% - 40px);
+    padding: 8px;
+
+}
+.coment_comnt_profile_{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.coment_comnt_profile_ img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.comnt_comnt_comnt h4{
+    color: var(--white-color);
+}
+.comnt_comnt_comnt p{
+    color: var(--background_low);
+}
+.time{
+    /* color: var(--background_low); */
+    font-size: 12px;
+    font-weight: 300 !important;
+}
+.rect_comnt_comnt_comnt span{
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--theme-color);
+   
+}
+.rect_comnt_comnt_comnt{
+    border-bottom: 1px solid var(--black-low);
+    padding-bottom: 5px;
+}
+.coment_reaction_box{
+    padding: 5px 0px;
+}
+@media (max-width:567px){
+    .comment_popup_box{
+        height: 100vh;
+    }
+    .top_section_comint a svg{
+        width: 20px;
+       
+    }
+    .top_section_comint{
+        padding: 15px 15px;
+    }
+
+.commnt_scnd_box{
+    padding: 15px 5px 10px 5px;
+}
+.comments_input_box{
+    padding: 10px;
+}
+}

@@ -4,7 +4,11 @@
 /* variables */
 :root{
     --black-color:#000000;
+    --black-color2:#343535;
     --white-color:#ffffff;
+    --background_low:#ccc;
+    --black-low:#51515171;
+    --black-low:#51515171;
     --theme-color:rgb(102,252,241);
     --font-family: 'Poppins', sans-serif;
     --heading-size:24px;

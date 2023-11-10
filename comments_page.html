@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Comments</title>
+    <link rel="stylesheet" href="static/css/comment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/test.css">
+    <link rel="stylesheet" href="static/css/User_Profile_page.css">
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+ <link rel="stylesheet" href="static/css/secondary-navbar-header.css">
+ <link rel="stylesheet" href="static/css/home_post_card.css">
+ <link rel="stylesheet" href="static/css/Feeds_page.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="cooments_page">
+        <div class="comment_popup_box">
+
+            <div class="comments_top_box">
+                <div class="top_section_comint">
+                    <a href="Feeds_page.php"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z"/></svg></a>
+                    <span>Profile name here</span>
+                </div>
+            </div>
+           
+                <div class="commnt_scnd_box _info_top">             
+                    <div class="_info_top_left">
+                        <svg  width="22" height="22" fill="white" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                          </svg>
+                    </div>
+                    <div class="commint_profile _info_top_right">
+                        <div class="commint_profiledata _profile_data">
+                            <div class="commint_profiledinfo _user_info">
+                                <div class="_user_name">
+                                <!-- <?= $userinfo['user_fullname'] ?> -->
+                                Naveed khosa
+                                </div>
+                                <div class="_user_username">
+                                    @mirehti
+                                </div>
+                            </div>
+                            <div class="_user_profile">
+                                <!-- <img src="<?= $userinfo['user_profileimg'] ?>" alt=""> -->
+                                <img src="static/images/profile.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+                <div class="comment_content_box">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo explicabo obcaecati numquam tempora eaque quis, ut inventore asperiores corporis cupiditate rerum provident consectetur magnam earum est facilis sit. Tempore, saepe?
+                    </p>
+                </div>
+                <div class="comint_img_box">
+                    <div class="comint_image">
+                        <img src="static/images/comingsoon.jpg" alt="" loading="lazy">
+                    </div>
+                </div>
+    
+                <div class="coment_reaction_box">
+                    <div class="_info_bottom">      
+                        <div class="_left_btn_s">
+                            <div class="_btn_s view_count">
+                                <svg  width="25" height="18" fill="gray"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M119.4 44.1c23.3-3.9 46.8-1.9 68.6 5.3l49.8 77.5-75.4 75.4c-1.5 1.5-2.4 3.6-2.3 5.8s1 4.2 2.6 5.7l112 104c2.9 2.7 7.4 2.9 10.5 .3s3.8-7 1.7-10.4l-60.4-98.1 90.7-75.6c2.6-2.1 3.5-5.7 2.4-8.8L296.8 61.8c28.5-16.7 62.4-23.2 95.7-17.6C461.5 55.6 512 115.2 512 185.1v5.8c0 41.5-17.2 81.2-47.6 109.5L283.7 469.1c-7.5 7-17.4 10.9-27.7 10.9s-20.2-3.9-27.7-10.9L47.6 300.4C17.2 272.1 0 232.4 0 190.9v-5.8c0-69.9 50.5-129.5 119.4-141z"/></svg>
+                                <span>22</span>
+                            </div>
+                            <div class="_btn_s _comment_count">
+                                <svg  width="25" height="18" fill="gray"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M272 416c17.7 0 32-14.3 32-32s-14.3-32-32-32H160c-17.7 0-32-14.3-32-32V192h32c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-64-64c-12.5-12.5-32.8-12.5-45.3 0l-64 64c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8l32 0 0 128c0 53 43 96 96 96H272zM304 96c-17.7 0-32 14.3-32 32s14.3 32 32 32l112 0c17.7 0 32 14.3 32 32l0 128H416c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l64 64c12.5 12.5 32.8 12.5 45.3 0l64-64c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8l-32 0V192c0-53-43-96-96-96L304 96z"/></svg>
+                                <span>232</span>
+                            </div>
+                            
+                        </div>
+                             
+                        <div class="_btn_s _comment_count">
+                            <svg  width="25" height="18" fill="gray" class="bi bi-chat-square" viewBox="0 0 16 16">
+                                <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                            </svg>
+                            <span>232</span>
+                        </div>
+    
+                        <div class="_btn_s _like_count">
+                            <span>22</span>
+                            <svg width="25" height="18" fill="gray" class="bi bi-heart" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="comment_comment_box">
+
+                    <div class="comnt_comnt">
+                        <div class="coment_comnt_profile_">
+                            <img src="static/images/profile2.jpg" alt="">
+                        </div>
+                        <div class="comnt_comnt_comnt">
+                            <h4>Naveed ullah khosa</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <div class="rect_comnt_comnt_comnt">
+                                <span class="time">30mnt</span>
+                                <span>Like</span>
+                                <span>Reply</span>
+                            </div>
+
+                            <div class="comnt_comnt">
+                                <div class="coment_comnt_profile_">
+                                    <img src="static/images/profile2.jpg" alt="">
+                                </div>
+                                <div class="comnt_comnt_comnt">
+                                    <h4>Naveed ullah khosa</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    <div class="rect_comnt_comnt_comnt">
+                                        <span class="time">30mnt</span>
+                                        <span>Like</span>
+                                        <span>Reply</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comnt_comnt">
+                                <div class="coment_comnt_profile_">
+                                    <img src="static/images/profile2.jpg" alt="">
+                                </div>
+                                <div class="comnt_comnt_comnt">
+                                    <h4>Naveed ullah khosa</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium obcaecati velit tempore illum adipisci molestias recusandae quisquam quo suscipit nemo in, temporibus, minus animi, hic fugiat dolore. Officiis, ullam eos!</p>
+                                    <div class="rect_comnt_comnt_comnt">
+                                        <span class="time">30mnt</span>
+                                        <span>Like</span>
+                                        <span>Reply</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="comnt_comnt">
+                        <div class="coment_comnt_profile_">
+                            <img src="static/images/profile2.jpg" alt="">
+                        </div>
+                        <div class="comnt_comnt_comnt">
+                            <h4>Naveed ullah khosa</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat fugit minus quos modi eos deleniti alias rem veritatis est numquam quod aspernatur beatae voluptas, eligendi a temporibus aperiam neque? Corporis?</p>
+                            <div class="rect_comnt_comnt_comnt">
+                                <span class="time">30mnt</span>
+                                <span>Like</span>
+                                <span>Reply</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="comments_input_box">
+                    <div class="coments_coments_section">
+                        <input type="text" name="" id="" placeholder="Add comment here...">
+                        <div class="coments_done_btn">
+                            <i class="fa-regular fa-paper-plane"></i>
+                        </div>
+                    </div>
+                </div>
+    
+        </div>
+       
+    </div>
+
+</body>
+</html>
