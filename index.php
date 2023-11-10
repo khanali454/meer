@@ -513,7 +513,7 @@ include "include_in_all.php";
             </div>
 
 
-            <div class="blogs-wrap-container">
+            <div class="blogs-wrap-container" id="recent_blog_container">
                 <div class="blog-card-header">
 
                     <div class="blogs-card-header-info">
@@ -574,7 +574,7 @@ include "include_in_all.php";
 
         
     </main>
-    
+
     <?php include "footer.php"; ?>
 
     <script>
@@ -604,7 +604,24 @@ include "include_in_all.php";
                 navbar.classList.add("close");
             }
         });
-    </script>
+   
+             async function loadRecentBlog() {
+                data = {
+                    start:0,
+                    category:"any"
+                };
+                var result = await fetch("<?= $app['site_url'] ?>apis/blogs/loadBlogs.php",{
+                    body: JSON.stringify(data),
+                });
+                var result = await result.json();
+                console.log(result);
+                var recent_blog_container = document.getElementById("recent_blog_container");
+
+            }
+
+            loadRecentBlog();
+        </script>
+
 </body>
 
 </html>

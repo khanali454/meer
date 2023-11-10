@@ -78,10 +78,4 @@
             }
 
             loadCategories();
-
-
-
-           
-
-            
         </script>
