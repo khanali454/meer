@@ -59,7 +59,7 @@
         <!-- Footer end -->
 
         <script>
-             async function loadCategories(max_index=4) {
+             async function loadCategories(max_index=5) {
                 var result = await fetch("<?= $app['site_url'] ?>apis/categories/loadCategories.php");
                 var result = await result.json();
                 var categories_container = document.getElementById("footer_categories");
