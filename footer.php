@@ -63,7 +63,7 @@
         <!-- Footer end -->
 
         <script>
-            async function loadCategories() {
+             async function loadCategories() {
                 var result = await fetch("<?= $app['site_url'] ?>"+"apis/categories/loadCategories.php");
                 var result = await result.json();
 
@@ -71,7 +71,7 @@
                 
             }
 
-            var categories =loadCategories();
+            var categories =await loadCategories();
             console.log(categories);
             // categories.each(element => {
             // });
