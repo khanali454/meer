@@ -67,7 +67,7 @@
                 var result = await fetch("<?= $app['site_url'] ?>apis/categories/loadCategories.php");
                 var result = await result.json();
 
-                array.forEach(element => {
+                result.forEach(element => {
                     console.log(element);
                 });
                 
