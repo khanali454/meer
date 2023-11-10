@@ -72,7 +72,7 @@
             }
 
             var categories =loadCategories();
-            categories.forEach(element => {
+            categories.each(element => {
                 console.log(element);
             });
 
