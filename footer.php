@@ -64,11 +64,17 @@
 
         <script>
             async function loadCategories() {
-                var result = await fetch("http://msamt.com/meer/apis/categories/loadCategories.php");
+                var result = await fetch("<?= $app['site_url'] ?>"+"apis/categories/loadCategories.php");
                 var result = await result.json();
 
-                console.log(result);
+                return result;
                 
             }
-            loadCategories();
+
+            var categories =loadCategories();
+            categories.forEach(element => {
+                console.log(element);
+            });
+
+            
         </script>
