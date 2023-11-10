@@ -113,6 +113,7 @@ img {
 font-size: 17px;
 line-height: calc(17 * 1.2px);
 margin: 8px 0;
+font-weight: 500 !important;
 color: #66fcf1 !important;
 }
 .blog-img-wrap {
