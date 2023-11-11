@@ -1,6 +1,43 @@
 /* font family */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 @import url("included.css");
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+
+    
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--theme-color);
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    color: var(--theme-color);
+    
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    color: var(--theme-color);
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 0px;
+    border-top: none;
+  }
 .cooments_page{
     display: flex;
     align-items: center;
@@ -119,6 +156,7 @@
     color: var(--white-color);
     border:none;
 }
+
 input::selection{
     background: rgba(0, 0, 255, 0.427);
 }
@@ -183,6 +221,7 @@ input::selection{
 .rect_comnt_comnt_comnt span{
     margin-right: 10px;
     font-size: 12px;
+    cursor: pointer;
     font-weight: 500;
     color: var(--theme-color);
    
