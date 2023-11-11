@@ -106,6 +106,7 @@
                     <div class="_profile_heading_">
                         Blogs
                         <?php
+                        echo "<pre>";
                         print_r(loadBlogs());
                         ?>
                     </div>
