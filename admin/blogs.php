@@ -107,7 +107,7 @@
                         Blogs
                         <?php
                         echo "<pre>";
-                        print_r(loadBlogs(0,2,"blog_id ASC"));
+                        print_r(loadBlogs(0,2,"blog_id DESC"));
                         ?>
                     </div>
                     <div class="_suspend_btn">Suspend</div>
