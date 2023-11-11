@@ -201,7 +201,7 @@ function loadBlogs($start = 0, $limit = 7, $order_by="")
 
     if ($result = mysqli_query($conn, $sql)) {
         if (mysqli_num_rows($result) > 0) {
-            return mysqli_fetch_all($result);
+            return mysqli_fetch_all($result,MYSQLI_ASSOC);
         } else {
             return 0;
         }
