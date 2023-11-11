@@ -26,6 +26,7 @@
                             <li><a href="about-us.php">About Us</a></li>
                             <li><a href="contact-us.php">Contact Us</a></li>
                             <li><a href="services.php">Services</a></li>
+                            <li><a href="blogs.php">Blogs</a></li>
                             <li><a href="privacy-policy.php">Privacy Policy</a></li>
                         </ul>
                     </div>
