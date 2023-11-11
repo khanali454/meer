@@ -105,6 +105,9 @@
                 <div class="_container_posts_">
                     <div class="_profile_heading_">
                         Blogs
+                        <?php
+                        print_r(loadBlogs());
+                        ?>
                     </div>
                     <div class="_suspend_btn">Suspend</div>
                 </div>

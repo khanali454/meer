@@ -167,7 +167,7 @@ function CountDraftBlogs()
 
 
 // users
-function loadUsers($start = 0, $limit = 7, $order_by)
+function loadUsers($start = 0, $limit = 7, $order_by="")
 {
     global $conn;
     $sql = "SELECT * FROM users WHERE user_role='user'";
@@ -177,15 +177,42 @@ function loadUsers($start = 0, $limit = 7, $order_by)
     $sql .= " LIMIT $start,$limit";
 
     if ($result = mysqli_query($conn, $sql)) {
-        if(mysqli_num_rows($result) > 0) {
+        if (mysqli_num_rows($result) > 0) {
             return mysqli_fetch_all($result);
-        }else{
+        } else {
             return 0;
         }
-    }else{
+    } else {
         return false;
     }
 }
+
+
+// load blogs
+
+function loadBlogs($start = 0, $limit = 7, $order_by="")
+{
+    global $conn;
+    $sql = "SELECT *,DATE_FORMAT(last_updated,'%d %b, %Y') as last_updated FROM `blogs` b INNER JOIN `users` u ON b.blog_publisher=u.user_id";
+    if ($order_by != "") {
+        $sql .= " ORDER BY " . $order_by;
+    }
+    $sql .= " LIMIT $start,$limit";
+
+    if ($result = mysqli_query($conn, $sql)) {
+        if (mysqli_num_rows($result) > 0) {
+            return mysqli_fetch_all($result);
+        } else {
+            return 0;
+        }
+    } else {
+        return false;
+    }
+}
+
+
+// load blogs
+
 ?>
 
 
