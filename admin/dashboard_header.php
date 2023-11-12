@@ -193,7 +193,7 @@ function printPagination($page_url,$current_page,$pages)
 {
     $resulted_output = "<div class='pagination__container'><ul class='pagination__'>";
     if( $current_page > 1){
-        $resulted_output .="<li><a href='{$page_url}?page={($current_page-1)}'>Prev</a></li>";
+        $resulted_output .="<li><a href='{$page_url}?page=".($current_page-1)."'>Prev</a></li>";
     }
     for ($page = 1; $page <= $pages; $page++) {
         if($current_page==$page){
@@ -203,7 +203,7 @@ function printPagination($page_url,$current_page,$pages)
         }
     }
     if( $current_page < $pages){
-        $resulted_output .="<li><a href='{$page_url}?page={($current_page+1)}'>Next</a></li>";
+        $resulted_output .="<li><a href='{$page_url}?page=".($current_page+1)."'>Next</a></li>";
     }
 
     $resulted_output .= "</ul></div>";
