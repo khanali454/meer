@@ -108,7 +108,7 @@
                             <?php 
                             $limit = 7;
                             $current_page = 1;
-                            $start = 1;
+                            $start = 0;
                             
                             // if(isset($_GET["page"]) && !empty($_GET['page'])){
                             //     $current_page = $_GET["page"];
