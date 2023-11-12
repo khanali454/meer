@@ -105,7 +105,7 @@
                 $total_pages = ceil($total_users / $limit);
                 ?>
 
-    <p style="padding:10px 0;color:rgba(255,255,255,0.46);width:100%;">Showing <?= $start+1 ?> to <?= (($start + $limit)>$total_users)?($start + $limit)-1:($start + $limit) ?> of <?= $total_users ?> users</p>
+    <p style="padding:10px 0;color:rgba(255,255,255,0.46);width:100%;">Showing <?= $start+1 ?> to <?= (($start + $limit)>$total_users)?$total_users:($start + $limit) ?> of <?= $total_users ?> users</p>
     <div class="_table_container_">
         <table class="_table_is" border="1">
             <thead>
