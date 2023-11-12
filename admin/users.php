@@ -90,22 +90,30 @@
 
     </div>
 
-    
+
     <?php
-                $limit = 4;
-                $current_page = 1;
-                $start = 0;
+    $limit = 4;
+    $current_page = 1;
+    $start = 0;
 
-                if (isset($_GET["page"]) && !empty($_GET['page'])) {
-                    $current_page = $_GET["page"];
-                    $start = ($current_page - 1) * $limit;
-                }
-                $users = loadUsers($start, $limit);
-                $total_users = CountAllUsers();
-                $total_pages = ceil($total_users / $limit);
-                ?>
+    if (isset($_GET["page"]) && !empty($_GET['page'])) {
+        $current_page = $_GET["page"];
+        $start = ($current_page - 1) * $limit;
+    }
+    $users = loadUsers($start, $limit);
+    $total_users = CountAllUsers();
+    $total_pages = ceil($total_users / $limit);
+    ?>
 
-    <p style="padding:10px 0;color:rgba(255,255,255,0.46);width:100%;">Showing <?= $start+1 ?> to <?= (($start + $limit)>$total_users)?$total_users:($start + $limit) ?> of <?= $total_users ?> users</p>
+    <div class="search_filter_container">
+        <?php echo "<pre>"; print_r($_SERVER); ?>
+        <form class="search_box_container" method="get" action="<?= "users.php" ?>">
+            <input type="search" name="" id="">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <p style="padding:10px 0;color:rgba(255,255,255,0.46);width:100%;">Showing <?= $start + 1 ?> to <?= (($start + $limit) > $total_users) ? $total_users : ($start + $limit) ?> of <?= $total_users ?> users</p>
     <div class="_table_container_">
         <table class="_table_is" border="1">
             <thead>
@@ -119,7 +127,7 @@
                 </tr>
             </thead>
             <tbody>
-               
+
                 <?php foreach ($users as $user) { ?>
 
                     <tr>

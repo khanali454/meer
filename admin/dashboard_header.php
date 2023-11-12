@@ -167,10 +167,13 @@ function CountDraftBlogs()
 
 
 // users
-function loadUsers($start = 0, $limit = 7, $order_by = "")
+function loadUsers($start = 0, $limit = 7,$where_clause="", $order_by = "")
 {
     global $conn;
     $sql = "SELECT * FROM users WHERE user_role='user'";
+    if($where_clause != ""){
+        $sql .= " WHERE " . $where_clause;
+    }
     if ($order_by != "") {
         $sql .= " ORDER BY " . $order_by;
     }
