@@ -146,7 +146,7 @@
         <?php if (isset($_GET['search'])) { ?>
             Showing Search Results - <a href="blogs.php" style="color: #E80000;">cancel search</a>
         <?php } else { ?>
-            Showing <?= $start + 1 ?> to <?= (($start + $limit) > $total_blogs) ? $total_blogs : ($start + $limit) ?> of <?= $total_blogs ?> users
+            Showing <?= $start + 1 ?> to <?= (($start + $limit) > $total_blogs) ? $total_blogs : ($start + $limit) ?> of <?= $total_blogs ?> blogs
         <?php } ?>
     </p>
 
