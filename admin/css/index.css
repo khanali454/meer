@@ -320,3 +320,33 @@ background-color: #01524C;
 
 }
 /* responsive  dashboard*/
+
+/* pagination */
+.pagination__container{
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination__container .pagination__{
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+.pagination__ li{
+    background: #000;
+    border: 2px solid #fff;
+}
+
+.pagination__ li  a{
+    padding: 7px 12px;
+    border: 2px solid gray;
+    background: #000;
+    border-radius: 4px;
+    color: #E31717;
+}
+
