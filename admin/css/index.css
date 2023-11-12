@@ -344,6 +344,11 @@ background-color: #01524C;
     display: flex;
 }
 
+.pagination__ li.active a{
+    background: #0085FF;
+    color: #fff;
+}
+
 .pagination__ li  a{
     display: flex;
     padding: 7px 12px;

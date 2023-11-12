@@ -193,7 +193,11 @@ function printPagination($page_url,$current_page,$pages)
 {
     $resulted_output = "<div class='pagination__container'><ul class='pagination__'>";
     for ($page = 1; $page <= $pages; $page++) {
-        $resulted_output .="<li><a href='{$page_url}?page={$page}'>{$page}</a></li>";
+        if($current_page==$page){
+            $resulted_output .="<li class='active'><a href='{$page_url}?page={$page}'>{$page}</a></li>";
+        }else{
+            $resulted_output .="<li><a href='{$page_url}?page={$page}'>{$page}</a></li>";
+        }
     }
     $resulted_output .= "</ul></div>";
     return $resulted_output;
