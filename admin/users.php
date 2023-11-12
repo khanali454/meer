@@ -105,8 +105,9 @@
     }else{
         $search = "";
     }
-    $users = loadUsers($start, $limit,$search);
-    $total_users = CountAllUsers();
+    $returned_result = loadUsers($start, $limit,$search);
+    $users = $returned_result['records'];
+    $total_users = $returned_result['total'];
     $total_pages = ceil($total_users / $limit);
     ?>
 
@@ -152,7 +153,11 @@
     </div>
     <!-- pagination -->
     <?php
-    echo printPagination($_SERVER['REQUEST_URI'], $current_page, $total_pages);
+    if(isset($_GET['search']) && !empty($_GET['search'])){
+        echo printPagination("users.php?search=".$_GET['search'], $current_page, $total_pages);
+    }else{
+        echo printPagination("users.php", $current_page, $total_pages);
+    }
     ?>
 
     <!-- CONTENT -->
