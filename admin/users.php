@@ -115,7 +115,7 @@
 
     <div class="search_filter_container">
         <form class="search_box_container" method="get" action="<?= $_SERVER['PHP_SELF'] ?>">
-            <input type="search" value="<?= $_GET['search'] ?? "" ?>" placeholder="Search by name or email" name="search">
+            <input type="search" required value="<?= $_GET['search'] ?? "" ?>" placeholder="Search by name or email" name="search">
             <button type="submit">Search</button>
         </form>
     </div>
