@@ -324,19 +324,18 @@ background-color: #01524C;
 /* pagination */
 .pagination__container{
     width: 100%;
-    border: 1px solid red;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    margin-bottom: 60px;
 }
 
 .pagination__container .pagination__{
-    width: 90%;
+    width: fit-content;
     margin: 0;
     padding: 0;
     display: flex;
     gap: 10px;
-    border: 2px solid red;
 }
 .pagination__ li{
     background: #000;
