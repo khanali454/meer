@@ -119,6 +119,8 @@
                             $total_pages = ceil($total_users / $limit);
                             echo "<br>users : ". $total_users;
                             echo "<br>pages : ". $total_pages;
+                            echo "<br><pre>";
+                            print_r($total_users);
 
                             
 
