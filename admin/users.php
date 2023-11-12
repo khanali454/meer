@@ -105,6 +105,7 @@
     }else{
         $search = "";
     }
+    echo $search;
     $users = loadUsers($start, $limit,$search);
     $total_users = CountAllUsers();
     $total_pages = ceil($total_users / $limit);
