@@ -115,46 +115,20 @@
                 $users = loadUsers($start, $limit);
                 $total_users = CountAllUsers();
                 $total_pages = ceil($total_users / $limit);
-                echo "<br>users : " . $total_users;
-                echo "<br>pages : " . $total_pages;
-                echo "<br><pre>";
-                print_r($users);
-
-                /**
-                 * 1 - 0 = 
-                 * 2 - 2
-                 * 3 - 4
-                 */
-
-
                 ?>
 
-                <tr>
-                    <td>1</td>
-                    <td>khan khosa</td>
-                    <td>khankhosa@gmail.com</td>
-                    <td>verified</td>
-                    <td><a href="user_profile.php" class="_user_edit_btn">View</a></td>
-                    <td><button class="_user_delete_btn">Delete</button></td>
-                </tr>
+                <?php foreach ($users as $user) { ?>
 
+                    <tr>
+                        <td><?= $user['user_id'] ?></td>
+                        <td><?= $user['user_fullname'] ?></td>
+                        <td><?= $user['user_email'] ?></td>
+                        <td><?= $user['user_class'] ?></td>
+                        <td><a href="user_profile.php?user=<?= $user['user_id'] ?>" class="_user_edit_btn">View</a></td>
+                        <td><button class="_user_delete_btn">Delete</button></td>
+                    </tr>
 
-                <tr>
-                    <td>2</td>
-                    <td>Khan</td>
-                    <td>naveedkhosa512@gmail.com</td>
-                    <td>Classic</td>
-                    <td><button class="_user_edit_btn">View</button></td>
-                    <td><button class="_user_delete_btn">Delete</button></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Naveed</td>
-                    <td>yameenkhan040@gmail.com</td>
-                    <td>Verified</td>
-                    <td><button class="_user_edit_btn">View</button></td>
-                    <td><button class="_user_delete_btn">Delete</button></td>
-                </tr>
+                <?php } ?>
 
             </tbody>
         </table>
