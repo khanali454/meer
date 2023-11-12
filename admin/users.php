@@ -106,10 +106,14 @@
                         </thead>
                         <tbody>
                             <?php 
-                            $users = loadUsers(0,7,"user_fullname ASC");
+                            $limit = 7;
+                            $start = 0;
+                            $current_page = 1;
+                            $users = loadUsers($start,$limit);
                             $total_users = CountAllUsers();
-                            echo "users : {$total_users} <pre>";
-                            print_r($users);
+                            $total_pages = ceil($total_users / $limit);
+                            echo "pages : ". $total_pages;
+
                             ?>
 
                             <tr>
