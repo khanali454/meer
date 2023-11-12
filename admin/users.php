@@ -100,14 +100,19 @@
         $current_page = $_GET["page"];
         $start = ($current_page - 1) * $limit;
     }
-    $users = loadUsers($start, $limit);
+    if(isset($_GET["search"]) && !empty($_GET["search"])){
+        $search = "user_fullname=".$_GET["search"]." OR user_email=".$_GET["search"];
+    }else{
+        $search = "";
+    }
+    $users = loadUsers($start, $limit,$search);
     $total_users = CountAllUsers();
     $total_pages = ceil($total_users / $limit);
     ?>
 
     <div class="search_filter_container">
         <form class="search_box_container" method="get" action="<?= $_SERVER['PHP_SELF'] ?>">
-            <input type="search" placeholder="Search name here" name="search">
+            <input type="search" placeholder="Search by name or email" name="search">
             <button type="submit">Search</button>
         </form>
     </div>
