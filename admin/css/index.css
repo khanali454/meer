@@ -381,7 +381,7 @@ background-color: #01524C;
     border: none;
     outline: none;
     border: 1px solid rgba(255,255,255,0.49);
-    cursor: pointer;
+  
 }
 
 .search_box_container button[type=submit]{
@@ -395,6 +395,7 @@ background-color: #01524C;
     border-radius: 2px;
     transition: all 0.3s ease-in-out;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .search_box_container button[type=submit]:hover{
