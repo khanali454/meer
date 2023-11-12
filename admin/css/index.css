@@ -375,6 +375,7 @@ background-color: #01524C;
     align-items: center;
 }
 .search_box_container input[type=search]{
+    width: 240px;
     padding: 7px 10px;
     border-radius: 2px;
     border: none;
