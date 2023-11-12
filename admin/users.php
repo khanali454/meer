@@ -102,11 +102,13 @@
     }
     if(isset($_GET["search"]) && !empty($_GET["search"])){
         $search = "user_fullname LIKE '%".$_GET["search"]."%' OR user_email LIKE '%".$_GET["search"]."%'";
+        $users = loadUsers($start, "no_limit",$search);
     }else{
         $search = "";
+        $users = loadUsers($start, $limit,$search);
     }
     
-    $users = loadUsers($start, $limit,$search);
+   
     $total_users = CountAllUsers();
     $total_pages = ceil($total_users / $limit);
     ?>
@@ -153,9 +155,7 @@
     </div>
     <!-- pagination -->
     <?php
-    if(isset($_GET['search']) && !empty($_GET['search'])){
-        echo printPagination("users.php?search=".$_GET['search'], $current_page, $total_pages);
-    }else{
+    if(!isset($_GET['search'])){
         echo printPagination("users.php", $current_page, $total_pages);
     }
     ?>

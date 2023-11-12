@@ -177,7 +177,10 @@ function loadUsers($start = 0, $limit = 7,$where_clause="", $order_by = "")
     if ($order_by != "") {
         $sql .= " ORDER BY " . $order_by;
     }
-    $sql .= " LIMIT $start,$limit";
+
+    if($limit!="no_limit"){
+        $sql .= " LIMIT $start,$limit";
+    }
 
     if ($result = mysqli_query($conn, $sql)) {
         if (mysqli_num_rows($result) > 0) {
