@@ -336,13 +336,16 @@ background-color: #01524C;
     padding: 0;
     display: flex;
     gap: 10px;
+    border: 2px solid red;
 }
 .pagination__ li{
     background: #000;
     border: 2px solid #fff;
+    display: flex;
 }
 
 .pagination__ li  a{
+    display: flex;
     padding: 7px 12px;
     border: 2px solid gray;
     background: #000;
