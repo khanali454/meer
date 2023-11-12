@@ -373,7 +373,7 @@ background-color: #01524C;
 }
 .search_box_container input[type=search]{
     padding: 7px 10px;
-    border-radius: 5px;
+    border-radius: 2px;
     border: none;
     outline: none;
     border: 1px solid rgba(255,255,255,0.49);
@@ -387,7 +387,7 @@ background-color: #01524C;
     background: #01524C;
     color: #fff;
     text-transform: capitalize;
-    border-radius: 5px;
+    border-radius: 2px;
     transition: all 0.3s ease-in-out;
     margin-left: 10px;
 }
