@@ -140,7 +140,7 @@
                                 <td><button class="_user_delete_btn">Delete</button></td>
                             </tr>
                             <?php 
-                            printPagination("users.php",$current_page,$total_pages);
+                            echo printPagination("users.php",$current_page,$total_pages);
                             ?>
 
                             <tr>
