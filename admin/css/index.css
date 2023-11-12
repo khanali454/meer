@@ -371,7 +371,8 @@ background-color: #01524C;
     display: flex;
     align-items: center;
     margin-top: 20px;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.30);
 }
 .search_box_container input[type=search]{
     padding: 7px 10px;
