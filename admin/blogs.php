@@ -13,51 +13,51 @@
     <link rel="stylesheet" href="css/user.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/blogs.css">
-    
+
     <link rel="stylesheet" href="css/loading_animation.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
 <body>
-<?php include "dashboard_header.php" ?>
+    <?php include "dashboard_header.php" ?>
 
 
 
 
 
 
-                <div class="_profile_heading_">  </div>
-                <div class="_websites_stats_container _users_stats">
-                    <!--stat box -->
-                    <div class="_stat_box">
-                        <div class="_stat_box_top">
-                            <div class="stat_box_top_left">
-                                <i class="fa-solid fa-blog"></i>
-                            </div>
-                            <div class="stat_box_top_right">
-                                <div class="_stat_count"><?= CountAllBlogs() ?></div>
-                                <div class="_stat_count_name">Total Blogs</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="_stat_box">
-                        <div class="_stat_box_top  blogs_stat_box_top">
-                            <div class="stat_box_top_left" style="cursor: pointer;">
-                                <a href="editor.html"><i class="fa-solid fa-circle-plus"></i></a>
-                            </div>
-                            <div class="stat_box_top_right">
-                               <a href="editor.html"><div class="_stat_count_name" style="color: #fff;">Add New Blogs</div></a> 
-                            </div>
-                        </div>
-                    </div>
-                    <!-- stat box end -->
+    <div class="_profile_heading_"> </div>
+    <div class="_websites_stats_container _users_stats">
+        <!--stat box -->
+        <div class="_stat_box">
+            <div class="_stat_box_top">
+                <div class="stat_box_top_left">
+                    <i class="fa-solid fa-blog"></i>
                 </div>
+                <div class="stat_box_top_right">
+                    <div class="_stat_count"><?= CountAllBlogs() ?></div>
+                    <div class="_stat_count_name">Total Blogs</div>
+                </div>
+            </div>
+        </div>
+        <div class="_stat_box">
+            <div class="_stat_box_top  blogs_stat_box_top">
+                <div class="stat_box_top_left" style="cursor: pointer;">
+                    <a href="editor.html"><i class="fa-solid fa-circle-plus"></i></a>
+                </div>
+                <div class="stat_box_top_right">
+                    <a href="editor.html">
+                        <div class="_stat_count_name" style="color: #fff;">Add New Blogs</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- stat box end -->
+    </div>
 
-                <!-- <div class="_profile_heading_">Profile Details</div> -->
-                <!-- <div class="_table_container_">
+    <!-- <div class="_profile_heading_">Profile Details</div> -->
+    <!-- <div class="_table_container_">
                     <table class="_table_is" border="1">
                         <thead>
                             <tr>
@@ -102,53 +102,94 @@
                 </div> -->
 
 
-                <div class="_container_posts_">
-                    <div class="_profile_heading_">
-                        Blogs
-                        <?php
-                        // echo "<pre>";
-                        // print_r(loadBlogs(0,2,"blog_id DESC"));
-                        ?>
-                    </div>
-                    <div class="_suspend_btn">Suspend</div>
-                </div>
+    <div class="_container_posts_">
+        <div class="_profile_heading_">
+            Blogs
+            <?php
+            // echo "<pre>";
+            // print_r(loadBlogs(0,2,"blog_id DESC"));
+            ?>
+        </div>
+        <div class="_suspend_btn">Suspend</div>
+    </div>
 
-                <div class="_table_container_ _next_post_table">
-                    <table class="_table_is" border="1">
-                        <thead>
-                            <tr>
-                                <th>Title</th>
-                                <th>Tags</th>
-                                <th>Discription</th>
-                                <th>Date & time</th>
-                                <th>Views</th>
-                                <th>Comments</th>
-                                <th>Likes</th>
-                                <th>Img</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Lorem ipsum dolor sit amet.</td>
-                                <td>Naveed,khosa,etc</td>
-                                <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae soluta odio exercitationem molestias sit maiores.</td>
-                                <td>24/05/2033</td>
-                                <th>4</th>
-                                <th>6</th>
-                                <th>5</th>
-                                <th>Img</th>
-                                <td><button class="_user_edit_btn">Edit</button></td>
-                                <td><button class="_user_delete_btn">Delete</button></td>
-                            </tr>
+    <?php
+    $limit = 5;
+    $current_page = 1;
+    $start = 0;
 
-                        </tbody>
-                    </table>
-                </div>
-                <!-- CONTENT -->
-          
+    if (isset($_GET["page"]) && !empty($_GET['page'])) {
+        $current_page = $_GET["page"];
+        $start = ($current_page - 1) * $limit;
+    }
+    if (isset($_GET["search"]) && !empty($_GET["search"])) {
+        $search = "b.blog_title LIKE '%" . $_GET["title"] . "%' OR u.user_fullname LIKE '%" . $_GET["search"] . "%'";
+        $users = loadBlogs($start, "no_limit", $search);
+    } else {
+        $search = "";
+        $blogs = loadBlogs($start, $limit, $search);
+    }
 
-<?php
-include "dashboard_footer.php";
-?>
+
+    $total_blogs = CountAllBlogs();
+    $total_pages = ceil($total_blogs / $limit);
+    ?>
+
+    <div class="search_filter_container">
+        <form class="search_box_container" method="get" action="<?= $_SERVER['PHP_SELF'] ?>">
+            <input type="search" required value="<?= $_GET['search'] ?? "" ?>" placeholder="Search by title or publisher name" name="search">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <p style="padding:10px 0;color:rgba(255,255,255,0.46);width:100%;">
+        <?php if (isset($_GET['search'])) { ?>
+            Showing Search Results - <a href="blogs.php" style="color: #E80000;">cancel search</a>
+        <?php } else { ?>
+            Showing <?= $start + 1 ?> to <?= (($start + $limit) > $total_blogs) ? $total_blogs : ($start + $limit) ?> of <?= $total_blogs ?> users
+        <?php } ?>
+    </p>
+
+    <div class="_table_container_ _next_post_table">
+        <table class="_table_is" border="1">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Publisher</th>
+                    <th>Blog Category</th>
+                    <th>Tags</th>
+                    <th>Last Updated</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($blogs as $blog) { ?>
+                    <tr>
+                        <td><?= $blog['blog_title'] ?></td>
+                        <td><?= $blog['user_fullname'] ?></td>
+                        <td><?= blogCategoryName($blog['blog_category']) ?></td>
+                        <td><?= loadBlogTages($blog['blog_id']) ?></td>
+                        <td><?= $blog['last_updated'] ?></td>
+                        <td>
+                            <button class="_user_edit_btn">Edit</button>
+                            <button class="_user_delete_btn">Delete</button>
+                        </td>
+                    </tr>
+                <?php } ?>
+
+            </tbody>
+        </table>
+    </div>
+    <!-- pagination -->
+    <?php
+    if (!isset($_GET['search'])) {
+        echo printPagination("blogs.php", $current_page, $total_pages);
+    }
+    ?>
+    <!-- CONTENT -->
+
+
+
+    <?php
+    include "dashboard_footer.php";
+    ?>

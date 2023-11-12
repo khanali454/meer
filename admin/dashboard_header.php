@@ -220,16 +220,24 @@ function printPagination($page_url,$current_page,$pages)
 }
 
 
+
 // load blogs
 
-function loadBlogs($start = 0, $limit = 7, $order_by = "")
+function loadBlogs($start = 0, $limit = 7,$where_clause="", $order_by = "")
 {
     global $conn;
     $sql = "SELECT *,DATE_FORMAT(last_updated,'%d %b, %Y') as last_updated FROM `blogs` b INNER JOIN `users` u ON b.blog_publisher=u.user_id";
+    if( $where_clause != ""){
+        $sql .= " WHERE " . $where_clause;
+    }
+
     if ($order_by != "") {
         $sql .= " ORDER BY " . $order_by;
     }
-    $sql .= " LIMIT $start,$limit";
+
+    if($limit != "no_limit"){
+        $sql .= " LIMIT $start,$limit";
+    }
 
     if ($result = mysqli_query($conn, $sql)) {
         if (mysqli_num_rows($result) > 0) {
@@ -242,8 +250,35 @@ function loadBlogs($start = 0, $limit = 7, $order_by = "")
     }
 }
 
-
 // load blogs
+
+// get blog category name by category id
+function blogCategoryName($category_id){
+    global $conn;
+    $sql = "SELECT c_name FROM categories WHERE c_id={$category_id};";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        return mysqli_fetch_assoc($result)['c_name'];
+    } else {
+        return "Not Found";
+    }
+}
+// get blog category name by category id
+function loadBlogTages($blog_id){
+    global $conn;
+    $sql = "SELECT tag_name FROM `blog_tags` WHERE `blog_id` = {$blog_id};";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        $tags = "";
+        while ($row = mysqli_fetch_assoc($result)){
+            $tags .= $row["tag_name"] .", ";
+        }
+        $tags = substr($tags,0,-1);
+        return $tags;
+    } else {
+        return "NA";
+    }
+}
 
 ?>
 
