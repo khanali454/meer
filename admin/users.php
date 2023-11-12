@@ -122,7 +122,7 @@
 
     <p style="padding:10px 0;color:rgba(255,255,255,0.46);width:100%;">
         <?php if (isset($_GET['search'])) { ?>
-            Showing Search Results <a href="users.php" style="color: red;margin-left:15px;font-size:18px;">&#x274C;</a>
+            Showing Search Results - <a href="users.php" style="color: red;margin-left:15px;">cancel search</a>
         <?php } else { ?>
             Showing <?= $start + 1 ?> to <?= (($start + $limit) > $total_users) ? $total_users : ($start + $limit) ?> of <?= $total_users ?> users
         <?php } ?>
