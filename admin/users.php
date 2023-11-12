@@ -101,7 +101,7 @@
         $start = ($current_page - 1) * $limit;
     }
     if(isset($_GET["search"]) && !empty($_GET["search"])){
-        $search = "user_fullname='".$_GET["search"]."' OR user_email='".$_GET["search"]."'";
+        $search = "user_fullname LIKE '%".$_GET["search"]."%' OR user_email LIKE '%".$_GET["search"]."%'";
     }else{
         $search = "";
     }
