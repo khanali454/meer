@@ -353,7 +353,7 @@ background-color: #01524C;
 .pagination__ li  a{
     display: flex;
     padding: 7px 12px;
-    border: 4px solid #0085ff;
+    border: 4px solid #222;
     background: #000;
     border-radius: 5px;
     color: #E31717;
