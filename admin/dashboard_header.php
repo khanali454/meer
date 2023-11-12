@@ -195,18 +195,15 @@ function printPagination($page_url,$current_page,$pages)
     if( $current_page > 1){
         $resulted_output .="<li><a href='{$page_url}?page=".($current_page-1)."'>Prev</a></li>";
     }
-    $lastlink = 0;
-    for ($page = 1; $page <= $pages; $page++) {
-        if($page > $lastlink + 1) {
-            $resulted_output .=" ... "; 
-          }
 
+    for ($page = 1; $page <= $pages; $page++) {
+      
         if($current_page==$page){
             $resulted_output .="<li class='active'><a href='{$page_url}?page={$page}'>{$page}</a></li>";
         }else{
             $resulted_output .="<li><a href='{$page_url}?page={$page}'>{$page}</a></li>";
         }
-        $lastlink = $page;
+    
     }
     if( $current_page < $pages){
         $resulted_output .="<li><a href='{$page_url}?page=".($current_page+1)."'>Next</a></li>";
