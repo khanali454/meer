@@ -271,7 +271,7 @@ function loadBlogTages($blog_id){
     if (mysqli_num_rows($result) > 0) {
         $tags = "";
         while ($row = mysqli_fetch_assoc($result)){
-            $tags .= $row["tag_name"] .", ";
+            $tags .= $row["tag_name"] .",";
         }
         $tags = substr($tags,0,-1);
         return $tags;
