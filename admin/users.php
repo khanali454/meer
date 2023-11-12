@@ -91,6 +91,7 @@
     </div>
 
     <div class="_table_container_">
+        <p>Showing 1 to 5 of 20 users</p>
         <table class="_table_is" border="1">
             <thead>
                 <tr>
