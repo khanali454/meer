@@ -112,7 +112,7 @@
                             
                             if(isset($_GET["page"]) && !empty($_GET['page'])){
                                 $current_page = $_GET["page"];
-                                $start = $start + $limit;
+                                $start = ($page-1) * $limit;
                             }
                             $users = loadUsers($start,$limit);
                             $total_users = CountAllUsers();
