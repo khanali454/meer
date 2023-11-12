@@ -92,7 +92,7 @@
 
     
     <?php
-                $limit = 5;
+                $limit = 2;
                 $current_page = 1;
                 $start = 0;
 
@@ -104,7 +104,7 @@
                 $total_users = CountAllUsers();
                 $total_pages = ceil($total_users / $limit);
                 ?>
-                
+
     <div class="_table_container_">
         <p style="padding:10px 0;color:rgba(255,255,255,0.46);">Showing <?= $start+1 ?> to <?= $limit ?> of <?= $total_users ?> users</p>
         <table class="_table_is" border="1">
