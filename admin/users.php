@@ -152,7 +152,7 @@
     </div>
     <!-- pagination -->
     <?php
-    echo printPagination("users.php", $current_page, $total_pages);
+    echo printPagination($_SERVER['REQUEST_URI'], $current_page, $total_pages);
     ?>
 
     <!-- CONTENT -->
