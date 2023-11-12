@@ -124,7 +124,7 @@
     }
     if (isset($_GET["search"]) && !empty($_GET["search"])) {
         $search = "b.blog_title LIKE '%" . $_GET["search"] . "%' OR u.user_fullname LIKE '%" . $_GET["search"] . "%'";
-        $users = loadBlogs($start, "no_limit", $search);
+        $blogs = loadBlogs($start, "no_limit", $search);
     } else {
         $search = "";
         $blogs = loadBlogs($start, $limit, $search);
