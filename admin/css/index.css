@@ -370,6 +370,8 @@ background-color: #01524C;
 .search_box_container{
     display: flex;
     align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 .search_box_container input[type=search]{
     padding: 7px 10px;
