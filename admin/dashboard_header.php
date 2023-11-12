@@ -167,7 +167,7 @@ function CountDraftBlogs()
 
 
 // users
-function loadUsers($start = 0, $limit = 7, $order_by="")
+function loadUsers($start = 0, $limit = 7, $order_by = "")
 {
     global $conn;
     $sql = "SELECT * FROM users WHERE user_role='user'";
@@ -188,9 +188,21 @@ function loadUsers($start = 0, $limit = 7, $order_by="")
 }
 
 
+// print pagination
+function printPagination($page_url,$current_page,$pages)
+{
+    $resulted_output = "<div class='pagination__container'><ul class='pagination__'>";
+    for ($page = 1; $page <= $pages; $page++) {
+        $resulted_output .="<li><a href='{$page_url}?page={$page}'>{$page}</a></li>";
+    }
+    $resulted_output .= "</ul></div>";
+    return $resulted_output;
+}
+
+
 // load blogs
 
-function loadBlogs($start = 0, $limit = 7, $order_by="")
+function loadBlogs($start = 0, $limit = 7, $order_by = "")
 {
     global $conn;
     $sql = "SELECT *,DATE_FORMAT(last_updated,'%d %b, %Y') as last_updated FROM `blogs` b INNER JOIN `users` u ON b.blog_publisher=u.user_id";
@@ -201,7 +213,7 @@ function loadBlogs($start = 0, $limit = 7, $order_by="")
 
     if ($result = mysqli_query($conn, $sql)) {
         if (mysqli_num_rows($result) > 0) {
-            return mysqli_fetch_all($result,MYSQLI_ASSOC);
+            return mysqli_fetch_all($result, MYSQLI_ASSOC);
         } else {
             return 0;
         }

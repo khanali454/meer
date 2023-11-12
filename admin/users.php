@@ -139,6 +139,9 @@
                                 <td><a href="user_profile.php" class="_user_edit_btn">View</a></td>
                                 <td><button class="_user_delete_btn">Delete</button></td>
                             </tr>
+                            <?php 
+                            printPagination("users.php",$current_page,$total_pages);
+                            ?>
 
                             <tr>
                                 <td>2</td>
