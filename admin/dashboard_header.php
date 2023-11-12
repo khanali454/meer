@@ -181,10 +181,7 @@ function loadUsers($start = 0, $limit = 7,$where_clause="", $order_by = "")
 
     if ($result = mysqli_query($conn, $sql)) {
         if (mysqli_num_rows($result) > 0) {
-            return [
-                "records"=> mysqli_fetch_all($result,MYSQLI_ASSOC),
-                "total"=> mysqli_num_rows($result),
-            ];
+            return mysqli_fetch_all($result,MYSQLI_ASSOC);
         } else {
             return 0;
         }

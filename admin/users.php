@@ -105,9 +105,9 @@
     }else{
         $search = "";
     }
-    $returned_result = loadUsers($start, $limit,$search);
-    $users = $returned_result['records'];
-    $total_users = $returned_result['total'];
+    
+    $users = loadUsers($start, $limit,$search);
+    $total_users = CountAllUsers();
     $total_pages = ceil($total_users / $limit);
     ?>
 
