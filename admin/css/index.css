@@ -346,8 +346,8 @@ background-color: #01524C;
 }
 
 .pagination__ li.active a{
-    background: #EFA12B;
-    color: rgba(255,255,255,0.49);
+    background: #01524C;
+    color: #ffffffe3;
 }
 
 .pagination__ li  a{
@@ -356,6 +356,6 @@ background-color: #01524C;
     border: 4px solid #000;
     background: #000;
     border-radius: 4px;
-    color: #efa12bca;
+    color: rgba(255,255,255,0.49);
 }
 
