@@ -342,6 +342,7 @@ background-color: #01524C;
     background: #000;
     border: 2px solid #fff;
     display: flex;
+    margin: 10px 0;
 }
 
 .pagination__ li.active a{
@@ -354,7 +355,7 @@ background-color: #01524C;
     padding: 7px 12px;
     border: 2px solid gray;
     background: #000;
-    border-radius: 4px;
+    border-radius: 5px;
     color: #E31717;
 }
 
