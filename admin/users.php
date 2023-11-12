@@ -90,6 +90,21 @@
 
     </div>
 
+    
+    <?php
+                $limit = 5;
+                $current_page = 1;
+                $start = 0;
+
+                if (isset($_GET["page"]) && !empty($_GET['page'])) {
+                    $current_page = $_GET["page"];
+                    $start = ($current_page - 1) * $limit;
+                }
+                $users = loadUsers($start, $limit);
+                $total_users = CountAllUsers();
+                $total_pages = ceil($total_users / $limit);
+                ?>
+                
     <div class="_table_container_">
         <p style="padding:10px 0;color:rgba(255,255,255,0.46);">Showing <?= $start+1 ?> to <?= $limit ?> of <?= $total_users ?> users</p>
         <table class="_table_is" border="1">
@@ -104,20 +119,7 @@
                 </tr>
             </thead>
             <tbody>
-                <?php
-                $limit = 5;
-                $current_page = 1;
-                $start = 0;
-
-                if (isset($_GET["page"]) && !empty($_GET['page'])) {
-                    $current_page = $_GET["page"];
-                    $start = ($current_page - 1) * $limit;
-                }
-                $users = loadUsers($start, $limit);
-                $total_users = CountAllUsers();
-                $total_pages = ceil($total_users / $limit);
-                ?>
-
+               
                 <?php foreach ($users as $user) { ?>
 
                     <tr>
