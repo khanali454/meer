@@ -123,7 +123,7 @@
         $start = ($current_page - 1) * $limit;
     }
     if (isset($_GET["search"]) && !empty($_GET["search"])) {
-        $search = "b.blog_title LIKE '%" . $_GET["title"] . "%' OR u.user_fullname LIKE '%" . $_GET["search"] . "%'";
+        $search = "b.blog_title LIKE '%" . $_GET["search"] . "%' OR u.user_fullname LIKE '%" . $_GET["search"] . "%'";
         $users = loadBlogs($start, "no_limit", $search);
     } else {
         $search = "";
