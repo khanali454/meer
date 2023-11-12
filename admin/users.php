@@ -92,7 +92,7 @@
 
     
     <?php
-                $limit = 7;
+                $limit = 4;
                 $current_page = 1;
                 $start = 0;
 
