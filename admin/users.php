@@ -106,14 +106,14 @@
                         </thead>
                         <tbody>
                             <?php 
-                            $limit = 7;
+                            $limit = 2;
                             $current_page = 1;
                             $start = 0;
                             
-                            // if(isset($_GET["page"]) && !empty($_GET['page'])){
-                            //     $current_page = $_GET["page"];
-                            //     $start = $start*$current_page + $limit;
-                            // }
+                            if(isset($_GET["page"]) && !empty($_GET['page'])){
+                                $current_page = $_GET["page"];
+                                $start = $start + $limit;
+                            }
                             $users = loadUsers($start,$limit);
                             $total_users = CountAllUsers();
                             $total_pages = ceil($total_users / $limit);
@@ -122,6 +122,11 @@
                             echo "<br><pre>";
                             print_r($users);
 
+                            /**
+                             * 1 - 0 = 
+                             * 2 - 2
+                             * 3 - 4
+                             */
                             
 
                             ?>
