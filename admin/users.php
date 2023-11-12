@@ -106,9 +106,8 @@
     ?>
 
     <div class="search_filter_container">
-        <?php echo "<pre>"; print_r($_SERVER); ?>
-        <form class="search_box_container" method="get" action="<?= "users.php" ?>">
-            <input type="search" name="" id="">
+        <form class="search_box_container" method="get" action="<?= $_SERVER['PHP_SELF'] ?>">
+            <input type="search" placeholder="Search name here" name="search">
             <button type="submit">Search</button>
         </form>
     </div>
