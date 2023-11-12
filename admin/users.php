@@ -100,27 +100,33 @@
         $current_page = $_GET["page"];
         $start = ($current_page - 1) * $limit;
     }
-    if(isset($_GET["search"]) && !empty($_GET["search"])){
-        $search = "user_fullname LIKE '%".$_GET["search"]."%' OR user_email LIKE '%".$_GET["search"]."%'";
-        $users = loadUsers($start, "no_limit",$search);
-    }else{
+    if (isset($_GET["search"]) && !empty($_GET["search"])) {
+        $search = "user_fullname LIKE '%" . $_GET["search"] . "%' OR user_email LIKE '%" . $_GET["search"] . "%'";
+        $users = loadUsers($start, "no_limit", $search);
+    } else {
         $search = "";
-        $users = loadUsers($start, $limit,$search);
+        $users = loadUsers($start, $limit, $search);
     }
-    
-   
+
+
     $total_users = CountAllUsers();
     $total_pages = ceil($total_users / $limit);
     ?>
 
     <div class="search_filter_container">
         <form class="search_box_container" method="get" action="<?= $_SERVER['PHP_SELF'] ?>">
-            <input type="search" value="<?= $_GET['search']??"" ?>" placeholder="Search by name or email" name="search">
+            <input type="search" value="<?= $_GET['search'] ?? "" ?>" placeholder="Search by name or email" name="search">
             <button type="submit">Search</button>
         </form>
     </div>
 
-    <p style="padding:10px 0;color:rgba(255,255,255,0.46);width:100%;">Showing <?= $start + 1 ?> to <?= (($start + $limit) > $total_users) ? $total_users : ($start + $limit) ?> of <?= $total_users ?> users</p>
+    <p style="padding:10px 0;color:rgba(255,255,255,0.46);width:100%;">
+        <?php if (isset($_GET['search'])) { ?>
+            Showing Search Results <a href="users.php" style="padding:7px 15px;background: #01524C;color: #fff;margin-left:15px;">Remove</a>
+        <?php } else { ?>
+            Showing <?= $start + 1 ?> to <?= (($start + $limit) > $total_users) ? $total_users : ($start + $limit) ?> of <?= $total_users ?> users
+        <?php } ?>
+    </p>
     <div class="_table_container_">
         <table class="_table_is" border="1">
             <thead>
@@ -155,7 +161,7 @@
     </div>
     <!-- pagination -->
     <?php
-    if(!isset($_GET['search'])){
+    if (!isset($_GET['search'])) {
         echo printPagination("users.php", $current_page, $total_pages);
     }
     ?>
