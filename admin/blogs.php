@@ -163,19 +163,27 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($blogs as $blog) { ?>
+                <?php if ($blogs == 0) { ?>
                     <tr>
-                        <td><?= $blog['blog_title'] ?></td>
-                        <td><?= $blog['user_fullname'] ?></td>
-                        <td><?= blogCategoryName($blog['blog_category']) ?></td>
-                        <td><?= loadBlogTages($blog['blog_id']) ?></td>
-                        <td><?= $blog['last_updated'] ?></td>
-                        <td>
-                            <button class="_user_edit_btn">Edit</button>
-                            <button class="_user_delete_btn">Delete</button>
-                        </td>
+                        <td colspan="6">No record was found</td>
                     </tr>
-                <?php } ?>
+                <?php } else { ?>
+
+
+                    <?php foreach ($blogs as $blog) { ?>
+                        <tr>
+                            <td><?= $blog['blog_title'] ?></td>
+                            <td><?= $blog['user_fullname'] ?></td>
+                            <td><?= blogCategoryName($blog['blog_category']) ?></td>
+                            <td><?= loadBlogTages($blog['blog_id']) ?></td>
+                            <td><?= $blog['last_updated'] ?></td>
+                            <td>
+                                <button class="_user_edit_btn">Edit</button>
+                                <button class="_user_delete_btn">Delete</button>
+                            </td>
+                        </tr>
+                <?php }
+                }  ?>
 
             </tbody>
         </table>

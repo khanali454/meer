@@ -140,7 +140,11 @@
                 </tr>
             </thead>
             <tbody>
-
+            <?php if ($users == 0) { ?>
+                    <tr>
+                        <td colspan="6">No record was found</td>
+                    </tr>
+                <?php } else { ?>
                 <?php foreach ($users as $user) { ?>
 
                     <tr>
@@ -152,7 +156,7 @@
                         <td><button class="_user_delete_btn">Delete</button></td>
                     </tr>
 
-                <?php } ?>
+                <?php } }?>
 
             </tbody>
         </table>
