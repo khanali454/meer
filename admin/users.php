@@ -106,7 +106,7 @@
                         </thead>
                         <tbody>
                             <?php 
-                            $limit = 2;
+                            $limit = 7;
                             $current_page = 1;
                             $start = 1;
                             
