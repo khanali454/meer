@@ -106,7 +106,7 @@
                 ?>
 
     <div class="_table_container_">
-        <p style="padding:10px 0;color:rgba(255,255,255,0.46);">Showing <?= $start ?> to <?= $start + $limit ?> of <?= $total_users ?> users</p>
+        <p style="padding:10px 0;color:rgba(255,255,255,0.46);">Showing <?= ($start==0)?1:$start ?> to <?= (($start + $limit)>$total_users)?($start + $limit)-1:($start + $limit) ?> of <?= $total_users ?> users</p>
         <table class="_table_is" border="1">
             <thead>
                 <tr>
