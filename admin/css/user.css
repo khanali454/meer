@@ -80,6 +80,7 @@ color: #fff !important;
 }
 
 ._table_is tbody tr td:last-child{
+    width: fit-content !important;
     word-break: keep-all !important;
     white-space: nowrap !important;
 }
