@@ -78,6 +78,12 @@ color: #fff !important;
     color :rgba(255,255,255,0.46);
     padding: 10px;
 }
+
+._table_is tbody tr td:last-child{
+    word-break: keep-all !important;
+    white-space: nowrap !important;
+}
+
 ._table_is tbody tr td ._user_edit_btn{
 padding: 8px 20px;
 color: #fff;
