@@ -20,7 +20,14 @@
 </head>
 
 <body>
-<?php include "dashboard_header.php" ?>
+<?php include "dashboard_header.php" ;
+if(isset($_GET['user']) && !empty(trim($_GET['user']))){
+    $user_id = mysqli_real_escape_string($conn,trim($_GET['user']));
+}
+$user = loadUsers(0,"no_limit","user_id=". $user_id);
+echo "<pre>";
+print_r($user);
+?>
 
 
                 <div class="_profile_heading_">Naveed Ullah</div>
