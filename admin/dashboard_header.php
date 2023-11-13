@@ -279,7 +279,22 @@ function loadBlogTages($blog_id){
         return "NA";
     }
 }
+// count blog likes by blog id
+function countBlogLikes($blog_id){
+    global $conn;
+    $sql = "SELECT * FROM `blog_likes` WHERE `blog_id` = {$blog_id};";
+    $result = mysqli_query($conn, $sql);
+    return mysqli_num_rows($result);
+}
 
+// count blog comments and comments replies by blog id
+function countBlogComments($blog_id){
+    global $conn;
+    $sql = "SELECT count(*) as t_comments,sum(replies) as t_replies FROM `blog_comments` WHERE `blog_id` = {$blog_id};";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    return ($row['t_comments'] + $row['t_replies']);
+}
 ?>
 
 

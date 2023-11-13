@@ -156,6 +156,8 @@
                     <th>Publisher</th>
                     <th>Blog Category</th>
                     <th>Tags</th>
+                    <th>Likes</th>
+                    <th>Comments</th>
                     <th>Last Updated</th>
                     <th>Actions</th>
                 </tr>
@@ -179,6 +181,8 @@
                             <td><?= $blog['user_fullname'] ?></td>
                             <td><?= blogCategoryName($blog['blog_category']) ?></td>
                             <td><?= loadBlogTages($blog['blog_id']) ?></td>
+                            <td><?= countBlogLikes($blog['blog_id']) ?></td>
+                            <td><?= countBlogComments($blog['blog_id']) ?></td>
                             <td><?= $blog['last_updated'] ?></td>
                             <td>
                                 <button class="_user_edit_btn _blog_edit_btn" data-id="<?= $blog['blog_id'] ?>">Edit</button>
