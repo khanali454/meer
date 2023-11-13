@@ -127,9 +127,10 @@ cursor: pointer;
 
 /* user cover image on user profile page */
 ._cover_img_{
-    width: 80px;
-    height: 80px;
-    border-radius: 3px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 ._cover_img_ img{
     width: 100%;
