@@ -127,6 +127,9 @@ cursor: pointer;
 
 /* user cover image on user profile page */
 ._cover_img_{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 60px;
     height: 60px;
     border-radius: 50%;
