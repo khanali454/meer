@@ -151,6 +151,7 @@
         <table class="_table_is" border="1">
             <thead>
                 <tr>
+                    <th>Cover Image</th>
                     <th>Title</th>
                     <th>Publisher</th>
                     <th>Blog Category</th>
@@ -169,6 +170,11 @@
 
                     <?php foreach ($blogs as $blog) { ?>
                         <tr>
+                            <td>
+                                <div class="cover_image">
+                                    <img width="70px" src="../uploads/feature-images/<?= $blog['blog_cover_img'] ?>" alt="">
+                                </div>
+                            </td>
                             <td><?= $blog['blog_title'] ?></td>
                             <td><?= $blog['user_fullname'] ?></td>
                             <td><?= blogCategoryName($blog['blog_category']) ?></td>
