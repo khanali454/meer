@@ -135,28 +135,30 @@
                     <th>FULL NAME</th>
                     <th>EMAIL</th>
                     <th>CLASS</th>
-                    <th>SEE DATA</th>
-                    <th>SUSPEND</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
-            <?php if ($users == 0) { ?>
+                <?php if ($users == 0) { ?>
                     <tr>
                         <td colspan="6">No record was found</td>
                     </tr>
                 <?php } else { ?>
-                <?php foreach ($users as $user) { ?>
+                    <?php foreach ($users as $user) { ?>
 
-                    <tr>
-                        <td><?= $user['user_id'] ?></td>
-                        <td><?= $user['user_fullname'] ?></td>
-                        <td><?= $user['user_email'] ?></td>
-                        <td><?= $user['user_class'] ?></td>
-                        <td><a href="user_profile.php?user=<?= $user['user_id'] ?>" class="_user_edit_btn">View</a></td>
-                        <td><button class="_user_delete_btn">Delete</button></td>
-                    </tr>
+                        <tr>
+                            <td><?= $user['user_id'] ?></td>
+                            <td><?= $user['user_fullname'] ?></td>
+                            <td><?= $user['user_email'] ?></td>
+                            <td><?= $user['user_class'] ?></td>
+                            <td>
+                                <a href="user_profile.php?user=<?= $user['user_id'] ?>" class="_user_edit_btn">View Profile</a>
+                                <button class="_user_delete_btn">Block</button>
+                            </td>
+                        </tr>
 
-                <?php } }?>
+                <?php }
+                } ?>
 
             </tbody>
         </table>
