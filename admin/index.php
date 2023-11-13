@@ -22,6 +22,7 @@ if(isset($_SESSION['admin_logged_in_id'])){
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:wght@200&display=swap');
     </style>
+    <?php include "common_styles.php"; ?>
 </head>
 
 <body>
