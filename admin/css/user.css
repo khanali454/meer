@@ -92,8 +92,8 @@ color: #fff !important;
 
 .cover_image img{
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: auto;
+    /* object-fit: contain; */
 }
 
 ._table_is tbody tr td ._user_edit_btn{

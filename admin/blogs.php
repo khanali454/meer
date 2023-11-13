@@ -172,7 +172,7 @@
                         <tr>
                             <td>
                                 <div class="cover_image">
-                                    <img width="70px" src="../uploads/feature-images/<?= $blog['blog_cover_img'] ?>" alt="">
+                                    <img src="../uploads/feature-images/<?= $blog['blog_cover_img'] ?>" alt="">
                                 </div>
                             </td>
                             <td><?= $blog['blog_title'] ?></td>
