@@ -70,6 +70,7 @@ color: #fff !important;
     color: #fff;
     font-size: 12px;
     text-transform: uppercase;
+    flex-shrink: 0;
 }
 
 ._table_is tbody tr td{
