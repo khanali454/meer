@@ -156,7 +156,7 @@
                     <th>Publisher</th>
                     <th>Blog Category</th>
                     <th>Tags</th>
-                    <th>Likes <?= number_format_short(1300); ?></th>
+                    <th>Likes</th>
                     <th>Comments</th>
                     <th>Last Updated</th>
                     <th>Actions</th>
