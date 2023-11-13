@@ -297,31 +297,36 @@ function countBlogComments($blog_id){
 }
 
 // number format
-function number_format_short( $n ) {
-	if ($n > 0 && $n < 1000) {
-		// 1 - 999
-		$n_format = floor($n);
-		$suffix = '';
-	} else if ($n >= 1000 && $n < 1000000) {
-		// 1k-999k
-		$n_format = floor($n / 1000);
-		$suffix = 'K+';
-	} else if ($n >= 1000000 && $n < 1000000000) {
-		// 1m-999m
-		$n_format = floor($n / 1000000);
-		$suffix = 'M+';
-	} else if ($n >= 1000000000 && $n < 1000000000000) {
-		// 1b-999b
-		$n_format = floor($n / 1000000000);
-		$suffix = 'B+';
-	} else if ($n >= 1000000000000) {
-		// 1t+
-		$n_format = floor($n / 1000000000000);
-		$suffix = 'T+';
-	}
 
-	return !empty($n_format . $suffix) ? $n_format . $suffix : 0;
+function number_format_short( $n, $precision = 1 ) {
+	if ($n < 900) {
+		// 0 - 900
+		$n_format = number_format($n, $precision);
+		$suffix = '';
+	} else if ($n < 900000) {
+		// 0.9k-850k
+		$n_format = number_format($n / 1000, $precision);
+		$suffix = 'K';
+	} else if ($n < 900000000) {
+		// 0.9m-850m
+		$n_format = number_format($n / 1000000, $precision);
+		$suffix = 'M';
+	} else if ($n < 900000000000) {
+		// 0.9b-850b
+		$n_format = number_format($n / 1000000000, $precision);
+		$suffix = 'B';
+	} else {
+		// 0.9t+
+		$n_format = number_format($n / 1000000000000, $precision);
+		$suffix = 'T';
+	}
+	if ( $precision > 0 ) {
+		$dotzero = '.' . str_repeat( '0', $precision );
+		$n_format = str_replace( $dotzero, '', $n_format );
+	}
+	return $n_format . $suffix;
 }
+
 ?>
 
 
