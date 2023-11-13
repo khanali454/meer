@@ -177,7 +177,9 @@
                                     <img src="../uploads/feature-images/<?= $blog['blog_cover_img'] ?>" alt="">
                                 </div>
                             </td>
-                            <td><?= $blog['blog_title'] ?></td>
+                            <td>
+                                <a href="../blog.php?id=<?=$blog['blog_id']?>"><?= $blog['blog_title'] ?></a>
+                            </td>
                             <td><?= $blog['user_fullname'] ?></td>
                             <td><?= blogCategoryName($blog['blog_category']) ?></td>
                             <td><?= loadBlogTages($blog['blog_id']) ?></td>
