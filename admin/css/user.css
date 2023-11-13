@@ -94,7 +94,6 @@ text-transform: uppercase;
 font-size: 12px;
 border-radius: 2px;
 cursor: pointer;
-margin: 3px;
 }
 
 ._table_is tbody tr td ._user_delete_btn{
@@ -107,7 +106,6 @@ margin: 3px;
     font-size: 12px;
     border-radius: 2px;
     cursor: pointer;
-    margin: 3px;
     }
     
 
