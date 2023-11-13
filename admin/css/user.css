@@ -125,3 +125,14 @@ cursor: pointer;
 
 /* users.html page */
 
+/* user cover image on user profile page */
+._cover_img_{
+    width: 80px;
+    height: 80px;
+    border-radius: 3px;
+}
+._cover_img_ img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
