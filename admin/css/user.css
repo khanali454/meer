@@ -63,12 +63,12 @@ color: #fff !important;
 
 ._table_is thead{
     background: #01524C;
-}
-
-._table_is thead th{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+._table_is thead th{
     width: fit-content;
     padding: 10px;
     color: #fff;
