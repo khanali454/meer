@@ -69,6 +69,8 @@ color: #fff !important;
     color: #fff;
     font-size: 12px;
     text-transform: uppercase;
+    word-break: keep-all;
+    white-space: nowrap;
 }
 
 ._table_is tbody tr td{
