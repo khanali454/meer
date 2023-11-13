@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/loading_animation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <?php include "common_styles.php"; ?>
 </head>
 
 <body>
@@ -178,8 +179,8 @@
                             <td><?= loadBlogTages($blog['blog_id']) ?></td>
                             <td><?= $blog['last_updated'] ?></td>
                             <td>
-                                <button class="_user_edit_btn">Edit</button>
-                                <button class="_user_delete_btn">Delete</button>
+                                <button class="_user_edit_btn _blog_edit_btn" data-id="<?= $blog['blog_id'] ?>">Edit</button>
+                                <button class="_user_delete_btn _blog_delete_btn" date-id="<?= $blog['blog_id'] ?>">Delete</button>
                             </td>
                         </tr>
                 <?php }
@@ -195,7 +196,6 @@
     }
     ?>
     <!-- CONTENT -->
-
 
 
     <?php
