@@ -178,7 +178,7 @@
                                 </div>
                             </td>
                             <td>
-                                <a href="../blog.php?id=<?=$blog['blog_id']?>"><?= $blog['blog_title'] ?></a>
+                                <a href="../blog.php?blog=<?=$blog['blog_id']?>"><?= $blog['blog_title'] ?></a>
                             </td>
                             <td><?= $blog['user_fullname'] ?></td>
                             <td><?= blogCategoryName($blog['blog_category']) ?></td>
