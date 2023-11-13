@@ -105,13 +105,9 @@
 
     <div class="_container_posts_">
         <div class="_profile_heading_">
-            Blogs
-            <?php
-            // echo "<pre>";
-            // print_r(loadBlogs(0,2,"blog_id DESC"));
-            ?>
+            blogs
         </div>
-        <div class="_suspend_btn">Suspend</div>
+        <!-- <div class="_suspend_btn">Suspend</div> -->
     </div>
 
     <?php
@@ -180,6 +176,7 @@
                             <td><?= $blog['last_updated'] ?></td>
                             <td>
                                 <button class="_user_edit_btn _blog_edit_btn" data-id="<?= $blog['blog_id'] ?>">Edit</button>
+                                <button class="_user_delete_btn _blog_suspend_btn" date-id="<?= $blog['blog_id'] ?>">Suspend</button>
                                 <button class="_user_delete_btn _blog_delete_btn" date-id="<?= $blog['blog_id'] ?>">Delete</button>
                             </td>
                         </tr>
