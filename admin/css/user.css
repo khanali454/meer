@@ -77,7 +77,9 @@ color: #fff !important;
     color :rgba(255,255,255,0.46);
     padding: 10px;
 }
-
+._table_is  tbody tr td a{
+    color: #6FBAFF;
+}
 ._table_is tbody tr td:last-child{
     word-break: keep-all !important;
     white-space: nowrap !important;
