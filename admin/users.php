@@ -152,7 +152,7 @@
                             <td><?= $user['user_email'] ?></td>
                             <td><?= $user['user_class'] ?></td>
                             <td>
-                                <a href="user_profile.php?user=<?= $user['user_id'] ?>" class="_user_edit_btn">View</a>
+                                <a href="user-profile.php?user=<?= $user['user_id'] ?>" class="_user_edit_btn">View</a>
                                 <button class="_user_delete_btn">Block</button>
                             </td>
                         </tr>
