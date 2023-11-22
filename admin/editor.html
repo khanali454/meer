@@ -40,6 +40,10 @@
             height: 100%;
             object-fit: cover;
         }
+        .banner_upload_btn{
+            background: #eee;
+            color: black;
+        }
     </style>
 </head>
 
@@ -113,14 +117,31 @@
         //     });
         // });
 
+        function filePreview(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('.editor_banner').css("background-repeat","no-repeat");
+                    $('.editor_banner').css("background-size","contain");
+                    $('.editor_banner').css("background-image",`url(${e.target.result})`);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
         $(document).ready(function () {
             $(".publish_btn").on("click", function () {
                 $("#preview_container").css("display", "flex");
                 var data = $(".para_writing").val();
                 var converter = new showdown.Converter(),
-                html_output = converter.makeHtml(data);
+                    html_output = converter.makeHtml(data);
                 console.log(html_output);
                 $("#preview").html(html_output);
+            });
+
+
+            $("#banner_upload").change(function () {
+                filePreview(this);
             });
 
         });
