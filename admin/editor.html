@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- showdown - markdown to html -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"
+        integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <style>
         #preview_container {
             position: fixed;
@@ -26,12 +30,12 @@
             display: none;
         }
 
-        .inner-image{
+        .inner-image {
             max-width: 900px;
             height: 300px;
         }
 
-        .inner-image .cover{
+        .inner-image .cover {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -67,46 +71,58 @@
 
     <script src="js/Js.js"></script>
     <script>
-        $(".publish_btn").on("click", function () {
-            $("#preview_container").css("display", "flex");
-            var data = $(".para_writing").val();
-            data = data.split("\n").filter(item => item.length);
+        // $(".publish_btn").on("click", function () {
+        //     $("#preview_container").css("display", "flex");
+        //     var data = $(".para_writing").val();
+        //     data = data.split("\n").filter(item => item.length);
 
-            data.forEach(line => {
-                if (line[0] == "#") {
-                    let countH = 0;
-                    let i = 0;
-                    while (line[i] == "#") {
-                        countH++;
-                        i++;
-                    }
-                    let tag = `h${countH}`;
+        //     data.forEach(line => {
+        //         if (line[0] == "#") {
+        //             let countH = 0;
+        //             let i = 0;
+        //             while (line[i] == "#") {
+        //                 countH++;
+        //                 i++;
+        //             }
+        //             let tag = `h${countH}`;
 
-                    $("#preview").html($("#preview").html() + `<${tag}>${line.slice(countH, line.length)}</${tag}>`);
-                } else if (line[0] == "!" && line[1] == "[") {
-                    let seperator;
-                    for (let i = 0; i <= line.length; i++) {
+        //             $("#preview").html($("#preview").html() + `<${tag}>${line.slice(countH, line.length)}</${tag}>`);
+        //         } else if (line[0] == "!" && line[1] == "[") {
+        //             let seperator;
+        //             for (let i = 0; i <= line.length; i++) {
 
-                        if (line[i] == "]" && line[i + 1] == "(" && line[line.length - 1] == ")") {
-                            seperator = i;
-                        }
+        //                 if (line[i] == "]" && line[i + 1] == "(" && line[line.length - 1] == ")") {
+        //                     seperator = i;
+        //                 }
 
-                    }
+        //             }
 
-                    let alt = line.slice(2,seperator);
-                    let src = line.slice(seperator+2,line.length - 1);
+        //             let alt = line.slice(2,seperator);
+        //             let src = line.slice(seperator+2,line.length - 1);
 
-                    console.log(alt);
-                    console.log(src);
+        //             console.log(alt);
+        //             console.log(src);
 
-                    // imgggg khosa
+        //             // imgggg khosa
 
-                     $("#preview").html($("#preview").html() + `<div class="inner-image"><img src='${src}' alt='${alt}' class='cover'></div>`);
+        //              $("#preview").html($("#preview").html() + `<div class="inner-image"><img src='${src}' alt='${alt}' class='cover'></div>`);
 
-                } else {
-                    $("#preview").html($("#preview").html() + `<p>${line}</p>`);
-                }
+        //         } else {
+        //             $("#preview").html($("#preview").html() + `<p>${line}</p>`);
+        //         }
+        //     });
+        // });
+
+        $(document).ready(function () {
+            $(".publish_btn").on("click", function () {
+                $("#preview_container").css("display", "flex");
+                var data = $(".para_writing").val();
+                var converter = new showdown.Converter(),
+                html_output = converter.makeHtml(data);
+                console.log(html_output);
+                $("#preview").html(html_output);
             });
+
         });
     </script>
 </body>
