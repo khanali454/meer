@@ -1,6 +1,5 @@
 <?php
 include "include_in_all.php";
-
 ?>
 
 <!DOCTYPE html>
