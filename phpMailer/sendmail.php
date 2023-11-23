@@ -41,7 +41,7 @@ function sendMail($recipients,$subject,$htmlMsg,$htmlMsgAlt,$fromName){
 
 
 
-$recipients = "naveedullahkhosa@gmail.com";
+$recipients = "khanandkhan061@gmail.com";
 $subject = "Somiacis Email Verification";
 $htmlMsg = '<!DOCTYPE html>
 <html lang="en">
