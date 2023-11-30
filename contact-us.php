@@ -154,10 +154,12 @@ include "include_in_all.php";
                 <div class="contact_selectcountry_blocks">
                     <label for="fullname">Why are You Writting Us</label>
                     <select name="" id="">
-                        <option value="Somiacis">Somiacis</option>
-                        <option value="Scribolibere">Scribolibere</option>
-                        <option value="Blog">Blog</option>
-                        <option value="News">News</option>
+                        <optgroup label="About:">
+                            <option value="Somiacis">Somiacis</option>
+                            <option value="Scribolibere">Scribolibere</option>
+                            <option value="Blog">Blog</option>
+                            <option value="News">News</option>
+                        </optgroup>
                         <option value="Feedback">Feedback</option>
                         <option value="Suggestion">Suggestion</option>
                         <option value="Complaint">Complaint</option>
