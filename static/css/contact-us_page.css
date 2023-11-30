@@ -10,12 +10,15 @@
     margin-top: 110px;
     
 }
-.contact_us_page_heading_img_bloak img{
-    height: 400px;
+
+.contact_us_page_heading_img_bloak{
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 400px;
+}
+.contact_us_page_heading_img_bloak img{
+    height: 100%;
+    width: 100%;
+  object-fit: cover;
     /* position: absolute; */
 
 }

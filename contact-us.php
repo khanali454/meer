@@ -37,7 +37,6 @@ include "include_in_all.php";
 
             <div class="contact_us_page_heading_img_bloak">
                 <img src="static/images/contact.webp" alt="">
-
             </div>
             <div class="contac_us_page_heading_and_line">
                 <div class="contact_us_heading_line"></div>
