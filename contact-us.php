@@ -4,6 +4,7 @@ include "include_in_all.php";
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -148,12 +149,21 @@ include "include_in_all.php";
                     </div>
                 </div>
 
+
+
                 <div class="contact_selectcountry_blocks">
                     <label for="fullname">Why are You Writting Us</label>
                     <select name="" id="">
-                        <option value="">Afg</option>
-                        <option value="">Pak</option>
-                        <option value="">ind</option>
+                        <option value="Somiacis">Somiacis</option>
+                        <option value="Scribolibere">Scribolibere</option>
+                        <option value="Blog">Blog</option>
+                        <option value="News">News</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Suggestion">Suggestion</option>
+                        <option value="Complaint">Complaint</option>
+                        <option value="Claiming Rights">Claiming Rights</option>
+                        <option value="Writing Content(Blogs, Scribolibere & News)">Writing Content(Blogs, Scribolibere & News)</option>
+                        <option value="Other Queries">Other Queries</option>
                     </select>
                 </div>
 
