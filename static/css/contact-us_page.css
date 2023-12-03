@@ -210,6 +210,9 @@ input[type=text],.contact_selectcountry_blocks textarea{
     resize: vertical;
     background: transparent;
 }
+.mb-1{
+    margin-bottom: 1rem;
+}
 .contac_block_names{
     display: flex;
     align-items: center;

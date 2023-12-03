@@ -168,10 +168,9 @@ include "include_in_all.php";
                     </select>
                 </div>
 
-                <div class="contact_selectcountry_blocks">
+                <div class="contact_selectcountry_blocks mb-1">
                     <label for="fullname">Message</label>
                     <textarea rows="5"></textarea>
-
                 </div>
 
                 <div class="contact_us_submit_main_btn">
