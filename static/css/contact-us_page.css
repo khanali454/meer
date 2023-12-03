@@ -144,7 +144,7 @@
     padding: 20px 0px;
     width: 90%;
 }
-input[type=text]{
+input[type=text],.contact_selectcountry_blocks textarea{
    
     padding: 8px;
     margin: 8px 1px;
@@ -203,6 +203,11 @@ input[type=text]{
 }
 .contact_selectcountry_blocks{
     width: 100%;
+}
+
+.contact_selectcountry_blocks textarea{
+    width: 100%;
+    resize: vertical;
 }
 .contac_block_names{
     display: flex;
