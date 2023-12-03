@@ -55,12 +55,12 @@ include "include_in_all.php";
                 <div class="contac_block_names">
                     <div class="contact_fullnames_blocks">
                         <label for="fullname">Full Name</label>
-                        <input type="text">
+                        <input type="text" placeholder="Your Full Name">
                     </div>
 
                     <div class="contact_fullnames_blocks">
-                        <label for="fullname">Parentage</label>
-                        <input type="text">
+                        <label for="fullname">Parentage (optional)</label>
+                        <input type="text" placeholder="Parentage">
                     </div>
                 </div>
 
@@ -68,10 +68,9 @@ include "include_in_all.php";
                     <div class="contact_email_blocks">
                         <label for="fullname">Email Address</label>
                         <div class="contact_number_input_blocks">
-                            <input type="text">
+                            <input type="text" placeholder="Your Email Address">
                             <input type="submit">
-                            <input type="tel" name="" id="">
-
+                            <input type="text" name="email_verify" placeholder="Email verification code">
                         </div>
                     </div>
                     <div class="contact_number_blocks">
