@@ -170,7 +170,7 @@ include "include_in_all.php";
 
                 <div class="contact_selectcountry_blocks mb-1">
                     <label for="fullname">Message</label>
-                    <textarea rows="5"></textarea>
+                    <textarea rows="5"placeholder="Write your message here"></textarea>
                 </div>
 
                 <div class="contact_us_submit_main_btn">
