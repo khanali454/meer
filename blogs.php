@@ -1,6 +1,10 @@
-<!-- db connection -->
 <?php
-include "include_in_all.php";
+session_start();
+if (isset($_SESSION['user_id'])) {
+    $logged_in_user_id = $_SESSION['user_id'];
+} else {
+    $logged_in_user_id = null;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +38,7 @@ include "include_in_all.php";
 
     <div class="loading_container" id="Pageloader"><span class="loader"></span></div>
 
-    
+
     <!-- @include header -->
     <?php include "header.php"; ?>
 
@@ -74,10 +78,10 @@ include "include_in_all.php";
 
 
             // load comments
-            function loadBlogs(startis,category_is) {
+            function loadBlogs(startis, category_is) {
                 var data = {
                     start: startis,
-                    category : category_is
+                    category: category_is
                 }
 
                 data = JSON.stringify(data);
@@ -150,7 +154,7 @@ include "include_in_all.php";
                 });
             }
 
-            loadBlogs(0,'<?= $_GET['category']??"any" ?>');
+            loadBlogs(0, '<?= $_GET['category'] ?? "any" ?>');
 
             window.addEventListener('scroll', () => {
                 const {
@@ -158,11 +162,11 @@ include "include_in_all.php";
                     scrollHeight,
                     clientHeight
                 } = document.documentElement;
-                
+
                 console.log(isEmpty);
                 console.log(isReq);
-                if (scrollTop + clientHeight >= scrollHeight - 5 && (isEmpty==false && isReq==false)) {
-                    loadBlogs(starting,'<?= $_GET['category']??"any" ?>');
+                if (scrollTop + clientHeight >= scrollHeight - 5 && (isEmpty == false && isReq == false)) {
+                    loadBlogs(starting, '<?= $_GET['category'] ?? "any" ?>');
                 }
             }, {
                 passive: true

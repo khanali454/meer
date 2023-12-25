@@ -1,5 +1,10 @@
 <?php
-include "include_in_all.php";
+session_start();
+if (isset($_SESSION['user_id'])) {
+    $logged_in_user_id = $_SESSION['user_id'];
+} else {
+    $logged_in_user_id = null;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,6 +80,16 @@ include "include_in_all.php";
         $(document).ready(function() {
             var baseURL = "http://msamt.com/meer/";
 
+            function isUserLoggedIn() {
+                $.ajax({
+                    url: "loggedInUser.php",
+                    method: "POST",
+                    success: function(resp) {
+                        return resp;
+                    }
+                });
+            }
+
             // time formatter
             function timeAgo(date) {
                 const seconds = Math.floor((new Date() - new Date(date)) / 1000);
@@ -123,50 +138,11 @@ include "include_in_all.php";
                 if (seconds > 31536000) {
                     return Math.floor(seconds / 31536000) + ' years ago';
                 }
-
-
-
-
-
-
-
-                // if (interval > 1) {
-                //     return interval + ' minutes ago';
-                // }
-
-                // let interval = Math.floor(seconds / 31536000);
-                // if (interval > 1) {
-                //     return interval + ' years ago';
-                // }
-
-                // interval = Math.floor(seconds / 2592000);
-                // if (interval > 1) {
-                //     return interval + ' months ago';
-                // }
-
-                // interval = Math.floor(seconds / 86400);
-                // if (interval > 1) {
-                //     return interval + ' days ago';
-                // }
-
-                // interval = Math.floor(seconds / 3600);
-                // if (interval > 1) {
-                //     return interval + ' hours ago';
-                // }
-
-                // interval = Math.floor(seconds / 60);
-                // if (interval > 1) {
-                //     return interval + ' minutes ago';
-                // }
-
-                // if (seconds < 10) return 'just now';
-
-                // return Math.floor(seconds) + ' seconds ago';
             }
 
             // number formatter
             function formatNumber(num, precision = 2) {
-                if(num<1000){
+                if (num < 1000) {
                     precision = 0;
                 }
                 const map = [{
@@ -330,26 +306,31 @@ include "include_in_all.php";
             $(document).on("click", "#likeBtn", function() {
                 $("#likeBtn").toggleClass("active");
                 var blog = $(this).attr('data-blog');
-                var add_like_data = {
-                    blog: blog,
-                    user: <?= $logged_in_user_id ?? 0; ?>
-                };
 
-                add_like_data = JSON.stringify(add_like_data);
+                if (isUserLoggedIn() == "0") {
+                    alert("Please sign in first");
+                } else {
+                    var add_like_data = {
+                        blog: blog,
+                        user: <?= $logged_in_user_id ?? 0; ?>
+                    };
 
-                $.ajax({
-                    url: baseURL + "apis/blogs/addBlogLike.php",
-                    method: "POST",
-                    data: add_like_data,
-                    success: function(resp) {
-                        if (resp.status == true) {
-                            //  update blog like
-                            checkUserLike();
-                        } else {
-                            alert(resp.msg);
+                    add_like_data = JSON.stringify(add_like_data);
+
+                    $.ajax({
+                        url: baseURL + "apis/blogs/addBlogLike.php",
+                        method: "POST",
+                        data: add_like_data,
+                        success: function(resp) {
+                            if (resp.status == true) {
+                                //  update blog like
+                                checkUserLike();
+                            } else {
+                                alert(resp.msg);
+                            }
                         }
-                    }
-                });
+                    });
+                }
             });
 
 
@@ -402,77 +383,82 @@ include "include_in_all.php";
                     // check if replying to a comment 
                     if (document.getElementById("reply_box_").style.display == "none") {
 
-                        var comment_req_data = {
-                            blog: blogIS,
-                            user: <?= $logged_in_user_id ?? 0; ?>,
-                            comment: commentMsg
-                        };
+                        if (isUserLoggedIn() == "0") {
+                            alert("Please sign in first");
+                        } else {
+                            var comment_req_data = {
+                                blog: blogIS,
+                                user: <?= $logged_in_user_id ?? 0; ?>,
+                                comment: commentMsg
+                            };
 
-                        comment_req_data = JSON.stringify(comment_req_data);
+                            comment_req_data = JSON.stringify(comment_req_data);
 
 
-                        $.ajax({
-                            url: baseURL + "apis/blogs/addBlogComment.php",
-                            method: "POST",
-                            data: comment_req_data,
-                            success: function(resp) {
+                            $.ajax({
+                                url: baseURL + "apis/blogs/addBlogComment.php",
+                                method: "POST",
+                                data: comment_req_data,
+                                success: function(resp) {
 
-                                if (resp.status == true) {
-                                    $("#commentMSG").val("");
-                                    starting = 0;
-                                    $(".comments").html("");
-                                    isEmpty = false;
-                                    isReq = false;
-                                    // comment added
-                                    loadComments(starting);
+                                    if (resp.status == true) {
+                                        $("#commentMSG").val("");
+                                        starting = 0;
+                                        $(".comments").html("");
+                                        isEmpty = false;
+                                        isReq = false;
+                                        // comment added
+                                        loadComments(starting);
 
-                                } else {
-                                    alert(resp.msg);
+                                    } else {
+                                        alert(resp.msg);
+                                    }
+                                },
+                                error: function(xhr, error_str) {
+                                    alert(xhr.statusText);
                                 }
-                            },
-                            error: function(xhr, error_str) {
-                                alert(xhr.statusText);
-                            }
-                        });
+                            });
+                        }
 
-                        
                         // else add reply to comment
                     } else {
                         const ReplyingToCommentContent = document.getElementById("ReplyingToCommentContent");
                         var comment_to_bereplied = ReplyingToCommentContent.getAttribute("data-commentID");
 
-                        
-                        var reply_req_data = {
-                            blog: blogIS,
-                            user: <?= $logged_in_user_id ?? 0; ?>,
-                            comment_to_bereplied:comment_to_bereplied,
-                            comment: commentMsg
-                        };
+                        if (isUserLoggedIn() == "0") {
+                            alert("Please sign in first");
+                        } else {
+                            var reply_req_data = {
+                                blog: blogIS,
+                                user: <?= $logged_in_user_id ?? 0; ?>,
+                                comment_to_bereplied: comment_to_bereplied,
+                                comment: commentMsg
+                            };
 
-                        reply_req_data = JSON.stringify(reply_req_data);
+                            reply_req_data = JSON.stringify(reply_req_data);
 
-                        $.ajax({
-                            url: baseURL + "apis/blogs/addBlogCommentReply.php",
-                            method: "POST",
-                            data: reply_req_data,
-                            success: function(resp) {
-                                if (resp.status == true) {
-                                    $("#commentMSG").val("");
-                                    $("#" + "replyto" + comment_to_bereplied).html("");
-                                    loadCommentReplies("replyto" + comment_to_bereplied);
-                                    $("#reply_box_").slideUp();
-                                } else {
-                                    alert(resp.msg);
+                            $.ajax({
+                                url: baseURL + "apis/blogs/addBlogCommentReply.php",
+                                method: "POST",
+                                data: reply_req_data,
+                                success: function(resp) {
+                                    if (resp.status == true) {
+                                        $("#commentMSG").val("");
+                                        $("#" + "replyto" + comment_to_bereplied).html("");
+                                        loadCommentReplies("replyto" + comment_to_bereplied);
+                                        $("#reply_box_").slideUp();
+                                    } else {
+                                        alert(resp.msg);
+                                    }
+                                },
+                                error: function(xhr, error_str) {
+                                    alert(xhr.statusText);
                                 }
-                            },
-                            error: function(xhr, error_str) {
-                                alert(xhr.statusText);
-                            }
-                        });
+                            });
+
+                        }
 
 
-
-                        
                     }
 
 
@@ -550,27 +536,31 @@ include "include_in_all.php";
                 } else {
                     $("#CommentlikeCount" + comment).html(formatNumber(parseInt($("#CommentlikeCount" + comment).html()) - 1, 1))
                 }
-                var commentlikedata = {
-                    comment: comment,
-                    user: <?= $logged_in_user_id ?? 0; ?>
-                };
+                if (isUserLoggedIn() == "0") {
+                    alert("Please sign in first");
+                } else {
+                    var commentlikedata = {
+                        comment: comment,
+                        user: <?= $logged_in_user_id ?? 0; ?>
+                    };
 
-                commentlikedata = JSON.stringify(commentlikedata);
+                    commentlikedata = JSON.stringify(commentlikedata);
 
-                $.ajax({
-                    url: baseURL + "apis/blogs/blogCommentLike.php",
-                    method: "POST",
-                    data: commentlikedata,
-                    success: function(resp) {
-                        if (resp.status == true) {
-                            //  update comment like
-                            checkUserCommentLike(comment, "comment_active" + comment);
-                            countLikesOnComment(comment);
-                        } else {
-                            alert("Something went wrong.");
+                    $.ajax({
+                        url: baseURL + "apis/blogs/blogCommentLike.php",
+                        method: "POST",
+                        data: commentlikedata,
+                        success: function(resp) {
+                            if (resp.status == true) {
+                                //  update comment like
+                                checkUserCommentLike(comment, "comment_active" + comment);
+                                countLikesOnComment(comment);
+                            } else {
+                                alert("Something went wrong.");
+                            }
                         }
-                    }
-                });
+                    });
+                }
             });
             // like/Unlike comment by logged in user
 

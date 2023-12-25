@@ -184,10 +184,10 @@ include "include_in_all.php";
                             </div>
                             <div class="_post_content">
                                 <div class="_post_heading">
-                                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias sapiente numquam illum est. Facilis repudiandae ipsum a soluta illo, consectetur sapiente, earum, ea et dolorem laboriosam sequi velit praesentium at.
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias sapiente numquam illum est. Facilis repudiandae ipsum a soluta illo, consectetur sapiente, earum, ea et dolorem laboriosam sequi velit praesentium at.
                                 </div>
                                 <div class="_content">
-                                 Aqeel ipsum dolor sit, amet consectetur adipisicing elit. Libero pariatur at laboriosam voluptatibus tempore magni fugit voluptatum praesentium. Officia architecto dolores veniam. Quasi temporibus repellat perspiciatis itaque perferendis debitis voluptatibus alias error minima earum cupiditate saepe vitae veritatis tenetur dicta quam dolorum tempora, nam eius repellendus quos? Nemo maiores sequi nulla vel porro nisi debitis unde repudiandae sed enim aperiam omnis, voluptas ducimus error nostrum cum quae consequatur aliquid quaerat at tempora, est exercitationem aspernatur voluptatum! Omnis laudantium vel, blanditiis ducimus voluptate reiciendis alias iusto fugiat itaque quibusdam enim, velit reprehenderit! Dolorum, iste! Natus error voluptatem hic eos numquam voluptatibus saepe repudiandae assumenda illo eum minima officiis, veritatis iure, esse ex a! Similique repudiandae vitae adipisci maxime aspernatur nisi facere, atque minus explicabo sint culpa maiores magni ullam praesentium dolorum quasi aliquam voluptatum ipsam at sed, itaque non. Quae, voluptates voluptas harum voluptate repellat architecto perferendis earum ipsam illo et iure vel fugiat, placeat quasi! Explicabo, fugiat? Assumenda blanditiis cumque ex maxime distinctio ipsa harum modi nesciunt! Odit voluptatem suscipit eum quasi necessitatibus atque aspernatur accusamus quae vitae officia voluptates aut eius, rem fuga consequatur nisi quibusdam, porro esse commodi ducimus? Distinctio, veniam quos fugiat minima nobis aspernatur voluptatem corporis, facilis ut doloremque natus aliquam omnis modi molestias similique nulla numquam repellendus quisquam enim odio voluptates quibusdam! Omnis, provident quod! Voluptas, maxime quia laudantium, tempore obcaecati vitae est amet itaque tenetur, dolorem neque quidem voluptatum ratione totam sed pariatur atque deserunt voluptate at distinctio porro earum nihil quae. Odit alias cumque ipsam unde architecto consequatur quae accusantium officiis, quaerat consectetur sequi optio vero nihil et temporibus nostrum aperiam distinctio animi ullam delectus dolorem explicabo, neque praesentium? Voluptatum iure quis id expedita blanditiis nisi explicabo labore possimus laboriosam temporibus facere architecto dolores obcaecati ipsam adipisci quisquam minima velit suscipit facilis, odio quia sequi! Ab quo dolorum, excepturi nobis velit dolore vel, eius minima itaque ad laudantium numquam quibusdam consequuntur voluptas vero totam blanditiis ducimus expedita unde atque sit. Nam hic labore itaque aspernatur harum atque cumque, nobis tempora ducimus excepturi, non saepe asperiores quis iure voluptatum accusantium laboriosam amet perferendis nemo. Minus maiores officia, beatae dolorum corrupti fugit necessitatibus atque vel nulla veritatis, ipsam aperiam deserunt aliquam quod architecto consequuntur eum officiis? Deserunt, vero, saepe ab, esse numquam libero odit distinctio at sed totam optio iste dicta sint reiciendis neque ipsa. Quae recusandae, modi unde saepe quam iusto quidem quia adipisci?
+                                    Aqeel ipsum dolor sit, amet consectetur adipisicing elit. Libero pariatur at laboriosam voluptatibus tempore magni fugit voluptatum praesentium. Officia architecto dolores veniam. Quasi temporibus repellat perspiciatis itaque perferendis debitis voluptatibus alias error minima earum cupiditate saepe vitae veritatis tenetur dicta quam dolorum tempora, nam eius repellendus quos? Nemo maiores sequi nulla vel porro nisi debitis unde repudiandae sed enim aperiam omnis, voluptas ducimus error nostrum cum quae consequatur aliquid quaerat at tempora, est exercitationem aspernatur voluptatum! Omnis laudantium vel, blanditiis ducimus voluptate reiciendis alias iusto fugiat itaque quibusdam enim, velit reprehenderit! Dolorum, iste! Natus error voluptatem hic eos numquam voluptatibus saepe repudiandae assumenda illo eum minima officiis, veritatis iure, esse ex a! Similique repudiandae vitae adipisci maxime aspernatur nisi facere, atque minus explicabo sint culpa maiores magni ullam praesentium dolorum quasi aliquam voluptatum ipsam at sed, itaque non. Quae, voluptates voluptas harum voluptate repellat architecto perferendis earum ipsam illo et iure vel fugiat, placeat quasi! Explicabo, fugiat? Assumenda blanditiis cumque ex maxime distinctio ipsa harum modi nesciunt! Odit voluptatem suscipit eum quasi necessitatibus atque aspernatur accusamus quae vitae officia voluptates aut eius, rem fuga consequatur nisi quibusdam, porro esse commodi ducimus? Distinctio, veniam quos fugiat minima nobis aspernatur voluptatem corporis, facilis ut doloremque natus aliquam omnis modi molestias similique nulla numquam repellendus quisquam enim odio voluptates quibusdam! Omnis, provident quod! Voluptas, maxime quia laudantium, tempore obcaecati vitae est amet itaque tenetur, dolorem neque quidem voluptatum ratione totam sed pariatur atque deserunt voluptate at distinctio porro earum nihil quae. Odit alias cumque ipsam unde architecto consequatur quae accusantium officiis, quaerat consectetur sequi optio vero nihil et temporibus nostrum aperiam distinctio animi ullam delectus dolorem explicabo, neque praesentium? Voluptatum iure quis id expedita blanditiis nisi explicabo labore possimus laboriosam temporibus facere architecto dolores obcaecati ipsam adipisci quisquam minima velit suscipit facilis, odio quia sequi! Ab quo dolorum, excepturi nobis velit dolore vel, eius minima itaque ad laudantium numquam quibusdam consequuntur voluptas vero totam blanditiis ducimus expedita unde atque sit. Nam hic labore itaque aspernatur harum atque cumque, nobis tempora ducimus excepturi, non saepe asperiores quis iure voluptatum accusantium laboriosam amet perferendis nemo. Minus maiores officia, beatae dolorum corrupti fugit necessitatibus atque vel nulla veritatis, ipsam aperiam deserunt aliquam quod architecto consequuntur eum officiis? Deserunt, vero, saepe ab, esse numquam libero odit distinctio at sed totam optio iste dicta sint reiciendis neque ipsa. Quae recusandae, modi unde saepe quam iusto quidem quia adipisci?
                                 </div>
                             </div>
                             <hr>
@@ -556,7 +556,7 @@ include "include_in_all.php";
         </div>
         <!-- ========== Services-home-card-end ============= -->
 
-        
+
     </main>
 
     <?php include "footer.php"; ?>
@@ -588,19 +588,19 @@ include "include_in_all.php";
                 navbar.classList.add("close");
             }
         });
-   
-             async function loadRecentBlog() {
-                data = {
-                    start:0,
-                    category:"any"
-                };
-                var result = await fetch("<?= $app['site_url'] ?>apis/blogs/loadBlogs.php",{
-                    method:"POST",
-                    body: JSON.stringify(data)
-                });
-                var result = await result.json();
-                var recent_blog_container = document.getElementById("recent_blog_container");
-                recent_blog_container.innerHTML = `
+
+        async function loadRecentBlog() {
+            data = {
+                start: 0,
+                category: "any"
+            };
+            var result = await fetch("<?= $app['site_url'] ?>apis/blogs/loadBlogs.php", {
+                method: "POST",
+                body: JSON.stringify(data)
+            });
+            var result = await result.json();
+            var recent_blog_container = document.getElementById("recent_blog_container");
+            recent_blog_container.innerHTML = `
                 <div class="blog-card-header">
                     <div class="blogs-card-header-info">
                         <h3>${result[0].blog_title}</h3>
@@ -614,10 +614,10 @@ include "include_in_all.php";
                     <img src="uploads/feature-images/${result[0].blog_cover_img}" alt="" class="blogs-img">
                 </div>`;
 
-            }
+        }
 
-            loadRecentBlog();
-        </script>
+        loadRecentBlog();
+    </script>
 
 </body>
 

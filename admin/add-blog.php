@@ -18,8 +18,6 @@
 </head>
 
 <body>
-
-
     <?php include "dashboard_header.php" ?>
     <!-- editor for blog post -->
     

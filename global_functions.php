@@ -1,5 +1,5 @@
 <?php
-include "config-db.php";
+include_once "config-db.php";
 
 
 function getAppConfiguration(){
